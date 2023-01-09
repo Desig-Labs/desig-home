@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 
@@ -80,8 +79,8 @@ export default function Home() {
               @desig/web3 <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Discover and deploy your projects on the layer0 of multisig with
-              the comprehensive web3 library.
+              Discover and deploy your projects on the layer-0 of multisig with
+              a comprehensive web3 library.
             </p>
           </a>
 
@@ -96,7 +95,7 @@ export default function Home() {
             </h2>
             <p className={inter.className}>
               Wanna become a validator, aka a contributor, aka a node in the
-              Desig Infra? You can do it in a second here!
+              Desig Infra? You can do it in seconds here!
             </p>
           </a>
         </div>
