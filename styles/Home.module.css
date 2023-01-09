@@ -23,6 +23,8 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 .description p {
@@ -32,6 +34,7 @@
   background-color: rgba(var(--callout-rgb), 0.5);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
 .code {
@@ -78,6 +81,11 @@
   align-items: center;
   position: relative;
   padding: 4rem 0;
+}
+
+.center h1 {
+  font-family: var(--font-mono);
+  font-size: 64px;
 }
 
 .center::before {
