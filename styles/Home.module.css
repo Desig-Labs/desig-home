@@ -15,7 +15,6 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
 .description a {
@@ -39,7 +38,6 @@
 
 .code {
   font-weight: 700;
-  font-family: var(--font-mono);
 }
 
 .grid {
@@ -84,7 +82,6 @@
 }
 
 .center h1 {
-  font-family: var(--font-mono);
   font-size: 64px;
 }
 

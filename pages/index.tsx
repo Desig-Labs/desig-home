@@ -35,6 +35,9 @@ export default function Home() {
         <div className={styles.center}>
           <h1>Comming Soon</h1>
         </div>
+        <a href="mailto:hi@desig.io" target="_blank" rel="noopener noreferrer">
+          👋 hi@desig.io
+        </a>
 
         <div className={styles.grid}>
           <a
