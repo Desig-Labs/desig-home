@@ -1,3 +1,3 @@
 export default function AboutUs() {
-  return <h1 style={{ height: '100vh', width: '100vw' }}>About Us</h1>
+  return <h1>About Us</h1>
 }
