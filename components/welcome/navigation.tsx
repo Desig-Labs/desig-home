@@ -1,7 +1,4 @@
-import { Inter } from '@next/font/google'
 import styles from 'styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Navigation() {
   return (
@@ -12,10 +9,10 @@ export default function Navigation() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h2 className={inter.className}>
+        <h2>
           Core <span>-&gt;</span>
         </h2>
-        <p className={inter.className}>
+        <p>
           Find in-depth information about Desig Core, which contains the main
           cryptographical algorithms for the protocol.
         </p>
@@ -27,10 +24,10 @@ export default function Navigation() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h2 className={inter.className}>
+        <h2>
           Docs <span>-&gt;</span>
         </h2>
-        <p className={inter.className}>
+        <p>
           Learn about Desig in a well-written document, a whitepaper, and a
           yellowpaper.
         </p>
@@ -42,10 +39,10 @@ export default function Navigation() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h2 className={inter.className}>
+        <h2>
           @desig/web3 <span>-&gt;</span>
         </h2>
-        <p className={inter.className}>
+        <p>
           Discover and deploy your projects on the layer-0 of multisig with a
           comprehensive web3 library.
         </p>
@@ -57,10 +54,10 @@ export default function Navigation() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h2 className={inter.className}>
+        <h2>
           Infrastructure <span>-&gt;</span>
         </h2>
-        <p className={inter.className}>
+        <p>
           Wanna become a validator, aka a contributor, aka a node in the Desig
           Infra? You can do it in seconds here!
         </p>

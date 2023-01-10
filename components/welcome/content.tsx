@@ -6,7 +6,12 @@ export default function Content() {
       <div className={styles.center}>
         <h1>Comming Soon</h1>
       </div>
-      <a href="mailto:hi@desig.io" target="_blank" rel="noopener noreferrer">
+      <a
+        href="mailto:hi@desig.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ marginBottom: 24 }}
+      >
         👋 hi@desig.io
       </a>
     </>
