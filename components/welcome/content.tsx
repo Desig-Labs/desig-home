@@ -4,7 +4,7 @@ export default function Content() {
   return (
     <>
       <div className={styles.center}>
-        <h1>Comming Soon</h1>
+        <h1>Coming Soon</h1>
       </div>
       <a
         href="mailto:hi@desig.io"
