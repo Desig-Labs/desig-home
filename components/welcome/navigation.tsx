@@ -1,4 +1,4 @@
-import styles from 'styles/Home.module.css'
+import styles from 'static/styles/Home.module.css'
 
 export default function Navigation() {
   return (
