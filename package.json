@@ -13,7 +13,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
     "@next/font": "13.1.1",
+    "@next/mdx": "^13.1.6",
     "antd": "^5.1.4",
     "next": "13.1.1",
     "react": "18.2.0",

@@ -7,6 +7,7 @@ import Header from 'components/header'
 import 'public/styles/globals.css'
 import styles from 'public/styles/Home.module.css'
 import DesigOg from 'public/images/desig-og.jpg'
+import Footer from 'components/footer'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -48,6 +49,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className={styles.main}>
         <Header />
         <Component {...pageProps} />
+        <Footer />
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-R91HV8NWFY"
