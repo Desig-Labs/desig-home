@@ -1,11 +1,11 @@
-import 'static/styles/globals.css'
-
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import styles from 'static/styles/Home.module.css'
+
 import Header from 'components/header'
-import DesigOg from 'static/images/desig-og.jpg'
-import Script from 'next/script'
+
+import 'public/styles/globals.css'
+import styles from 'public/styles/Home.module.css'
+import DesigOg from 'public/images/desig-og.jpg'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -43,24 +43,6 @@ export default function App({ Component, pageProps }: AppProps) {
           content="A blockchain-agnostic (smartcontractless) multisig solution."
         />
         <meta name="twitter:image" content={DesigOg.src} />
-        {/* Google Font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-        {/* Google tag (gtag.js) */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-R91HV8NWFY"
-        />
-        <Script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-R91HV8NWFY');
-          `}
-        </Script>
       </Head>
       <main className={styles.main}>
         <Header />
