@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import Script from 'next/script'
 
 export default function Document() {
   return (
@@ -11,18 +10,20 @@ export default function Document() {
           rel="stylesheet"
         />
         {/* Google tag (gtag.js) */}
-        <Script
+        <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-R91HV8NWFY"
-        />
-        <Script id="ga">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-R91HV8NWFY');
-          `}
-        </Script>
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-R91HV8NWFY');
+            `,
+          }}
+        ></script>
       </Head>
       <body>
         <Main />
