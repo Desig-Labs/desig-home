@@ -1,6 +1,6 @@
 import { Col, Row } from 'antd'
 
-import Termly from 'components/termly.mdx'
+import Termly from 'components/policy.mdx'
 
 export default function Policy() {
   return (
