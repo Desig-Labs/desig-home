@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import Script from 'next/script'
 
 import Header from 'components/header'
 
@@ -47,6 +48,16 @@ export default function App({ Component, pageProps }: AppProps) {
       <main className={styles.main}>
         <Header />
         <Component {...pageProps} />
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-R91HV8NWFY"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R91HV8NWFY');
+        `}</Script>
       </main>
     </>
   )
