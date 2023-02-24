@@ -14,7 +14,7 @@ export default function Navigation() {
         </h2>
         <p>
           Find in-depth information about Desig Core, which contains the main
-          cryptographical algorithms for the protocol.
+          cryptography algorithms for the protocol.
         </p>
       </a>
 
@@ -28,7 +28,7 @@ export default function Navigation() {
           Docs <span>-&gt;</span>
         </h2>
         <p>
-          Learn about Desig in a well-written document, a whitepaper, and a
+          Learn about Desig in a well-explained document, a whitepaper, and a
           yellowpaper.
         </p>
       </a>
