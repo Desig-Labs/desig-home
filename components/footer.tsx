@@ -1,4 +1,4 @@
-import { Col, Row, Typography } from 'antd'
+import { Col, Row } from 'antd'
 
 export default function Footer() {
   return (
