@@ -36,19 +36,19 @@ const naviagtors = [
     title: 'Core',
     url: 'https://www.npmjs.com/package/@desig/core',
     description:
-      'Find in-depth information about Desig Core, which contains the main cryptography algorithms for the protocol.',
+      'Find in-depth information about Desig Core, which contains the main crypto algorithms for the protocol.',
   },
   {
     title: 'Docs',
     url: 'https://docs.desig.io/',
     description:
-      'Learn about Desig in a well-explained document, a whitepaper, and a yellowpaper.',
+      'Learn about Desig in the well-explained document, or also find the whitepaper, and the yellowpaper.',
   },
   {
     title: '@desig/web3',
     url: 'https://web3.desig.io/',
     description:
-      'Discover and deploy your projects on the layer-0 of multisig with a comprehensive web3 library.',
+      'Discover and deploy your projects on the blockchain-agnostic multisig solution with a comprehensive web3 library.',
   },
   {
     title: 'Infrastructure',
