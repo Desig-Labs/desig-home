@@ -4,7 +4,7 @@ import { useDebounce } from 'react-use'
 
 import { LoadingOutlined } from '@ant-design/icons'
 import { Col, Row, Space, Spin } from 'antd'
-import Desig from './desig'
+import Desig from 'components/desig'
 
 const BaseSplash = styled.div({
   height: '100%',
@@ -13,7 +13,7 @@ const BaseSplash = styled.div({
   zIndex: 9999,
   top: 0,
   left: 0,
-  backdropFilter: 'blur(12px)',
+  backdropFilter: 'blur(24px)',
 })
 
 export type SplashProps = {

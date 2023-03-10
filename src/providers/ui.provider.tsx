@@ -4,7 +4,7 @@ import { create } from 'zustand'
 import { Col, ConfigProvider, Layout, Row } from 'antd'
 import Splash from 'components/splash'
 
-import { generateTheme } from 'public/styles/theme'
+import { generateTheme } from 'static/styles/theme'
 
 export enum Infix {
   xs = 0,
@@ -16,7 +16,6 @@ export enum Infix {
 }
 
 const getInfix = (): Infix => {
-  if (typeof window === 'undefined') return Infix.xs
   const width = window.innerWidth
   if (width >= Infix.xxl) return Infix.xxl
   if (width >= Infix.xl) return Infix.xl
@@ -27,7 +26,6 @@ const getInfix = (): Infix => {
 }
 
 const getTheme = (): Theme => {
-  if (typeof window === 'undefined') return 'light'
   if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light'
   return 'dark'
 }
@@ -48,7 +46,7 @@ export type UiStore = {
 
 export const useUiStore = create<UiStore>()((set) => ({
   infix: getInfix(),
-  width: typeof window === 'undefined' ? 0 : window.innerWidth,
+  width: window.innerWidth,
   setWidth: (width: number) => set({ width, infix: getInfix() }),
   theme: getTheme(),
   setTheme: (theme: Theme) => set({ theme }),
@@ -95,7 +93,7 @@ export default function UiProvider({ children }: { children: ReactNode }) {
 
   return (
     <ConfigProvider theme={generateTheme(theme)}>
-      <Layout style={{ padding: 12, minHeight: '100vh' }}>
+      <Layout style={{ margin: -8, padding: 24, minHeight: '100vh' }}>
         <Row gutter={[24, 24]} justify="center">
           <Col xs={24} md={22} xl={18}>
             {children}

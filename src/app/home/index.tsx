@@ -1,8 +1,8 @@
 import { Col, Row } from 'antd'
-import Content from 'components/welcome/content'
-import Navigation from 'components/welcome/navigation'
+import Content from './content'
+import Navigation from './navigation'
 
-export default function Main() {
+export default function Home() {
   return (
     <Row gutter={[24, 128]}>
       <Col span={24} style={{ textAlign: 'center' }}>

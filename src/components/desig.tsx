@@ -2,7 +2,7 @@ import { CSSProperties } from 'react'
 
 import { Image, Space, Typography } from 'antd'
 
-import logo from 'public/images/logo.png'
+import logo from 'static/images/logo.png'
 
 export type DesigProps = {
   onClick?: () => void
@@ -17,8 +17,8 @@ export default function Desig({
 }: DesigProps) {
   return (
     <Space style={style} size={size / 3} onClick={onClick}>
-      <Image width={size} src={logo.src} preview={false} />
-      <Typography.Title style={{ fontSize: size, fontWeight: 700 }}>
+      <Image width={size} src={logo} preview={false} />
+      <Typography.Title style={{ fontSize: size, fontWeight: 700, margin: 0 }}>
         Desig
       </Typography.Title>
     </Space>

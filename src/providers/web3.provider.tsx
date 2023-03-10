@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react'
+import { Fragment, ReactNode, useEffect } from 'react'
 import isEqual from 'react-fast-compare'
 import Web3 from 'web3'
 import { create } from 'zustand'
@@ -43,7 +43,7 @@ export default function Web3Provider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const id: NodeJS.Timer = setInterval(() => {
-      if (typeof window !== 'undefined' && !!window?.ethereum) {
+      if (window.ethereum) {
         setWeb3(window.ethereum)
         return clearInterval(id)
       }
@@ -51,5 +51,5 @@ export default function Web3Provider({ children }: { children: ReactNode }) {
     return () => clearInterval(id)
   }, [setWeb3, setLoading])
 
-  return <>{children}</>
+  return <Fragment>{children}</Fragment>
 }

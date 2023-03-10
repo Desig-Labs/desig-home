@@ -64,7 +64,7 @@ export default function Navigation() {
   return (
     <Row gutter={[24, 24]}>
       {naviagtors.map(({ title, url, description }, i) => (
-        <Col key={i} xs={24} md={12} lg={6}>
+        <Col key={i} xs={24} sm={12} xl={6}>
           <NavigationCard title={title} url={url} description={description} />
         </Col>
       ))}
