@@ -3,11 +3,12 @@ import Head from 'next/head'
 import Script from 'next/script'
 
 import Header from 'components/header'
-
-import 'public/styles/globals.css'
-import styles from 'public/styles/Home.module.css'
-import DesigOg from 'public/images/desig-og.jpg'
 import Footer from 'components/footer'
+import UiProvider from 'providers/ui.provider'
+import Web3Provider from 'providers/web3.provider'
+
+import 'public/styles/index.scss'
+import DesigOg from 'public/images/desig-og.jpg'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -46,10 +47,14 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta name="twitter:image" content={DesigOg.src} />
       </Head>
-      <main className={styles.main}>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+      <main>
+        <UiProvider>
+          <Web3Provider>
+            <Header />
+            <Component {...pageProps} />
+            <Footer />
+          </Web3Provider>
+        </UiProvider>
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-R91HV8NWFY"

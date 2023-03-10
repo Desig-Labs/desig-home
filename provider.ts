@@ -25,19 +25,9 @@ export enum WalletMethod {
 export class ProviderRpcError extends Error {
   public readonly code: number
   public readonly data?: unknown
-  constructor(
-    message: string,
-    {
-      code,
-      data,
-    }: {
-      code: number
-      data?: unknown
-    },
-  ) {
+  constructor(message: string) {
     super(message)
-    this.code = code
-    this.data = data
+    this.code = 4009
   }
 }
 
@@ -95,11 +85,7 @@ export class HttpProvider extends EventEmitter<WalletEvents> {
     const data = { jsonrpc: '2.0', id, method, params }
     const {
       data: { result },
-    } = await axios.post(this.rpc, data, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
+    } = await axios.post(this.rpc, data)
     return result
   }
 }
@@ -128,16 +114,15 @@ export class WsProvider extends EventEmitter<WalletEvents> {
     this.ws.onopen = () => {
       this.isConnecting = false
       this.connected = true
-      this.emit('connect', { chainId: '0x1' })
+      console.log('😂 connected')
+      return this.emit('connect', { chainId: '0x1' })
     }
     this.ws.onclose = () => {
+      console.log('🙏 disconnected')
       return this.emit(
         'disconnect',
         new ProviderRpcError(
           'The Provider is not connected to the requested chain.',
-          {
-            code: 4009,
-          },
         ),
       )
     }
@@ -160,7 +145,6 @@ export class WsProvider extends EventEmitter<WalletEvents> {
     if (this.promises[id]) throw new Error('The request id has been sent')
     this.promises[id] = new Deferred()
     const data = { jsonrpc: '2.0', id, method, params }
-    console.log(data)
     const interval: NodeJS.Timer = setInterval(() => {
       if (this.connected) {
         this.ws.send(JSON.stringify(data))

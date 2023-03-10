@@ -1,3 +1,5 @@
+const path = require('path')
+
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
@@ -15,6 +17,9 @@ const withMDX = require('@next/mdx')({
 const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: false,
+  sassOptions: {
+    includePaths: [path.join(__dirname, './public/styles')],
+  },
 }
 
 module.exports = withMDX(nextConfig)

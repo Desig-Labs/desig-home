@@ -1,11 +1,8 @@
-import styles from 'public/styles/Home.module.css'
-
 export default function Navigation() {
   return (
-    <div className={styles.grid}>
+    <div>
       <a
         href="https://www.npmjs.com/package/@desig/core"
-        className={styles.card}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -20,7 +17,6 @@ export default function Navigation() {
 
       <a
         href="https://docs.desig.io/"
-        className={styles.card}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -35,7 +31,6 @@ export default function Navigation() {
 
       <a
         href="https://web3.desig.io/"
-        className={styles.card}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -50,7 +45,6 @@ export default function Navigation() {
 
       <a
         href="http://infra.desig.io/"
-        className={styles.card}
         target="_blank"
         rel="noopener noreferrer"
       >

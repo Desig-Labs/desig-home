@@ -1,9 +1,7 @@
-import styles from 'public/styles/Home.module.css'
-
 export default function Content() {
   return (
     <>
-      <div className={styles.center}>
+      <div>
         <h1>Coming Soon</h1>
       </div>
       <a
