@@ -9,6 +9,7 @@ import Web3Provider from 'providers/web3.provider'
 
 import 'public/styles/index.scss'
 import DesigOg from 'public/images/desig-og.jpg'
+import { Col, Row } from 'antd'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -50,9 +51,17 @@ export default function App({ Component, pageProps }: AppProps) {
       <main>
         <UiProvider>
           <Web3Provider>
-            <Header />
-            <Component {...pageProps} />
-            <Footer />
+            <Row gutter={[24, 48]}>
+              <Col span={24}>
+                <Header />
+              </Col>
+              <Col span={24}>
+                <Component {...pageProps} />
+              </Col>
+              <Col span={24}>
+                <Footer />
+              </Col>
+            </Row>
           </Web3Provider>
         </UiProvider>
         <Script

@@ -20,6 +20,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, './public/styles')],
   },
+  transpilePackages: ['@sentre/antd-ionicon'],
 }
 
 module.exports = withMDX(nextConfig)

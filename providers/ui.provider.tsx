@@ -1,7 +1,7 @@
 import { ReactNode, useEffect } from 'react'
 import { create } from 'zustand'
 
-import { ConfigProvider, Layout } from 'antd'
+import { Col, ConfigProvider, Layout, Row } from 'antd'
 import Splash from 'components/splash'
 
 import { generateTheme } from 'public/styles/theme'
@@ -95,7 +95,13 @@ export default function UiProvider({ children }: { children: ReactNode }) {
 
   return (
     <ConfigProvider theme={generateTheme(theme)}>
-      <Layout style={{ padding: 12, minHeight: '100vh' }}>{children}</Layout>
+      <Layout style={{ padding: 12, minHeight: '100vh' }}>
+        <Row gutter={[24, 24]} justify="center">
+          <Col xs={24} md={22} xl={18}>
+            {children}
+          </Col>
+        </Row>
+      </Layout>
       <Splash open={loading} />
     </ConfigProvider>
   )
