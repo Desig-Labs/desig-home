@@ -7,6 +7,9 @@
     "build": "craco build",
     "test": "craco test"
   },
+  "engines": {
+    "node": ">=16 <=18"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
