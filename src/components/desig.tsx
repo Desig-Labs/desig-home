@@ -17,7 +17,7 @@ export default function Desig({
 }: DesigProps) {
   return (
     <Space style={style} size={size / 3} onClick={onClick}>
-      <Image width={size} src={logo} preview={false} />
+      <Image alt="desig-logo" width={size} src={logo} preview={false} />
       <Typography.Title style={{ fontSize: size, fontWeight: 700, margin: 0 }}>
         Desig
       </Typography.Title>
