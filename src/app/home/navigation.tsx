@@ -22,8 +22,6 @@ export function NavigationCard({
               <IonIcon name="arrow-forward-outline" />
             </Typography.Title>
           </Space>
-        </Col>
-        <Col span={24}>
           <Typography.Paragraph type="secondary">
             {description}
           </Typography.Paragraph>

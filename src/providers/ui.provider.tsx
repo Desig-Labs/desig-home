@@ -4,6 +4,7 @@ import { create } from 'zustand'
 import { Col, ConfigProvider, Layout, Row } from 'antd'
 import Splash from 'components/splash'
 
+import 'static/styles/index.scss'
 import { generateTheme } from 'static/styles/theme'
 
 export enum Infix {
@@ -93,7 +94,7 @@ export default function UiProvider({ children }: { children: ReactNode }) {
 
   return (
     <ConfigProvider theme={generateTheme(theme)}>
-      <Layout style={{ margin: -8, padding: 24, minHeight: '100vh' }}>
+      <Layout style={{ padding: 24, minHeight: '100vh' }}>
         <Row gutter={[24, 24]} justify="center">
           <Col xs={24} md={22} xl={18}>
             {children}

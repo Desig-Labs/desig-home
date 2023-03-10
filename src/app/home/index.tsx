@@ -4,7 +4,7 @@ import Navigation from './navigation'
 
 export default function Home() {
   return (
-    <Row gutter={[24, 128]}>
+    <Row gutter={[24, 96]}>
       <Col span={24} style={{ textAlign: 'center' }}>
         <Content />
       </Col>
