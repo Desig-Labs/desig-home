@@ -5,6 +5,7 @@ import Footer from './footer'
 import Header from './header'
 import Home from './home'
 import Policy from './policy'
+import Connect from './connect'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Routes>
           <Route path="home" element={<Home />} />
           <Route path="policy" element={<Policy />} />
+          <Route path="connect" element={<Connect />} />
           <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
       </Col>
