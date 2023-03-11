@@ -37,23 +37,16 @@ export default function Web3Provider({ children }: { children: ReactNode }) {
   const { setLoading } = useLoading()
 
   useEffect(() => {
-    try {
-      setLoading(true)
-      let retries = 5
-      const id: NodeJS.Timer = setInterval(() => {
-        --retries
-        if (retries <= 0) return clearInterval(id)
-        if (window.ethereum) {
-          setWeb3(new Web3(window.ethereum))
-          return clearInterval(id)
-        }
-      }, 1000)
-      return () => clearInterval(id)
-    } catch (er: any) {
-      console.warn(er.message)
-    } finally {
-      setLoading(false)
-    }
+    setLoading(true)
+    let retries = 5
+    const id: NodeJS.Timer = setInterval(() => {
+      if (window.ethereum) setWeb3(new Web3(window.ethereum))
+      if (!!window.ethereum || retries-- <= 0) {
+        clearInterval(id)
+        return setLoading(false)
+      }
+    }, 1000)
+    return () => clearInterval(id)
   }, [setWeb3, setLoading])
 
   return <Fragment>{children}</Fragment>
