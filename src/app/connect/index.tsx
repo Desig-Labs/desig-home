@@ -26,6 +26,13 @@ export default function Connect() {
     }
   }, [web3])
 
+  const disconnect = useCallback(async () => {
+    setAddress('')
+    setBalance(0)
+    setBlockNumber(0)
+    return (web3?.eth?.currentProvider as any)?.disconnect()
+  }, [web3])
+
   const fetch = useCallback(async () => {
     if (!web3 || !address) return
     const wei = await web3.eth.getBalance(address)
@@ -63,9 +70,19 @@ export default function Connect() {
         </Space>
       </Col>
       <Col span={24}>
-        <Button type="primary" size="large" onClick={connect} loading={loading}>
-          Connect
-        </Button>
+        <Space>
+          <Button size="large" onClick={disconnect} disabled={!address}>
+            Disconnect
+          </Button>
+          <Button
+            type="primary"
+            size="large"
+            onClick={connect}
+            loading={loading}
+          >
+            Connect
+          </Button>
+        </Space>
       </Col>
     </Row>
   )
