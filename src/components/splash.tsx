@@ -38,7 +38,7 @@ export default function Splash({ open }: SplashProps) {
   return (
     <BaseSplash style={{ display }}>
       <Row gutter={[24, 24]} justify="center">
-        <Col style={{ marginTop: 'calc(50vh - 48px)' }}>
+        <Col style={{ marginTop: '35vh' }}>
           <Space direction="vertical" align="center">
             <Desig />
             <Spin size="large" indicator={<LoadingOutlined />} spinning />
