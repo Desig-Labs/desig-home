@@ -38,7 +38,7 @@ export default function Web3Provider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setLoading(true)
-    let retries = 5
+    let retries = 3
     const clear = () => {
       clearInterval(id)
       setLoading(false)
