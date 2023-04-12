@@ -1,9 +1,12 @@
+'use client'
+
 import { ReactNode, useEffect } from 'react'
 import { create } from 'zustand'
 
 import { Col, ConfigProvider, Layout, Row } from 'antd'
 
-import { generateTheme } from 'styles/theme'
+import { generateTheme } from 'static/styles/theme'
+import { useMount } from 'react-use'
 
 export enum Infix {
   xs = 0,
@@ -63,8 +66,17 @@ export const useTheme = () => {
 
 export default function UiProvider({ children }: { children: ReactNode }) {
   const { setWidth } = useWidth()
-  const { theme } = useTheme()
+  const { theme, setTheme } = useTheme()
 
+  useMount(() => {
+    const theme: Theme = window.matchMedia('(prefers-color-scheme: light)')
+      .matches
+      ? 'light'
+      : 'dark'
+    setTheme(theme)
+    const width = window.innerWidth
+    setWidth(width)
+  })
   // Listen theme events
   useEffect(() => {
     document.body.setAttribute('id', theme)

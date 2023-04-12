@@ -1,10 +1,17 @@
 /** @type {import('next').NextConfig} */
+const isGithubActions = process.env.GITHUB_ACTIONS || false
 
 const nextConfig = {
-  reactStrictMode: true,
+  experimental: {
+    appDir: true,
+  },
   output: 'export',
-  basePath: '/desig-next',
-  assetPrefix: '/desig-next/',
+}
+
+if (isGithubActions) {
+  const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+  nextConfig.assetPrefix = `/${repo}/`
+  nextConfig.basePath = `/${repo}`
 }
 
 module.exports = nextConfig

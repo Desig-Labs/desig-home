@@ -1,4 +1,6 @@
-import { useRouter } from 'next/router'
+'use client'
+
+import { useRouter } from 'next/navigation'
 
 import { Button, Col, Row, Typography } from 'antd'
 
@@ -10,14 +12,8 @@ export default function Welcome() {
       <Col span={24}>
         <Typography.Title>Welcome</Typography.Title>
       </Col>
-
       <Col span={24}>
-        <Button
-          type="primary"
-          size="large"
-          onClick={() => router.push('/')}
-          block
-        >
+        <Button size="large" onClick={() => router.push('/')} block>
           Back
         </Button>
       </Col>

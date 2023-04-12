@@ -11,20 +11,22 @@
     "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
+    "@sentre/antd-ionicon": "^2.0.4",
     "antd": "^5.4.2",
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.0.4",
+    "react-use": "^17.4.0",
     "zustand": "^4.3.7"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
-    "@types/react": "18.0.34",
+    "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "gh-pages": "^5.0.0",
-    "sass": "^1.62.0"
+    "sass": "^1.62.0",
+    "typescript": "5.0.4"
   }
 }

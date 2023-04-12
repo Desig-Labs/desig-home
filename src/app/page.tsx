@@ -1,8 +1,12 @@
-import { useRouter } from 'next/router'
+'use client'
+
+import { useRouter } from 'next/navigation'
 
 import { Button, Col, Row, Typography } from 'antd'
+import Header from './header'
+import Footer from './footer'
 
-export default function Home() {
+export default function App() {
   const router = useRouter()
 
   return (
