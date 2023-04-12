@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <Row className={styles.header} gutter={[24, 24]} wrap={false}>
       <Col flex="auto">
-        <Desig onClick={() => router.push('')} style={{ cursor: 'pointer' }} />
+        <Desig onClick={() => router.refresh()} style={{ cursor: 'pointer' }} />
       </Col>
       <Col>
         <Card bodyStyle={{ padding: '8px 12px' }}>
