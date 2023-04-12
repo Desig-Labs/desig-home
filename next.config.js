@@ -3,7 +3,8 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: 'https://tuphan-dn.github.io/desig-next',
+  basePath: '/desig-next',
+  assetPrefix: '/desig-next/',
 }
 
 module.exports = nextConfig
