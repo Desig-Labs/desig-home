@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "yarn build",
-    "deploy": "touch out/.nojekyll && gh-pages -d out -t true"
+    "predeploy": "yarn build && touch out/.nojekyll",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "antd": "^5.4.2",
