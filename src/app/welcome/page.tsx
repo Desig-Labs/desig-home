@@ -13,7 +13,7 @@ export default function Welcome() {
         <Typography.Title>Welcome</Typography.Title>
       </Col>
       <Col span={24}>
-        <Button size="large" onClick={() => router.push('')} block>
+        <Button size="large" onClick={() => router.push('/')} block>
           Back
         </Button>
       </Col>
