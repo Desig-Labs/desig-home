@@ -10,6 +10,7 @@ const nextConfig = {
 
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '')
+  nextConfig.assetPrefix = `/${repo}/`
   nextConfig.basePath = `/${repo}`
 }
 
