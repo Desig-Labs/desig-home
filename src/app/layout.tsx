@@ -5,8 +5,6 @@ import UiProvider from 'providers/ui.provider'
 import Header from './header'
 import Footer from './footer'
 
-import 'static/styles/index.scss'
-
 export const metadata: Metadata = {
   title: 'Desig',
   description: 'Desig x NextJS',

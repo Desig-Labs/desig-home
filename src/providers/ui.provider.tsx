@@ -2,11 +2,12 @@
 
 import { ReactNode, useEffect } from 'react'
 import { create } from 'zustand'
+import { useMount } from 'react-use'
 
 import { Col, ConfigProvider, Layout, Row } from 'antd'
 
+import 'static/styles/index.scss'
 import { generateTheme } from 'static/styles/theme'
-import { useMount } from 'react-use'
 
 export enum Infix {
   xs = 0,
