@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Row gutter={[24, 24]}>
       <Col span={24}>
-        <Typography.Text>Home</Typography.Text>
+        <Typography.Title>Desig x NextJS</Typography.Title>
       </Col>
       <Col span={12}>
         <Button
