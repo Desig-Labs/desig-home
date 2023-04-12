@@ -76,8 +76,6 @@ export default function UiProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener('resize', handleEvent)
   }, [setWidth])
 
-  console.log(theme)
-
   return (
     <ConfigProvider theme={generateTheme(theme)}>
       <Layout style={{ padding: 24, minHeight: '100vh' }}>
