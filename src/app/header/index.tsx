@@ -1,5 +1,7 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
+
 import { Card, Col, Row, Space, Typography } from 'antd'
 import Desig from 'components/desig'
 import IonIcon from '@sentre/antd-ionicon'
@@ -7,12 +9,12 @@ import IonIcon from '@sentre/antd-ionicon'
 import styles from './index.module.scss'
 
 export default function Header() {
-  const onHome = () => (window.location.href = window.location.origin)
+  const router = useRouter()
 
   return (
     <Row className={styles.header} gutter={[24, 24]} wrap={false}>
       <Col flex="auto">
-        <Desig onClick={onHome} style={{ cursor: 'pointer' }} />
+        <Desig onClick={() => router.push('/')} style={{ cursor: 'pointer' }} />
       </Col>
       <Col>
         <Card bodyStyle={{ padding: '8px 12px' }}>
