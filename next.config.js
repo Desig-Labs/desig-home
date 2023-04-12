@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  basePath: '/desig-next',
+  basePath: '/desig-next/',
 }
 
 module.exports = nextConfig
