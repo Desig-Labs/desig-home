@@ -11,8 +11,6 @@ if (isGithubActions) {
   basePath = `/${repo}`
 }
 
-console.log(assetPrefix, basePath)
-
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
