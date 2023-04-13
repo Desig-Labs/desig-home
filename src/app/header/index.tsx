@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 
 import { Card, Col, Row, Space, Typography } from 'antd'
 import Desig from 'components/desig'
-import IonIcon from '@sentre/antd-ionicon'
+import IonIcon from 'components/ionicon'
 
 import styles from './index.module.scss'
 

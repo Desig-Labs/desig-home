@@ -1,7 +1,7 @@
 'use client'
 
 import { Col, Row, Switch, Typography } from 'antd'
-import IonIcon from '@sentre/antd-ionicon'
+import IonIcon from 'components/ionicon'
 
 import styles from './index.module.scss'
 import { useTheme } from 'providers/ui.provider'
