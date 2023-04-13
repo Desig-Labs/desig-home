@@ -2,9 +2,10 @@ import { Metadata } from 'next'
 import Script from 'next/script'
 import { ReactNode } from 'react'
 
-import UiProvider from 'providers/ui.provider'
 import Header from './header'
 import Footer from './footer'
+import CsrProvider from 'providers/csr.provider'
+import UiProvider from 'providers/ui.provider'
 
 export const metadata: Metadata = {
   title: 'Desig',
@@ -21,11 +22,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
       </head>
       <body>
-        <UiProvider>
-          <Header />
-          {children}
-          <Footer />
-        </UiProvider>
+        <CsrProvider>
+          <UiProvider>
+            <Header />
+            {children}
+            <Footer />
+          </UiProvider>
+        </CsrProvider>
         <Script
           type="module"
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

@@ -3,7 +3,7 @@ import { useRouter } from 'next/navigation'
 
 import { Button, Col, Row, Typography } from 'antd'
 
-export default function App() {
+export default async function App() {
   const router = useRouter()
 
   return (

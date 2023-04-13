@@ -1,14 +1,12 @@
 'use client'
 import { ReactNode, useEffect } from 'react'
 import { create } from 'zustand'
-import { persist, createJSONStorage } from 'zustand/middleware'
-import { useMount } from 'react-use'
+import { persist, createJSONStorage, devtools } from 'zustand/middleware'
 
 import { Col, ConfigProvider, Layout, Row } from 'antd'
 
 import 'static/styles/index.scss'
 import { generateTheme } from 'static/styles/theme'
-import dynamic from 'next/dynamic'
 
 export enum Infix {
   xs = 0,
@@ -28,6 +26,11 @@ const getInfix = (width: number): Infix => {
   return Infix.xs
 }
 
+const getTheme = (): Theme => {
+  if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light'
+  return 'dark'
+}
+
 /**
  * Store
  */
@@ -41,17 +44,24 @@ export type UiStore = {
 }
 
 export const useUiStore = create<UiStore>()(
-  persist(
-    (set) => ({
-      infix: getInfix(0),
-      width: 0,
-      setWidth: (width: number) => set({ width, infix: getInfix(width) }),
-      theme: 'light',
-      setTheme: (theme: Theme) => set({ theme }),
-    }),
+  devtools(
+    persist(
+      (set) => ({
+        infix: getInfix(window.innerWidth),
+        width: window.innerWidth,
+        setWidth: (width: number) =>
+          set({ width, infix: getInfix(width) }, false, 'setWidth'),
+        theme: getTheme(),
+        setTheme: (theme: Theme) => set({ theme }, false, 'setTheme'),
+      }),
+      {
+        name: 'ui',
+        storage: createJSONStorage(() => sessionStorage),
+      },
+    ),
     {
       name: 'ui',
-      storage: createJSONStorage(() => sessionStorage),
+      enabled: process.env.NODE_ENV === 'development',
     },
   ),
 )
@@ -74,26 +84,10 @@ export const useTheme = () => {
  * Provider
  */
 
-const DynamicConfigProvider = dynamic(
-  () => import('antd').then(({ ConfigProvider }) => ConfigProvider),
-  {
-    ssr: false,
-  },
-)
-
 export default function UiProvider({ children }: { children: ReactNode }) {
   const { setWidth } = useWidth()
-  const { theme, setTheme } = useTheme()
+  const { theme } = useTheme()
 
-  useMount(() =>
-    setTheme(
-      theme ||
-        (window.matchMedia('(prefers-color-scheme: light)').matches
-          ? 'light'
-          : 'dark'),
-    ),
-  )
-  useMount(() => setWidth(window.innerWidth))
   // Listen theme events
   useEffect(() => {
     document.body.setAttribute('id', theme)
@@ -106,7 +100,7 @@ export default function UiProvider({ children }: { children: ReactNode }) {
   }, [setWidth])
 
   return (
-    <DynamicConfigProvider theme={generateTheme(theme)}>
+    <ConfigProvider theme={generateTheme(theme)}>
       <Layout style={{ padding: 24, minHeight: '100vh' }}>
         <Row gutter={[24, 24]} justify="center">
           <Col xs={24} md={22} xl={18}>
@@ -114,6 +108,6 @@ export default function UiProvider({ children }: { children: ReactNode }) {
           </Col>
         </Row>
       </Layout>
-    </DynamicConfigProvider>
+    </ConfigProvider>
   )
 }
