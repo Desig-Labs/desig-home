@@ -7,6 +7,7 @@ import { Col, ConfigProvider, Layout, Row } from 'antd'
 
 import 'static/styles/index.scss'
 import { generateTheme } from 'static/styles/theme'
+import { useWindowSize } from 'react-use'
 
 export enum Infix {
   xs = 0,
@@ -87,6 +88,7 @@ export const useTheme = () => {
 export default function UiProvider({ children }: { children: ReactNode }) {
   const { setWidth } = useWidth()
   const { theme } = useTheme()
+  const { width } = useWindowSize()
 
   // Listen theme events
   useEffect(() => {
@@ -94,10 +96,8 @@ export default function UiProvider({ children }: { children: ReactNode }) {
   }, [theme])
   // Listen window events
   useEffect(() => {
-    const handleEvent = () => setWidth(window.innerWidth)
-    window.addEventListener('resize', handleEvent)
-    return () => window.removeEventListener('resize', handleEvent)
-  }, [setWidth])
+    setWidth(width)
+  }, [width, setWidth])
 
   return (
     <ConfigProvider theme={generateTheme(theme)}>
