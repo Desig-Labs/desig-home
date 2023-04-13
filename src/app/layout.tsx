@@ -7,7 +7,7 @@ import Footer from './footer'
 
 export const metadata: Metadata = {
   title: 'Desig',
-  description: 'Desig x NextJS',
+  description: 'The Blockchain-Agnostic Multisig Solution',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

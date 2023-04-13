@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "predeploy": "yarn build && touch out/.nojekyll",
-    "deploy": "gh-pages -d out -t true"
+    "lint": "next lint"
   },
   "dependencies": {
     "@sentre/antd-ionicon": "^2.0.4",
@@ -25,7 +23,6 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
-    "gh-pages": "^5.0.0",
     "sass": "^1.62.0",
     "typescript": "5.0.4"
   }
