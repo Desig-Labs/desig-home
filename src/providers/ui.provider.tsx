@@ -1,12 +1,14 @@
 'use client'
 import { ReactNode, useEffect } from 'react'
 import { create } from 'zustand'
+import { persist, createJSONStorage } from 'zustand/middleware'
 import { useMount } from 'react-use'
 
 import { Col, ConfigProvider, Layout, Row } from 'antd'
 
 import 'static/styles/index.scss'
 import { generateTheme } from 'static/styles/theme'
+import dynamic from 'next/dynamic'
 
 export enum Infix {
   xs = 0,
@@ -38,13 +40,21 @@ export type UiStore = {
   setTheme: (theme: Theme) => void
 }
 
-export const useUiStore = create<UiStore>()((set) => ({
-  infix: getInfix(0),
-  width: 0,
-  setWidth: (width: number) => set({ width, infix: getInfix(width) }),
-  theme: 'light',
-  setTheme: (theme: Theme) => set({ theme }),
-}))
+export const useUiStore = create<UiStore>()(
+  persist(
+    (set) => ({
+      infix: getInfix(0),
+      width: 0,
+      setWidth: (width: number) => set({ width, infix: getInfix(width) }),
+      theme: 'light',
+      setTheme: (theme: Theme) => set({ theme }),
+    }),
+    {
+      name: 'ui',
+      storage: createJSONStorage(() => sessionStorage),
+    },
+  ),
+)
 
 /**
  * Hook
@@ -64,15 +74,23 @@ export const useTheme = () => {
  * Provider
  */
 
+const DynamicConfigProvider = dynamic(
+  () => import('antd').then(({ ConfigProvider }) => ConfigProvider),
+  {
+    ssr: false,
+  },
+)
+
 export default function UiProvider({ children }: { children: ReactNode }) {
   const { setWidth } = useWidth()
   const { theme, setTheme } = useTheme()
 
   useMount(() =>
     setTheme(
-      window.matchMedia('(prefers-color-scheme: light)').matches
-        ? 'light'
-        : 'dark',
+      theme ||
+        (window.matchMedia('(prefers-color-scheme: light)').matches
+          ? 'light'
+          : 'dark'),
     ),
   )
   useMount(() => setWidth(window.innerWidth))
@@ -88,7 +106,7 @@ export default function UiProvider({ children }: { children: ReactNode }) {
   }, [setWidth])
 
   return (
-    <ConfigProvider theme={generateTheme(theme)}>
+    <DynamicConfigProvider theme={generateTheme(theme)}>
       <Layout style={{ padding: 24, minHeight: '100vh' }}>
         <Row gutter={[24, 24]} justify="center">
           <Col xs={24} md={22} xl={18}>
@@ -96,6 +114,6 @@ export default function UiProvider({ children }: { children: ReactNode }) {
           </Col>
         </Row>
       </Layout>
-    </ConfigProvider>
+    </DynamicConfigProvider>
   )
 }
