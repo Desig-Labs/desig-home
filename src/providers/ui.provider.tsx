@@ -1,6 +1,5 @@
 'use client'
-
-import { ReactNode, useEffect, useMemo } from 'react'
+import { ReactNode, useEffect } from 'react'
 import { create } from 'zustand'
 import { useMount } from 'react-use'
 
@@ -68,14 +67,6 @@ export const useTheme = () => {
 export default function UiProvider({ children }: { children: ReactNode }) {
   const { setWidth } = useWidth()
   const { theme, setTheme } = useTheme()
-
-  const systemTheme = useMemo(() => {
-    const theme: Theme = window.matchMedia('(prefers-color-scheme: light)')
-      .matches
-      ? 'light'
-      : 'dark'
-    return theme
-  }, [])
 
   useMount(() => {
     const theme: Theme = window.matchMedia('(prefers-color-scheme: light)')
