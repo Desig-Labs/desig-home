@@ -13,4 +13,4 @@ jobs:
       - name: Checkout git
         uses: actions/checkout@v3
       - name: Deploy static to Cloudflare Pages
-        run: curl ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
+        run: curl -X POST ${{ secrets.CLOUDFLARE_PAGES_DEPLOY_HOOK }}
