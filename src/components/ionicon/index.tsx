@@ -28,4 +28,6 @@ const IonIcon = forwardRef<
   )
 })
 
+IonIcon.displayName = 'IonIcon'
+
 export default IonIcon
