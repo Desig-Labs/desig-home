@@ -68,15 +68,14 @@ export default function UiProvider({ children }: { children: ReactNode }) {
   const { setWidth } = useWidth()
   const { theme, setTheme } = useTheme()
 
-  useMount(() => {
-    const theme: Theme = window.matchMedia('(prefers-color-scheme: light)')
-      .matches
-      ? 'light'
-      : 'dark'
-    setTheme(theme)
-    const width = window.innerWidth
-    setWidth(width)
-  })
+  useMount(() =>
+    setTheme(
+      window.matchMedia('(prefers-color-scheme: light)').matches
+        ? 'light'
+        : 'dark',
+    ),
+  )
+  useMount(() => setWidth(window.innerWidth))
   // Listen theme events
   useEffect(() => {
     document.body.setAttribute('id', theme)
