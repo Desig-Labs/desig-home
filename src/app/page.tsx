@@ -9,7 +9,7 @@ export default function App() {
   return (
     <Row gutter={[24, 24]}>
       <Col span={24}>
-        <Typography.Title>Desig x NextJS</Typography.Title>
+        <Typography.Title>Desig</Typography.Title>
       </Col>
       <Col span={12}>
         <Button
