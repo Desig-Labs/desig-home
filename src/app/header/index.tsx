@@ -1,19 +1,30 @@
 'use client'
 import { useRouter } from 'next/navigation'
 
-import { Card, Col, Row, Space, Typography } from 'antd'
+import { Card, Col, Row, Space, Switch, Typography } from 'antd'
 import Brand from 'components/brand'
 import IonIcon from 'components/ionicon'
 
 import styles from './index.module.scss'
+import { useTheme } from 'providers/ui.provider'
 
 export default function Header() {
   const router = useRouter()
+  const { theme, setTheme } = useTheme()
 
   return (
-    <Row className={styles.header} gutter={[24, 24]} wrap={false}>
+    <Row
+      className={styles.header}
+      gutter={[12, 12]}
+      align="middle"
+      wrap={false}
+    >
       <Col flex="auto">
-        <Brand onClick={() => router.refresh()} style={{ cursor: 'pointer' }} />
+        <Brand
+          onClick={() => router.push('/')}
+          style={{ cursor: 'pointer' }}
+          theme={theme}
+        />
       </Col>
       <Col>
         <Card bodyStyle={{ padding: '8px 12px' }}>
@@ -31,6 +42,14 @@ export default function Header() {
             </Col>
           </Row>
         </Card>
+      </Col>
+      <Col>
+        <Switch
+          checked={theme === 'dark'}
+          onChange={(checked) => setTheme(checked ? 'dark' : 'light')}
+          unCheckedChildren={<IonIcon name="sunny-outline" />}
+          checkedChildren={<IonIcon name="moon-outline" />}
+        />
       </Col>
     </Row>
   )
