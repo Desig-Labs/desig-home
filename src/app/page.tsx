@@ -5,6 +5,7 @@ import { Button, Col, Row, Space, Typography } from 'antd'
 
 import { email } from 'configs/socials.constant'
 import Link from 'next/link'
+import { Ripple } from 'components/splash'
 
 export default async function App() {
   const router = useRouter()
@@ -30,11 +31,17 @@ export default async function App() {
             </Typography.Title>
           </Col>
           <Col span={24} style={{ marginTop: 128 }}>
-            <Link href="#pasd">
-              <Typography.Title level={5}>
-                👇 Prepare for the Moon
-              </Typography.Title>
-            </Link>
+            <Space>
+              <Ripple />
+              <Link
+                href="#pasd"
+                style={{ position: 'relative', left: -52, top: -6 }}
+              >
+                <Typography.Title level={5}>
+                  PREPARE FOR THE MOON 🌕
+                </Typography.Title>
+              </Link>
+            </Space>
           </Col>
         </Row>
       </Col>
