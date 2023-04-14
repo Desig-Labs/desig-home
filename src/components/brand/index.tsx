@@ -1,12 +1,15 @@
+'use client'
 import { CSSProperties, useEffect, useState } from 'react'
+
+import Image from 'next/image'
 
 import logo from './logo.svg'
 import light from './brand-in-light.svg'
 import dark from './brand-in-dark.svg'
 
-const brands: Record<string, string> = {
-  light: light.src,
-  dark: dark.src,
+const brands: Record<string, any> = {
+  light,
+  dark,
 }
 
 export type BrandProps = {
@@ -34,6 +37,14 @@ export default function Brand({
     )
   }, [])
 
-  const src = named ? brands[theme || system] : logo.src
-  return <img src={src} height={size} style={style} onClick={onClick} />
+  const src = named ? brands[theme || system] : logo
+  return (
+    <Image
+      alt="desig-brand"
+      src={src}
+      height={size}
+      style={style}
+      onClick={onClick}
+    />
+  )
 }
