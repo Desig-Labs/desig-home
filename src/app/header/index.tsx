@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation'
 
 import { Card, Col, Row, Space, Typography } from 'antd'
-import Desig from 'components/desig'
+import Brand from 'components/brand'
 import IonIcon from 'components/ionicon'
 
 import styles from './index.module.scss'
@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <Row className={styles.header} gutter={[24, 24]} wrap={false}>
       <Col flex="auto">
-        <Desig onClick={() => router.refresh()} style={{ cursor: 'pointer' }} />
+        <Brand onClick={() => router.refresh()} style={{ cursor: 'pointer' }} />
       </Col>
       <Col>
         <Card bodyStyle={{ padding: '8px 12px' }}>
