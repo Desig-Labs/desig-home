@@ -62,6 +62,13 @@ export default function Footer() {
             <Button
               size="small"
               type="text"
+              icon={<IonIcon name="mail" />}
+              href="mailto:hi@desig.io"
+              target="_blank"
+            />
+            <Button
+              size="small"
+              type="text"
               icon={<IonIcon name="logo-twitter" />}
               href="https://twitter.com/DesigLabs"
               target="_blank"
