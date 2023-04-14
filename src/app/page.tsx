@@ -78,7 +78,7 @@ export default async function App() {
           <div className={styles.gradient} />
         </div>
         <model-viewer
-          style={{ margin: 0, width: '100%', height: '75vh', borderRadius: 24 }}
+          style={{ margin: 0, width: '100%', height: '75vh' }}
           alt="Apollo's Spacesuit"
           src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
           shadow-intensity="1"
