@@ -32,7 +32,7 @@ export default async function App() {
           <Col span={24} style={{ marginTop: 128 }}>
             <Link href="#pasd">
               <Typography.Title level={5}>
-                Prepare for the Moon 👇
+                👇 Prepare for the Moon
               </Typography.Title>
             </Link>
           </Col>
