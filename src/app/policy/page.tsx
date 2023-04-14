@@ -1,3 +1,4 @@
+'use client'
 import { Col, Row, Typography } from 'antd'
 
 export default function Policy() {
