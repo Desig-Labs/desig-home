@@ -41,12 +41,11 @@ export default async function App() {
       <Col xs={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
         <model-viewer
           style={{ margin: 0, width: '100%', height: '75vh', borderRadius: 24 }}
-          alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
-          src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
-          environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr"
-          poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp"
+          alt="Apollo's Spacesuit"
+          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
           shadow-intensity="1"
           touch-action="pan-y"
+          camera-orbit="0deg 85deg 105%"
           camera-controls
           disable-pan
           disable-zoom
