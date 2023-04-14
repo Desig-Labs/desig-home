@@ -92,8 +92,8 @@ export default async function App() {
         />
       </Col>
       <Col id="desig-go" span={24} order={3}>
-        <Row gutter={[24, 128]}>
-          <Col span={24} style={{ textAlign: 'center' }}>
+        <Row gutter={[24, 24]}>
+          <Col span={24} style={{ textAlign: 'center', marginBottom: 96 }}>
             <Typography.Title level={1} type="secondary">
               LET'S CRAFT YOUR SPACESUITE{' '}
               <span style={{ color: 'white' }}>🧑‍🚀</span>
