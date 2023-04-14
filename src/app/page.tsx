@@ -38,7 +38,7 @@ const naviagtors = [
 export default async function App() {
   return (
     <Row gutter={[24, 128]}>
-      <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
+      <Col xs={24} md={12}>
         <Row gutter={[24, 24]}>
           <Col span={24}>
             <Space>
@@ -72,12 +72,12 @@ export default async function App() {
           </Col>
         </Row>
       </Col>
-      <Col xs={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
+      <Col xs={24} md={12}>
         <div className={styles['gradient-container']}>
           <div className={styles.gradient} />
         </div>
         <model-viewer
-          style={{ margin: 0, width: '100%', height: '75vh' }}
+          style={{ width: '100%', height: '75vh' }}
           alt="Apollo's Spacesuit"
           src="/Astronaut.glb"
           shadow-intensity="1"
@@ -90,7 +90,7 @@ export default async function App() {
           ar
         />
       </Col>
-      <Col id="desig-go" span={24} order={3}>
+      <Col id="desig-go" span={24}>
         <Row gutter={[24, 24]}>
           <Col span={24} style={{ textAlign: 'center', marginBottom: 96 }}>
             <Typography.Title level={1} type="secondary">
