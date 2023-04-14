@@ -39,7 +39,6 @@ const naviagtors = [
 export default async function App() {
   return (
     <Row gutter={[24, 128]}>
-      <div className={styles.galaxy}></div>
       <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
         <Row gutter={[24, 24]}>
           <Col span={24}>
@@ -75,6 +74,9 @@ export default async function App() {
         </Row>
       </Col>
       <Col xs={{ span: 24, order: 1 }} md={{ span: 12, order: 2 }}>
+        <div className={styles['gradient-container']}>
+          <div className={styles.gradient} />
+        </div>
         <model-viewer
           style={{ margin: 0, width: '100%', height: '75vh', borderRadius: 24 }}
           alt="Apollo's Spacesuit"
@@ -92,12 +94,10 @@ export default async function App() {
       <Col id="desig-go" span={24} order={3}>
         <Row gutter={[24, 128]}>
           <Col span={24} style={{ textAlign: 'center' }}>
-            <Space>
-              <Typography.Title level={1} type="secondary">
-                LET'S CRAFT YOUR SPACESUITE
-              </Typography.Title>
-              <Typography.Title level={1}>🧑‍🚀</Typography.Title>
-            </Space>
+            <Typography.Title level={1} type="secondary">
+              LET'S CRAFT YOUR SPACESUITE{' '}
+              <span style={{ color: 'white' }}>🧑‍🚀</span>
+            </Typography.Title>
           </Col>
           {naviagtors.map(({ title, url, description }, i) => (
             <Col key={i} xs={24} sm={12} xl={6}>
