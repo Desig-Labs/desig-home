@@ -7,6 +7,7 @@ import Brand from 'components/brand'
 
 import styles from './index.module.scss'
 import { useTheme } from 'providers/ui.provider'
+import { email, github, pitchdeck, twitter } from 'configs/socials.constant'
 
 export default function Footer() {
   const { theme } = useTheme()
@@ -64,21 +65,21 @@ export default function Footer() {
               size="small"
               type="text"
               icon={<IonIcon name="mail" />}
-              href="mailto:hi@desig.io"
+              href={email}
               target="_blank"
             />
             <Button
               size="small"
               type="text"
               icon={<IonIcon name="logo-twitter" />}
-              href="https://twitter.com/DesigLabs"
+              href={twitter}
               target="_blank"
             />
             <Button
               size="small"
               type="text"
               icon={<IonIcon name="logo-github" />}
-              href="https://github.com/Desig-Labs"
+              href={github}
               target="_blank"
             />
           </Space>
@@ -89,10 +90,7 @@ export default function Footer() {
           <Typography.Text type="secondary" strong>
             INFO
           </Typography.Text>
-          <Link
-            href="https://www.canva.com/design/DAFXv84yDsE/KAVpFvOMa7H-mNOGlJh3Ng/edit?utm_content=DAFXv84yDsE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-            target="_blank"
-          >
+          <Link href={pitchdeck} target="_blank">
             <Typography.Text>Pitch Deck</Typography.Text>
           </Link>
           <Link href="/policy">

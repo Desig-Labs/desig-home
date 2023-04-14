@@ -2,12 +2,13 @@
 import { ReactNode, useEffect } from 'react'
 import { create } from 'zustand'
 import { persist, createJSONStorage, devtools } from 'zustand/middleware'
+import { useWindowSize } from 'react-use'
 
 import { Col, ConfigProvider, Layout, Row } from 'antd'
 
 import 'static/styles/index.scss'
 import { generateTheme } from 'static/styles/theme'
-import { useWindowSize } from 'react-use'
+import { env } from 'configs/env'
 
 export enum Infix {
   xs = 0,
@@ -62,7 +63,7 @@ export const useUiStore = create<UiStore>()(
     ),
     {
       name: 'ui',
-      enabled: process.env.NODE_ENV === 'development',
+      enabled: env === 'development',
     },
   ),
 )

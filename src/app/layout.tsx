@@ -34,6 +34,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
           defer
         />
+        <Script
+          type="module"
+          src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
+        />
       </body>
     </html>
   )
