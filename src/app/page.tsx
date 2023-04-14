@@ -95,7 +95,7 @@ export default async function App() {
         <Row gutter={[24, 24]}>
           <Col span={24} style={{ textAlign: 'center', marginBottom: 96 }}>
             <Typography.Title level={1} type="secondary">
-              LET'S CRAFT YOUR SPACESUITE{' '}
+              LET&apos;S CRAFT YOUR SPACESUITE{' '}
               <span style={{ color: 'white' }}>🧑‍🚀</span>
             </Typography.Title>
           </Col>
