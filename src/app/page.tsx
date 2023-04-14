@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { Button, Col, Row, Space, Typography } from 'antd'
 
 import { email } from 'configs/socials.constant'
+import Link from 'next/link'
 
 export default async function App() {
   const router = useRouter()
@@ -14,8 +15,8 @@ export default async function App() {
         <Row gutter={[24, 24]}>
           <Col span={24}>
             <Space>
-              <Button>Coming Soon 🚀</Button>
-              <Button type="primary" href={email} target="_blank">
+              <Button size="large">Coming Soon 🚀</Button>
+              <Button type="primary" size="large" href={email} target="_blank">
                 Say Hi 👋
               </Button>
             </Space>
@@ -29,9 +30,11 @@ export default async function App() {
             </Typography.Title>
           </Col>
           <Col span={24} style={{ marginTop: 128 }}>
-            <Button size="large" href="#pasd">
-              Prepare for the Moon 👇
-            </Button>
+            <Link href="#pasd">
+              <Typography.Title level={5}>
+                Prepare for the Moon 👇
+              </Typography.Title>
+            </Link>
           </Col>
         </Row>
       </Col>
