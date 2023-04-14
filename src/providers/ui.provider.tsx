@@ -6,8 +6,8 @@ import { useWindowSize } from 'react-use'
 
 import { Col, ConfigProvider, Layout, Row } from 'antd'
 
-import 'static/styles/index.scss'
-import { generateTheme } from 'static/styles/theme'
+import 'styles/index.scss'
+import { generateTheme } from 'styles/theme'
 import { env } from 'configs/env'
 
 export enum Infix {

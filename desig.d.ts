@@ -6,3 +6,8 @@ declare namespace JSX {
     'model-viewer': any
   }
 }
+
+declare module '*.glb' {
+  const content: any
+  export default content
+}

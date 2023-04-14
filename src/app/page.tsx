@@ -6,7 +6,6 @@ import { Ripple } from 'components/splash'
 import { NavigationCard } from 'components/cards/navigation'
 
 import { email } from 'configs/socials.constant'
-
 import styles from './index.module.scss'
 
 const naviagtors = [
@@ -80,7 +79,7 @@ export default async function App() {
         <model-viewer
           style={{ margin: 0, width: '100%', height: '75vh' }}
           alt="Apollo's Spacesuit"
-          src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+          src="/Astronaut.glb"
           shadow-intensity="1"
           touch-action="pan-y"
           camera-orbit="0deg 85deg 105%"
