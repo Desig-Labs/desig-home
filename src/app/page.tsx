@@ -1,17 +1,45 @@
 'use client'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 import { Button, Col, Row, Space, Typography } from 'antd'
+import { Ripple } from 'components/splash'
+import { NavigationCard } from 'components/cards/navigation'
 
 import { email } from 'configs/socials.constant'
-import Link from 'next/link'
-import { Ripple } from 'components/splash'
+
+import styles from './index.module.scss'
+
+const naviagtors = [
+  {
+    title: 'Core',
+    url: 'https://www.npmjs.com/package/@desig/core',
+    description:
+      'Find in-depth information about Desig Core, which contains the main crypto algorithms for the protocol.',
+  },
+  {
+    title: 'Docs',
+    url: 'https://docs.desig.io/',
+    description:
+      'Learn about Desig in the well-explained document, or also find the whitepaper, and the yellowpaper.',
+  },
+  {
+    title: '@desig/web3',
+    url: 'https://web3.desig.io/',
+    description:
+      'Discover and deploy your projects on the blockchain-agnostic multisig solution with a comprehensive web3 library.',
+  },
+  {
+    title: 'Infrastructure',
+    url: 'http://infra.desig.io/',
+    description:
+      'Wanna become a validator, aka a contributor, aka a node in the Desig Infra? You can do it in seconds here!',
+  },
+]
 
 export default async function App() {
-  const router = useRouter()
-
   return (
-    <Row gutter={[24, 64]}>
+    <Row gutter={[24, 128]}>
+      <div className={styles.galaxy}></div>
       <Col xs={{ span: 24, order: 2 }} md={{ span: 12, order: 1 }}>
         <Row gutter={[24, 24]}>
           <Col span={24}>
@@ -23,7 +51,7 @@ export default async function App() {
             </Space>
           </Col>
           <Col span={24}>
-            <Typography.Title style={{ fontSize: 128 }}>Desig</Typography.Title>
+            <Typography.Title style={{ fontSize: 112 }}>Desig</Typography.Title>
           </Col>
           <Col span={24}>
             <Typography.Title type="secondary" style={{ fontSize: 36 }}>
@@ -34,8 +62,9 @@ export default async function App() {
             <Space>
               <Ripple />
               <Link
-                href="#pasd"
+                href="#desig-go"
                 style={{ position: 'relative', left: -52, top: -6 }}
+                scroll={false}
               >
                 <Typography.Title level={5}>
                   PREPARE FOR THE MOON 🌕
@@ -59,6 +88,27 @@ export default async function App() {
           auto-rotate
           ar
         />
+      </Col>
+      <Col id="desig-go" span={24} order={3}>
+        <Row gutter={[24, 128]}>
+          <Col span={24} style={{ textAlign: 'center' }}>
+            <Space>
+              <Typography.Title level={1} type="secondary">
+                LET'S CRAFT YOUR SPACESUITE
+              </Typography.Title>
+              <Typography.Title level={1}>🧑‍🚀</Typography.Title>
+            </Space>
+          </Col>
+          {naviagtors.map(({ title, url, description }, i) => (
+            <Col key={i} xs={24} sm={12} xl={6}>
+              <NavigationCard
+                title={title}
+                url={url}
+                description={description}
+              />
+            </Col>
+          ))}
+        </Row>
       </Col>
     </Row>
   )

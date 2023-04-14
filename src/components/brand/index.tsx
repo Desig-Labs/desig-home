@@ -1,12 +1,12 @@
-import { CSSProperties } from 'react'
+import { CSSProperties, useEffect, useState } from 'react'
 
 import logo from './logo.svg'
 import light from './brand-in-light.svg'
 import dark from './brand-in-dark.svg'
 
-const brands = {
-  light,
-  dark,
+const brands: Record<string, string> = {
+  light: light.src,
+  dark: dark.src,
 }
 
 export type BrandProps = {
@@ -14,7 +14,7 @@ export type BrandProps = {
   size?: number
   style?: CSSProperties
   named?: boolean
-  theme?: Theme
+  theme?: Theme | ''
 }
 
 export default function Brand({
@@ -22,8 +22,18 @@ export default function Brand({
   size = 24,
   style = {},
   named = true,
-  theme = 'light',
+  theme = '',
 }: BrandProps) {
-  const src = named ? brands[theme]?.src || light : logo.src
+  const [system, setSystem] = useState<Theme>('light')
+
+  useEffect(() => {
+    setSystem(
+      window.matchMedia('(prefers-color-scheme: light)').matches
+        ? 'light'
+        : 'dark',
+    )
+  }, [])
+
+  const src = named ? brands[theme || system] : logo.src
   return <img src={src} height={size} style={style} onClick={onClick} />
 }
