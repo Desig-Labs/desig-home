@@ -37,6 +37,7 @@ export default function Footer() {
               size="small"
               type="text"
               icon={<IonIcon name="logo-chrome" />}
+              disabled
             />
             <Button
               size="small"
@@ -86,8 +87,14 @@ export default function Footer() {
       <Col>
         <Space direction="vertical" align="end">
           <Typography.Text type="secondary" strong>
-            LEGAL
+            INFO
           </Typography.Text>
+          <Link
+            href="https://www.canva.com/design/DAFXv84yDsE/KAVpFvOMa7H-mNOGlJh3Ng/edit?utm_content=DAFXv84yDsE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+            target="_blank"
+          >
+            <Typography.Text>Pitch Deck</Typography.Text>
+          </Link>
           <Link href="/policy">
             <Typography.Text>Policy</Typography.Text>
           </Link>

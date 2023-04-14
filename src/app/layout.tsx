@@ -8,7 +8,7 @@ import CsrProvider from 'providers/csr.provider'
 import UiProvider from 'providers/ui.provider'
 
 export const metadata: Metadata = {
-  title: 'Desig',
+  title: 'Desig: The Blockchain-Agnostic Multisig Solution',
   description: 'The Blockchain-Agnostic Multisig Solution',
 }
 
