@@ -1,11 +1,12 @@
 'use client'
 import Link from 'next/link'
 
-import { Button, Col, Row, Space, Typography } from 'antd'
+import { Button, Card, Col, Row, Space, Typography } from 'antd'
 import { Ripple } from 'components/splash'
 import { NavigationCard } from 'components/cards/navigation'
+import IonIcon from 'components/ionicon'
 
-import { email } from 'configs/socials.constant'
+import { twitter } from 'configs/socials.constant'
 import styles from './index.module.scss'
 
 const naviagtors = [
@@ -43,8 +44,14 @@ export default async function App() {
           <Col span={24}>
             <Space>
               <Button size="large">Coming Soon 🚀</Button>
-              <Button type="primary" size="large" href={email} target="_blank">
-                Say Hi 👋
+              <Button
+                size="large"
+                type="primary"
+                icon={<IonIcon name="logo-twitter" />}
+                href={twitter}
+                target="_blank"
+              >
+                @DesigLabs
               </Button>
             </Space>
           </Col>

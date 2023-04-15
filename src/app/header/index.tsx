@@ -1,13 +1,13 @@
 'use client'
 import { useRouter } from 'next/navigation'
 
-import { Card, Col, Row, Space, Switch, Typography } from 'antd'
+import { Button, Col, Row, Switch } from 'antd'
 import Brand from 'components/brand'
 import IonIcon from 'components/ionicon'
 
 import styles from './index.module.scss'
 import { useTheme } from 'providers/ui.provider'
-import { twitter } from 'configs/socials.constant'
+import { email } from 'configs/socials.constant'
 
 export default function Header() {
   const router = useRouter()
@@ -28,18 +28,9 @@ export default function Header() {
         />
       </Col>
       <Col>
-        <Card bodyStyle={{ padding: '8px 12px' }}>
-          <Row gutter={[12, 12]}>
-            <Col span={24}>
-              <Typography.Link href={twitter} target="_blank">
-                <Space>
-                  <IonIcon name="logo-twitter" />
-                  @DesigLabs
-                </Space>
-              </Typography.Link>
-            </Col>
-          </Row>
-        </Card>
+        <Button type="text" href={email} target="_blank">
+          Say Hi to Us 👋
+        </Button>
       </Col>
       <Col>
         <Switch
