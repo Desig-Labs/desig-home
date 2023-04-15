@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 
-import { Button, Card, Col, Row, Space, Typography } from 'antd'
+import { Button, Col, Row, Space, Typography } from 'antd'
 import { Ripple } from 'components/splash'
 import { NavigationCard } from 'components/cards/navigation'
 import IonIcon from 'components/ionicon'
