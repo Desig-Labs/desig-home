@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently --names DEV,LINT -c cyan,yellow 'next dev' 'yarn lint:watch'",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:watch": "nodemon --watch src --ext ts,tsx --exec 'next lint'"
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
@@ -23,8 +24,13 @@
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "concurrently": "^8.0.1",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "nodemon": "^2.0.22",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
     "sass": "^1.62.0",
