@@ -12,24 +12,30 @@ export default function Policy() {
       <Col span={24}>
         <Content
           components={{
-            p: (props: ParagraphProps) => <Typography.Paragraph {...props} />,
+            p: (props: ParagraphProps) => (
+              <Typography.Paragraph {...props} className="reset" />
+            ),
             h1: (props: TitleProps) => (
-              <Typography.Title {...props} level={1} />
+              <Typography.Title {...props} level={1} className="reset" />
             ),
             h2: (props: TitleProps) => (
-              <Typography.Title {...props} level={2} />
+              <Typography.Title {...props} level={2} className="reset" />
             ),
             h3: (props: TitleProps) => (
-              <Typography.Title {...props} level={3} />
+              <Typography.Title {...props} level={3} className="reset" />
             ),
             h4: (props: TitleProps) => (
-              <Typography.Title {...props} level={4} />
+              <Typography.Title {...props} level={4} className="reset" />
             ),
             h5: (props: TitleProps) => (
-              <Typography.Title {...props} level={5} />
+              <Typography.Title {...props} level={5} className="reset" />
             ),
-            ul: (props: TextProps) => <Typography.Text {...props} />,
-            ol: (props: any) => <Typography.Text {...props} />,
+            ul: (props: TextProps) => (
+              <Typography.Text {...props} className="reset" />
+            ),
+            ol: (props: any) => (
+              <Typography.Text {...props} className="reset" />
+            ),
           }}
         />
       </Col>
