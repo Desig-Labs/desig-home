@@ -29,8 +29,9 @@ const getInfix = (width: number): Infix => {
 }
 
 const getTheme = (): Theme => {
-  if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light'
-  return 'dark'
+  return 'light'
+  // if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light'
+  // return 'dark'
 }
 
 /**
