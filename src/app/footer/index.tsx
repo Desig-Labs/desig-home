@@ -7,7 +7,14 @@ import Brand from 'components/brand'
 
 import styles from './index.module.scss'
 import { useTheme } from 'providers/ui.provider'
-import { email, github, pitchdeck, twitter } from 'configs/socials.constant'
+import {
+  chromestore,
+  email,
+  github,
+  pitchdeck,
+  twitter,
+  youtube,
+} from 'configs/socials.constant'
 
 export default function Footer() {
   const { theme } = useTheme()
@@ -38,7 +45,8 @@ export default function Footer() {
               size="small"
               type="text"
               icon={<IonIcon name="logo-chrome" />}
-              disabled
+              href={chromestore}
+              target="_blank"
             />
             <Button
               size="small"
@@ -64,8 +72,8 @@ export default function Footer() {
             <Button
               size="small"
               type="text"
-              icon={<IonIcon name="mail" />}
-              href={email}
+              icon={<IonIcon name="logo-youtube" />}
+              href={youtube}
               target="_blank"
             />
             <Button
@@ -83,6 +91,20 @@ export default function Footer() {
               target="_blank"
             />
           </Space>
+          <Space style={{ marginRight: -4 }}>
+            <Button
+              size="small"
+              type="text"
+              icon={<IonIcon name="logo-discord" />}
+              disabled
+            />
+            <Button
+              size="small"
+              type="text"
+              icon={<IonIcon name="logo-telegram" />}
+              disabled
+            />
+          </Space>
         </Space>
       </Col>
       <Col>
@@ -95,6 +117,9 @@ export default function Footer() {
           </Link>
           <Link href="/policy">
             <Typography.Text>Policy</Typography.Text>
+          </Link>
+          <Link href={email} target="_blank">
+            <Typography.Text>Contact Us</Typography.Text>
           </Link>
         </Space>
       </Col>
