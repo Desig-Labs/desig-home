@@ -20,16 +20,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap"
           rel="stylesheet"
         />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-R91HV8NWFY"
-          strategy="afterInteractive"
-        />
-        <Script id="ga">
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-R91HV8NWFY');`}
-        </Script>
       </head>
       <body>
         <CsrProvider>
@@ -42,13 +32,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Script
           type="module"
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-          defer
+          async
         />
         <Script
           type="module"
           src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
-          defer
+          async
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-R91HV8NWFY"
+          strategy="afterInteractive"
+        />
+        <Script id="ga">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R91HV8NWFY');`}
+        </Script>
       </body>
     </html>
   )
