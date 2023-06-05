@@ -11,6 +11,8 @@ import {
   chromestore,
   email,
   github,
+  googlestore,
+  mirror,
   pitchdeck,
   twitter,
   youtube,
@@ -58,7 +60,8 @@ export default function Footer() {
               size="small"
               type="text"
               icon={<IonIcon name="logo-android" />}
-              disabled
+              href={googlestore}
+              target="_blank"
             />
           </Space>
         </Space>
@@ -92,6 +95,13 @@ export default function Footer() {
             />
           </Space>
           <Space style={{ marginRight: -4 }}>
+            <Button
+              size="small"
+              type="text"
+              icon={<IonIcon name="logo-mirror" />}
+              href={mirror}
+              target="_blank"
+            />
             <Button
               size="small"
               type="text"
