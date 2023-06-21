@@ -8,6 +8,7 @@ import Brand from 'components/brand'
 import styles from './index.module.scss'
 import { useTheme } from 'providers/ui.provider'
 import {
+  applestore,
   chromestore,
   email,
   github,
@@ -54,7 +55,8 @@ export default function Footer() {
               size="small"
               type="text"
               icon={<IonIcon name="logo-apple" />}
-              disabled
+              href={applestore}
+              target="_blank"
             />
             <Button
               size="small"

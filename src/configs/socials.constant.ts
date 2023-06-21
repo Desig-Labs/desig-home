@@ -11,3 +11,4 @@ export const chromestore =
   'https://chrome.google.com/webstore/detail/desig-wallet/panpgppehdchfphcigocleabcmcgfoca?hl=en-US'
 export const googlestore =
   'https://play.google.com/store/apps/details?id=io.desig.app&hl=en'
+export const applestore = 'https://apps.apple.com/app/desig-wallet/id6450106028'
