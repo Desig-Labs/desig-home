@@ -1,0 +1,19 @@
+.install-app {
+  background-image: url('../../static/images/install-app-bg.svg');
+  width: 100%;
+  aspect-ratio: 16/5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+  position: relative;
+}
+
+.content {
+  margin-top: -24px;
+}
+
+@media (max-width: 767px) {
+  .content {
+    margin-top: 24px !important;
+  }
+}
