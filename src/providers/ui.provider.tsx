@@ -4,7 +4,7 @@ import { create } from 'zustand'
 import { persist, createJSONStorage, devtools } from 'zustand/middleware'
 import { useWindowSize } from 'react-use'
 
-import { Col, ConfigProvider, Layout, Row } from 'antd'
+import { ConfigProvider, Layout } from 'antd'
 
 import 'styles/index.scss'
 import { generateTheme } from 'styles/theme'
@@ -102,12 +102,8 @@ export default function UiProvider({ children }: { children: ReactNode }) {
 
   return (
     <ConfigProvider theme={generateTheme(theme)}>
-      <Layout style={{ padding: 24, minHeight: '100vh' }}>
-        <Row gutter={[24, 24]} justify="center">
-          <Col xs={24} md={22} xl={18}>
-            {children}
-          </Col>
-        </Row>
+      <Layout style={{ minHeight: '100vh', overflow: 'hidden' }}>
+        {children}
       </Layout>
     </ConfigProvider>
   )
