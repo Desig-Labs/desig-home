@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 
 import { Button, Col, Row, Space, Typography } from 'antd'

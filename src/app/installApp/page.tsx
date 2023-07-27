@@ -1,3 +1,4 @@
+'use client'
 import { Card, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import Image from 'next/image'
