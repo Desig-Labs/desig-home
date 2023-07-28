@@ -17,10 +17,16 @@ const Banner = () => {
           <Row gutter={[24, 24]}>
             <Col span={24}>
               <Space>
-                <Button size="large">Coming Soon 🚀</Button>
                 <Button
                   size="large"
                   type="primary"
+                  icon={<IonIcon name="arrow-down-circle-outline" />}
+                  href="#desig-install"
+                >
+                  Download
+                </Button>
+                <Button
+                  size="large"
                   icon={<IonIcon name="logo-twitter" />}
                   href={twitter}
                   target="_blank"
@@ -42,15 +48,15 @@ const Banner = () => {
             <Col span={24} style={{ marginTop: 128 }}>
               <Space>
                 <Ripple />
-                <Link
+                <Button
+                  type="ghost"
                   href="#desig-go"
                   style={{ position: 'relative', left: -52, top: -6 }}
-                  scroll={false}
                 >
                   <Typography.Title level={5}>
                     PREPARE FOR THE MOON 🌕
                   </Typography.Title>
-                </Link>
+                </Button>
               </Space>
             </Col>
           </Row>

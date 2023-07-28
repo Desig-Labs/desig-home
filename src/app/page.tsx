@@ -39,7 +39,7 @@ export default async function App() {
       <Col span={24}>
         <Banner />
       </Col>
-      <Col span={24}>
+      <Col id="desig-install" span={24}>
         <InstallApp />
       </Col>
       <Col id="desig-go" span={24}>
