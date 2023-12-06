@@ -1,5 +1,28 @@
 @import '~antd/dist/reset.css';
+@import './var.scss';
 
 .ant-typography:not(.reset) {
   margin: 0 !important;
 }
+
+//Button
+.ant-btn {
+  font-weight: 700;
+  background-color: transparent !important;
+  border: 1px solid $PRIMARY !important;
+}
+
+.ant-btn-primary {
+  background-color: $PRIMARY;
+  font-weight: 700;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+//Card
+.ant-card {
+  background: $CARD_FILL !important;
+  border-radius: 32px !important;
+  box-shadow: none !important;
+}
+

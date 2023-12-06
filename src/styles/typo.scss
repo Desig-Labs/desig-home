@@ -1,3 +1,32 @@
 .caption {
-  font-size: 12px;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+
+.gradient-text {
+  font-size: 52px;
+  background: linear-gradient(270deg, #FAE2B6 -5.65%, #EF90B8 57.47%, #B684F0 90.18%) ;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important; 
+}
+
+.ant-typography {
+  font-weight: 500;
+}
+
+h1.ant-typography {
+  font-weight: 900 !important;
+}
+
+h2.ant-typography {
+  font-weight: 700 !important;
+}
+
+h3.ant-typography {
+  font-weight: 700 !important;
+}
+
+h4.ant-typography {
+  font-weight: 700 !important;
 }

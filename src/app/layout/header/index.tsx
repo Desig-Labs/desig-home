@@ -1,18 +1,15 @@
 'use client'
 import { useRouter } from 'next/navigation'
 
-import { Button, Col, Row, Switch } from 'antd'
+import { Button, Col, Row, Segmented } from 'antd'
 import Brand from 'components/brand'
 import IonIcon from 'components/ionicon'
 import MaxWidthLayout from 'components/maxWidthLayout'
 
 import styles from './index.module.scss'
-import { useTheme } from 'providers/ui.provider'
-import { email } from 'configs/socials.constant'
 
 export default function Header() {
   const router = useRouter()
-  const { theme, setTheme } = useTheme()
 
   return (
     <MaxWidthLayout>
@@ -22,26 +19,41 @@ export default function Header() {
         align="middle"
         wrap={false}
         style={{ padding: 24 }}
+        justify="space-between"
       >
-        <Col flex="auto">
+        <Col>
           <Brand
             onClick={() => router.push('/')}
             style={{ cursor: 'pointer' }}
-            theme={theme}
           />
         </Col>
         <Col>
-          <Button type="text" href={email} target="_blank">
-            Say Hi to Us 👋
+          <Segmented
+            className="tab-bar-segmented"
+            options={[
+              {
+                label: 'Wallet',
+                value: 'Wallet',
+              },
+              {
+                label: 'Service',
+                value: 'Service',
+              },
+              {
+                label: 'Docs',
+                value: 'Docs',
+              },
+              {
+                label: 'Blog',
+                value: 'Blog',
+              },
+            ]}
+          />
+        </Col>
+        <Col>
+          <Button className="ant-btn" icon={<IonIcon name="key-outline" />}>
+            Get Early Access
           </Button>
-        </Col>
-        <Col>
-          <Switch
-            checked={theme === 'dark'}
-            onChange={(checked) => setTheme(checked ? 'dark' : 'light')}
-            unCheckedChildren={<IonIcon name="sunny-outline" />}
-            checkedChildren={<IonIcon name="moon-outline" />}
-          />
         </Col>
       </Row>
     </MaxWidthLayout>

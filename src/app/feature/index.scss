@@ -1,0 +1,48 @@
+.gradient-feature{
+    font-size: 52px !important;
+    background: linear-gradient(266deg, #FAE2B6 17.15%, #EF90B8 60.53%, #B684F0 86.55%);
+}
+
+$item: item1 item2 item3 item4 item5 item6 item7 item8;
+
+.grid-layout{
+    display: grid;
+    grid-template-areas: 
+        "a b c"
+        "d b c"
+        "d e c"
+        "d e f"
+        "g g h";
+}
+
+
+.item1 {
+   grid-area: a;
+   height: 212px ;
+}
+.item2 {
+   grid-area: b;
+   height: 319px ;
+}
+.item3 {
+   grid-area: c;
+   height: 426px;
+}
+.item4 {
+   grid-area: d;
+   height: 426px;
+}
+.item5 {
+   grid-area: e;
+   height: 319px;
+}
+.item6 {
+   grid-area: f;
+   height: 212px;
+}
+.item7 {
+   grid-area: g;
+}
+.item8 {
+   grid-area: h
+}

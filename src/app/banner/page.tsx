@@ -1,85 +1,75 @@
 'use client'
 
 import { Button, Col, Row, Space, Typography } from 'antd'
-import { Ripple } from 'components/splash'
-import IonIcon from 'components/ionicon'
 import MaxWidthLayout from 'components/maxWidthLayout'
+import Image from 'next/image'
 
-import { twitter } from 'configs/socials.constant'
-import styles from '../index.module.scss'
+import './index.scss'
+import IonIcon from 'components/ionicon'
+import Line from 'static/images/line.svg'
+import { ScrollChainList } from 'app/layout/ChainList'
+import Spline from '@splinetool/react-spline'
 
 const Banner = () => {
   return (
-    <MaxWidthLayout>
-      <Row gutter={[24, 24]} align="middle">
-        <Col xs={24} md={12}>
+    <Row>
+      <Col span={24}>
+        <Image
+          src={Line}
+          alt="line"
+          style={{ position: 'absolute', top: -120 }}
+        />
+      </Col>
+      <Col span={24}>
+        <MaxWidthLayout>
           <Row gutter={[24, 24]}>
-            <Col span={24}>
-              <Space>
-                <Button
-                  size="large"
-                  type="primary"
-                  icon={<IonIcon name="arrow-down-circle-outline" />}
-                  href="#desig-install"
-                >
-                  Download
-                </Button>
-                <Button
-                  size="large"
-                  icon={<IonIcon name="logo-twitter" />}
-                  href={twitter}
-                  target="_blank"
-                >
-                  @DesigLabs
-                </Button>
-              </Space>
+            <Col xs={24} md={12}>
+              <Row gutter={[16, 16]}>
+                <Col span={24}>
+                  <Space direction="vertical">
+                    <Typography.Title
+                      style={{ fontSize: 70, lineHeight: 'normal' }}
+                    >
+                      <span className="gradient-text gradient-banner-1">
+                        Multi-sig
+                      </span>{' '}
+                      meets
+                    </Typography.Title>
+                    <Typography.Title className="gradient-text gradient-banner-2">
+                      Multi-chain
+                    </Typography.Title>
+                  </Space>
+                </Col>
+                <Col span={24}>
+                  <Typography.Text type="secondary" style={{ fontSize: 20 }}>
+                    A holistic solution to{' '}
+                    <span className="italic-text">Wallet Security</span>
+                  </Typography.Text>
+                </Col>
+                <Col span={24} style={{ marginTop: 28 }}>
+                  <Button
+                    size="large"
+                    className="ant-btn-primary"
+                    icon={<IonIcon name="key-outline" />}
+                  >
+                    Get Early Access
+                  </Button>
+                </Col>
+              </Row>
             </Col>
-            <Col span={24}>
-              <Typography.Title style={{ fontSize: 112 }}>
-                Desig
-              </Typography.Title>
-            </Col>
-            <Col span={24}>
-              <Typography.Title type="secondary" style={{ fontSize: 36 }}>
-                The blockchain-agnostic multisig solution.
-              </Typography.Title>
-            </Col>
-            <Col span={24} style={{ marginTop: 128 }}>
-              <Space>
-                <Ripple />
-                <Button
-                  type="ghost"
-                  href="#desig-go"
-                  style={{ position: 'relative', left: -52, top: -6 }}
-                >
-                  <Typography.Title level={5}>
-                    PREPARE FOR THE MOON 🌕
-                  </Typography.Title>
-                </Button>
-              </Space>
+            <Col xs={24} md={12}>
+              <Spline
+                style={{ height: 350, width: '100%' }}
+                scene="https://prod.spline.design/ggwuYlnJDuOzvQvE/scene.splinecode"
+              />
             </Col>
           </Row>
-        </Col>
-        <Col xs={24} md={12}>
-          <div className={styles['gradient-container']}>
-            <div className={styles.gradient} />
-          </div>
-          <model-viewer
-            style={{ width: '100%', height: '75vh' }}
-            alt="Apollo's Spacesuit"
-            src="/Astronaut.glb"
-            shadow-intensity="1"
-            touch-action="pan-y"
-            camera-orbit="0deg 85deg 105%"
-            camera-controls
-            disable-pan
-            disable-zoom
-            auto-rotate
-            ar
-          />
-        </Col>
-      </Row>
-    </MaxWidthLayout>
+        </MaxWidthLayout>
+      </Col>
+      <Col style={{ marginTop: 64 }} span={24}>
+        <ScrollChainList />
+      </Col>
+    </Row>
   )
 }
 

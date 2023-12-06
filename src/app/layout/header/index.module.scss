@@ -2,3 +2,11 @@
   padding-bottom: 24px;
   margin-bottom: 64px;
 }
+
+.tab-bar-segmented {
+  .ant-segmented-item{
+    .ant-segmented-item-selected{
+      background-color: none !important;
+    }
+  }
+}
