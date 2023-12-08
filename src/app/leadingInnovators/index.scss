@@ -1,7 +1,12 @@
 .gradient-text-leading{
     line-height: 1.3;
-    font-size: 52px !important;
     background: linear-gradient(266deg, #FAE2B6 5.93%, #EF90B8 44.82%, #B684F0 68.16%);
+}
+
+.icon-award{
+    padding-top: 30px;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 .animation-card{
@@ -17,5 +22,20 @@
             width: 320px;
         }
         
+    }
+}
+@media screen and (max-width: 991.9px) {
+    .animation-card{
+        animation-name: none;
+    }
+    .icon-award{
+        padding-top: 0px;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 575.9px) {
+    .icon-award{
+        padding-top: 0px;
+        width: 100%;
     }
 }

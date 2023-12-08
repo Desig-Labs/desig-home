@@ -1,8 +1,13 @@
+import { useMemo, useState } from 'react'
+
 import Spline from '@splinetool/react-spline'
 import Card from 'antd/es/card/Card'
-import { Col, Row, Space, Typography } from 'antd'
+import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
-import { useState } from 'react'
+
+import { useWidth } from 'providers/ui.provider'
+
+import './index.scss'
 
 const LIST_PRIZES = [
   {
@@ -33,6 +38,14 @@ const LIST_PRIZES = [
 export const PrizeCard = () => {
   const [selectedItem, setSelectedItem] = useState(0)
 
+  const { width } = useWidth()
+
+  const isMobile = useMemo(() => {
+    let result = true
+    if (width > 992) result = false
+    return result
+  }, [width])
+
   const mouseHover = (index: number) => {
     setSelectedItem(index)
   }
@@ -41,36 +54,46 @@ export const PrizeCard = () => {
     setSelectedItem(0)
   }
   return (
-    <MaxWidthLayout>
-      <Row wrap={false} gutter={[12, 12]} justify="center">
-        {LIST_PRIZES.map(({ icon, title, descriptions }, idx) => (
-          <Col key={idx}>
-            <Card
-              className={`ant-card-bordered ${
-                selectedItem === idx
-                  ? 'active-card animation-card'
-                  : 'un-active-card'
-              } `}
-              onMouseOver={() => mouseHover(idx)}
-              onMouseLeave={mouseLeave}
-            >
-              <Row gutter={[24, 24]} justify="center">
-                <Col style={{ marginTop: 80 }}>
-                  <Spline style={{ height: 160, width: 160 }} scene={icon} />
-                </Col>
-                <Col>
-                  <Space size={12} direction="vertical">
+    <Row wrap={isMobile} gutter={[12, 12]} justify="center" align="middle">
+      {LIST_PRIZES.map(({ icon, title, descriptions }, idx) => (
+        <Col
+          span={isMobile ? 24 : 'auto'}
+          key={idx}
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          <Card
+            className={`ant-card-bordered ${
+              selectedItem === idx
+                ? 'active-card animation-card'
+                : 'un-active-card'
+            } `}
+            onMouseOver={() => mouseHover(idx)}
+            onMouseLeave={mouseLeave}
+          >
+            <Row gutter={[24, 24]} justify={'center'}>
+              <Col className="icon-award">
+                <Spline scene={icon} />
+              </Col>
+              <Col span={24}>
+                <Row gutter={[12, 12]} justify="center" align="middle">
+                  <Col span={24}>
                     <Typography.Title level={3}>{title}</Typography.Title>
-                    <Typography style={{ opacity: 0.7 }}>
+                  </Col>
+                  <Col style={{ textAlign: 'center' }}>
+                    <Typography.Text
+                      style={{
+                        opacity: 0.7,
+                      }}
+                    >
                       {descriptions}
-                    </Typography>
-                  </Space>
-                </Col>
-              </Row>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </MaxWidthLayout>
+                    </Typography.Text>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Card>
+        </Col>
+      ))}
+    </Row>
   )
 }

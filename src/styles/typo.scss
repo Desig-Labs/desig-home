@@ -3,8 +3,14 @@
   font-weight: 400 !important;
 }
 
+.description {
+  font-size: 20px !important;
+  @media (max-width: 767.9px) {
+    font-size: 16px !important;
+  }
+}
+
 .gradient-text {
-  font-size: 52px;
   background: linear-gradient(270deg, #FAE2B6 -5.65%, #EF90B8 57.47%, #B684F0 90.18%) ;
   background-clip: text !important;
   -webkit-background-clip: text !important;
@@ -16,15 +22,26 @@
 }
 
 h1.ant-typography {
-  font-weight: 900 !important;
+  font-size: 70px !important;
+  font-weight: 700 !important;
+  @media (max-width: 767.9px) {
+    font-size: 40px !important;
+  }
 }
 
 h2.ant-typography {
+  font-size: 52px !important;
   font-weight: 700 !important;
+  @media (max-width: 767.9px) {
+    font-size: 24px !important;
+  }
 }
 
 h3.ant-typography {
   font-weight: 700 !important;
+  @media (max-width: 767.9px) {
+    font-size: 16px !important;
+  }
 }
 
 h4.ant-typography {
