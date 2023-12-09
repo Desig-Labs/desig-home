@@ -1,3 +1,5 @@
+'use client'
+
 import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 
@@ -63,12 +65,15 @@ export const Feature = () => {
         <Col>
           <Row gutter={[16, 16]} justify="center">
             <Col>
-              <Typography.Title className="gradient-text gradient-feature">
+              <Typography.Title
+                level={2}
+                className="gradient-text gradient-feature"
+              >
                 Secure. Private. Effortless.
               </Typography.Title>
             </Col>
             <Col>
-              <Typography.Text style={{ fontSize: 20 }} type="secondary">
+              <Typography.Text className="description" type="secondary">
                 Harmonizing proven technology and user-centric design for
                 multi-sig excellence.
               </Typography.Text>
@@ -78,7 +83,7 @@ export const Feature = () => {
         <Col>
           <Row gutter={[24, 24]} justify="center" className="grid-layout">
             {FEATURES.map(({ title, icon, index }) => (
-              <Col key={index} className={`item${index}`}>
+              <Col key={index} className={`item-grid item${index}`}>
                 <FeatureCard title={title} icon={icon} />
               </Col>
             ))}

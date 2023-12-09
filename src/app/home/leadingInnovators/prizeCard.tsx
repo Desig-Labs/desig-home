@@ -1,9 +1,10 @@
+'use client'
+
 import { useMemo, useState } from 'react'
 
 import Spline from '@splinetool/react-spline'
 import Card from 'antd/es/card/Card'
 import { Col, Row, Typography } from 'antd'
-import MaxWidthLayout from 'components/maxWidthLayout'
 
 import { useWidth } from 'providers/ui.provider'
 
