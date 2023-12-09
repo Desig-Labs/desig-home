@@ -8,7 +8,7 @@ const LIST_JOURNEY = [
   {
     title: 'Effortless Multichain Management',
     desc: 'Seamlessly grow and manage shared funds across diverse blockchains in one simple app.',
-    bg: '/journey/bg-effortless.png',
+    bg: '/journey/bg-efforless.png',
   },
   {
     title: 'Zero-Cost Transactions',
@@ -23,12 +23,12 @@ const LIST_JOURNEY = [
   {
     title: 'Mobile-First Accessibility',
     desc: 'Your finances are at your fingertips with our intuitive mobile app designed for your convenience.',
-    bg: '/fortress/bg-mobile.png',
+    bg: '/journey/bg-mobile.png',
   },
   {
     title: 'Stay in the Know, Anywhere',
     desc: 'Get instant, real-time alerts on all multi-sig activities, whether you&apos;re on your mobile or PC.',
-    bg: '/journey/bg-stay.png',
+    bg: '/journey/bg-stay-in.png',
   },
   {
     title: 'Security First',

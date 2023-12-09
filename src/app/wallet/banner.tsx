@@ -2,15 +2,20 @@
 import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import IonIcon from 'components/ionicon'
+import Spline from '@splinetool/react-spline'
 
 import './index.scss'
-import Spline from '@splinetool/react-spline'
 
 const Banner = () => {
   return (
     <MaxWidthLayout>
-      <Row gutter={[16, 16]} align="middle">
-        <Col xs={24} md={14}>
+      <Row
+        className="responsive-item"
+        gutter={[0, 16]}
+        align="middle"
+        justify="space-between"
+      >
+        <Col xs={24} md={12}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <Space direction="vertical">
@@ -35,8 +40,11 @@ const Banner = () => {
             </Col>
           </Row>
         </Col>
-        <Col xs={24} md={10}>
-          <Spline scene="https://prod.spline.design/8qIm7MTcLWdCAzsw/scene.splinecode" />
+        <Col xs={24} md={12}>
+          <Spline
+            style={{ height: '431px' }}
+            scene="https://prod.spline.design/BQZqYlKPGsOOI9nr/scene.splinecode"
+          />
         </Col>
       </Row>
     </MaxWidthLayout>

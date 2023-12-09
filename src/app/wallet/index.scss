@@ -1,0 +1,16 @@
+.journey-card{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100%;
+    width: 490px;
+    padding: 40px 32px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+@media (max-width: 786px) {
+    .responsive-item{
+        flex-direction: column-reverse !important;
+    }
+  }

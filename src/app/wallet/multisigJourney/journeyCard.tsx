@@ -1,5 +1,5 @@
 'use client'
-import { Card, Col, Row, Typography } from 'antd'
+import { Col, Row, Typography } from 'antd'
 
 type JourneyCardProps = {
   title: string
@@ -9,22 +9,19 @@ type JourneyCardProps = {
 
 export default function JourneyCard({ title, desc, bg }: JourneyCardProps) {
   return (
-    <Card
-      bodyStyle={{
-        width: 490,
-        padding: '40px 32px',
-        backgroundSize: 'cover',
-        background: `url(${bg})`,
+    <Row
+      gutter={[0, 24]}
+      className="journey-card"
+      style={{
+        backgroundImage: `url(${bg})`,
       }}
-      style={{ height: '100%' }}
-      className="ant-card"
     >
-      <Row gutter={[0, 24]}>
-        <Col span={24}>
-          <Typography.Title level={3}>{title}</Typography.Title>
-        </Col>
-        <Col span={24}>{desc}</Col>
-      </Row>
-    </Card>
+      <Col span={24}>
+        <Typography.Title level={3}>{title}</Typography.Title>
+      </Col>
+      <Col span={24}>
+        <Typography.Text style={{ color: '#A0A0A1' }}>{desc}</Typography.Text>
+      </Col>
+    </Row>
   )
 }
