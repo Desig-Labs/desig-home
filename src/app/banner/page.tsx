@@ -61,11 +61,7 @@ const Banner = () => {
                 </Col>
               </Row>
             </Col>
-            <Col
-              xs={24 && { order: 1 }}
-              md={12 && { order: 2 }}
-              className="wrap-blogs-banner awn"
-            >
+            <Col xs={24 && { order: 1 }} md={12 && { order: 2 }}>
               <Image src={Img} alt="" />
               {/* <iframe
                 className="blogs-banner"
