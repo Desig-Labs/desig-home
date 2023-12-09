@@ -1,9 +1,10 @@
+'use client'
+
 import { useMemo, useState } from 'react'
 
 import Spline from '@splinetool/react-spline'
 import Card from 'antd/es/card/Card'
 import { Col, Row, Typography } from 'antd'
-import MaxWidthLayout from 'components/maxWidthLayout'
 
 import { useWidth } from 'providers/ui.provider'
 
@@ -54,7 +55,13 @@ export const PrizeCard = () => {
     setSelectedItem(0)
   }
   return (
-    <Row wrap={isMobile} gutter={[12, 12]} justify="center" align="middle">
+    <Row
+      wrap={isMobile}
+      gutter={[12, 12]}
+      justify="center"
+      align="middle"
+      style={{ cursor: 'pointer' }}
+    >
       {LIST_PRIZES.map(({ icon, title, descriptions }, idx) => (
         <Col
           span={isMobile ? 24 : 'auto'}

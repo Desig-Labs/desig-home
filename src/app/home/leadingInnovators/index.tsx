@@ -1,8 +1,11 @@
+'use client'
+
 import { Col, Row, Typography } from 'antd'
 import Image from 'next/image'
 
 import { PrizeCard } from './prizeCard'
 import MaxWidthLayout from 'components/maxWidthLayout'
+
 import IMG from 'static/images/leading-line.svg'
 
 import './index.scss'
@@ -30,7 +33,7 @@ export const LeadingInnovators = () => {
                 alt="line"
                 style={{
                   position: 'absolute',
-                  left: 327,
+                  left: 127,
                   top: 13,
                 }}
               />
