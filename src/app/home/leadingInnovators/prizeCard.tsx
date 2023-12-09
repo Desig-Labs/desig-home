@@ -55,7 +55,13 @@ export const PrizeCard = () => {
     setSelectedItem(0)
   }
   return (
-    <Row wrap={isMobile} gutter={[12, 12]} justify="center" align="middle">
+    <Row
+      wrap={isMobile}
+      gutter={[12, 12]}
+      justify="center"
+      align="middle"
+      style={{ cursor: 'pointer' }}
+    >
       {LIST_PRIZES.map(({ icon, title, descriptions }, idx) => (
         <Col
           span={isMobile ? 24 : 'auto'}

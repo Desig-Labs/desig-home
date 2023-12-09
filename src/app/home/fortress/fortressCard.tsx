@@ -3,9 +3,10 @@
 import { Button, Col, Row, Typography } from 'antd'
 import Image from 'next/image'
 import Card from 'antd/es/card/Card'
+
 import Multisig from 'static/images/fortress/multisig.png'
 import Service_Desig from 'static/images/fortress/service-desig.png'
-import Arrow from './arrow.svg'
+import Arrow from 'static/images/btn-link.svg'
 
 import './index.scss'
 

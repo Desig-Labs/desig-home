@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useMemo } from 'react'
-import Spline from '@splinetool/react-spline'
+// import Spline from '@splinetool/react-spline'
 
 import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
@@ -89,7 +89,7 @@ const Banner = () => {
           </Row>
         </MaxWidthLayout>
       </Col>
-      <Col style={{ marginTop: 100 }} span={24}>
+      <Col style={{ marginTop: 120 }} span={24}>
         <ScrollChainList />
       </Col>
     </Row>

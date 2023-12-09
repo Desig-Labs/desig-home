@@ -2,10 +2,10 @@
 
 import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
-import React from 'react'
+
+import { FortressCard } from './fortressCard'
 
 import './index.scss'
-import { FortressCard } from './fortressCard'
 
 export const Fortress = () => {
   return (

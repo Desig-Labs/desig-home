@@ -22,7 +22,7 @@ export const FeatureCard = ({ title = '', icon }: FeatureCardProps) => {
 
   return (
     <Card
-      style={{ height: '100%' }}
+      style={{ height: '100%', cursor: 'pointer' }}
       bodyStyle={{ height: '100%' }}
       className="ant-card"
     >

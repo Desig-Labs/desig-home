@@ -1,9 +1,11 @@
 'use client'
 
-import { Col, Image, Row, Typography } from 'antd'
+import { Col, Row, Typography } from 'antd'
+import Image from 'next/image'
+
 import MaxWidthLayout from 'components/maxWidthLayout'
 
-import RoadMapImg from 'static/images/roadmap/roadmap.svg'
+import RoadMapImg from 'static/images/roadmap/road-map.svg'
 import './index.scss'
 
 export const RoadMap = () => {
@@ -22,7 +24,11 @@ export const RoadMap = () => {
           </Typography.Text>
         </Col>
         <Col span={24}>
-          <Image src={RoadMapImg} alt="roadmap" />
+          <Image
+            src={RoadMapImg}
+            alt="roadmap"
+            style={{ height: '70%', width: 'auto' }}
+          />
         </Col>
       </Row>
     </MaxWidthLayout>
