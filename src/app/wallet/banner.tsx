@@ -4,9 +4,7 @@ import MaxWidthLayout from 'components/maxWidthLayout'
 import IonIcon from 'components/ionicon'
 import Spline from '@splinetool/react-spline'
 
-import './index.scss'
-
-const Banner = () => {
+export default function Banner() {
   return (
     <MaxWidthLayout>
       <Row
@@ -50,5 +48,3 @@ const Banner = () => {
     </MaxWidthLayout>
   )
 }
-
-export default Banner

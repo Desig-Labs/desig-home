@@ -43,7 +43,7 @@ export default function MultisigJourney() {
       <Row gutter={[0, 80]} justify="start">
         <Col span={20}>
           <Row gutter={[0, 16]}>
-            <Col>
+            <Col span={24}>
               <Typography.Title level={2}>
                 Empower your{' '}
                 <span style={{ paddingRight: 4 }} className="gradient-text">
@@ -52,7 +52,7 @@ export default function MultisigJourney() {
                 , the Desig way
               </Typography.Title>
             </Col>
-            <Col>
+            <Col span={24}>
               <Typography.Text style={{ fontSize: 20 }} type="secondary">
                 See how Desig transform the digital asset management world for
                 teams.
@@ -63,7 +63,7 @@ export default function MultisigJourney() {
         <Col span={24}>
           <Row gutter={[24, 24]} wrap={false}>
             {LIST_JOURNEY.map(({ title, desc, bg }) => (
-              <Col key={title}>
+              <Col xs={24} md={12} key={title}>
                 <JourneyCard title={title} desc={desc} bg={bg} />
               </Col>
             ))}

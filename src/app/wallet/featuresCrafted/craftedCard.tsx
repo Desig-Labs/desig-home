@@ -10,8 +10,13 @@ type CraftedCardProps = {
 
 export default function CraftedCard({ title, desc, url3d }: CraftedCardProps) {
   return (
-    <Card bodyStyle={{ padding: '32px 64px' }}>
-      <Row className="responsive-item" align="middle" justify="space-between">
+    <Card className="crafted-card">
+      <Row
+        gutter={[24, 24]}
+        className="responsive-item"
+        align="middle"
+        justify="space-between"
+      >
         <Col xs={24} md={12}>
           <Row gutter={[0, 16]}>
             <Col span={24}>
