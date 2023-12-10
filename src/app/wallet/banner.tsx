@@ -8,7 +8,7 @@ export default function Banner() {
   return (
     <MaxWidthLayout>
       <Row
-        className="responsive-item"
+        className="item-responsive"
         gutter={[0, 16]}
         align="middle"
         justify="space-between"
@@ -30,7 +30,7 @@ export default function Banner() {
             <Col span={24} style={{ marginTop: 28 }}>
               <Button
                 size="large"
-                className="ant-btn-primary"
+                className="banner-btn-access ant-btn-primary"
                 icon={<IonIcon name="key-outline" />}
               >
                 Get Early Access

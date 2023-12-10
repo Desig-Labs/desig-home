@@ -24,13 +24,23 @@
 }
 
 @media (max-width: 786px) {
-    .responsive-item{
+    .item-responsive{
         flex-direction: column-reverse !important;
+    }
+
+    .banner-btn-access{
+        width: 100%;
     }
 
     .crafted-card{
         .ant-card-body{
             padding: 16;
         }
+    }
+}
+
+@media (max-width: 1080px) {
+    .effect-responsive{
+        display: none;
     }
 }

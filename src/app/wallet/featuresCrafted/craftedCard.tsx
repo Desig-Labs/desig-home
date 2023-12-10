@@ -13,7 +13,7 @@ export default function CraftedCard({ title, desc, url3d }: CraftedCardProps) {
     <Card className="crafted-card">
       <Row
         gutter={[24, 24]}
-        className="responsive-item"
+        className="item-responsive"
         align="middle"
         justify="space-between"
       >
