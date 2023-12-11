@@ -63,7 +63,7 @@ export default function MultisigJourney() {
         <Col span={24}>
           <Row gutter={[24, 24]} wrap={false}>
             {LIST_JOURNEY.map(({ title, desc, bg }) => (
-              <Col xs={24} md={12} key={title}>
+              <Col key={title}>
                 <JourneyCard title={title} desc={desc} bg={bg} />
               </Col>
             ))}
