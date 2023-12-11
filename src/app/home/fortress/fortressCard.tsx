@@ -34,15 +34,10 @@ export const FortressCard = () => {
               <Col span={24} order={2} md={{ order: 1, span: 12 }}>
                 <Row gutter={[16, 16]}>
                   <Col span={24}>
-                    <Typography.Text className="title-card-fortress">
-                      {title}
-                    </Typography.Text>
+                    <Typography.Title level={3}>{title}</Typography.Title>
                   </Col>
                   <Col span={24}>
-                    <Typography.Text
-                      className="description-card-fortress"
-                      type="secondary"
-                    >
+                    <Typography.Text type="secondary">
                       {description}
                     </Typography.Text>
                   </Col>

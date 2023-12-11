@@ -7,6 +7,7 @@ import { LeadingInnovators } from './leadingInnovators'
 import { Feature } from './feature'
 import { Fortress } from './fortress'
 import { RoadMap } from './roadMap'
+import { FutureOfMultisig } from './futureOfMultisig'
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
       </Col>
       <Col span={24}>
         <RoadMap />
+      </Col>
+      <Col span={24}>
+        <FutureOfMultisig />
       </Col>
     </Row>
   )

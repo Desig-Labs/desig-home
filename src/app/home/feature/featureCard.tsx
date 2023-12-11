@@ -28,7 +28,7 @@ export const FeatureCard = ({ title = '', icon }: FeatureCardProps) => {
     >
       <Row gutter={[16, 16]} wrap={!isMobile}>
         <Col md={24} flex={isMobile ? ' auto' : 'none'}>
-          <Typography.Title level={3}>{title}</Typography.Title>
+          <Typography.Title level={4}>{title}</Typography.Title>
         </Col>
         <Col className="icon-feature">
           <Image src={icon} alt="" style={{ width: '50%', height: '50%' }} />

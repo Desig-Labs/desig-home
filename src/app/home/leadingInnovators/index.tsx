@@ -27,22 +27,12 @@ export const LeadingInnovators = () => {
                 </Typography.Title>
               </Typography.Title>
             </Col>
-            <Col span={24}>
-              <Image
-                src={IMG}
-                alt="line"
-                style={{
-                  position: 'absolute',
-                  left: 127,
-                  top: 13,
-                }}
-              />
-            </Col>
             <Col>
               <Typography.Text className="description" type="secondary">
                 Within{' '}
                 <span className="color-white" style={{ fontWeight: 700 }}>
                   8 months
+                  <Image src={IMG} alt="line" className="line-under" />
                 </span>
                 , Desig brought home Golds and Silvers from multiple hackathons
                 across the globe.

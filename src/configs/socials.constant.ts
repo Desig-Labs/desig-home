@@ -12,3 +12,12 @@ export const chromestore =
 export const googlestore =
   'https://play.google.com/store/apps/details?id=io.desig.app&hl=en'
 export const applestore = 'https://apps.apple.com/app/desig-wallet/id6450106028'
+export const link3 = 'https://link3.to/desiglabs'
+export const debank =
+  'https://debank.com/profile/0xc084ca4d5c9ab288a151a43be999e41f70226beb'
+export const linkedin = 'linkedin.com/company/desiglabs'
+export const docs = 'https://docs.desig.io/'
+export const core = 'https://www.npmjs.com/package/@desig/core'
+export const web3 = 'https://web3.desig.io/'
+export const brandkit = '#'
+export const blog = '#'

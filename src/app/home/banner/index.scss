@@ -18,6 +18,11 @@
     font-style: italic;   
     color: #F3F3F3;
 }
+.line-banner{
+  position: absolute;
+   top: -120px !important;
+   left: -58px !important
+}
 
 @media (max-width: 767.9px) {
     .gradient-text-banner-1{
@@ -34,6 +39,11 @@
     }
     .btn-get-access-banner{
       width: 100% !important;
+    }
+    .line-banner{
+      position: absolute;
+       top: -177px !important;
+       left: -16px !important
     }
 }
 

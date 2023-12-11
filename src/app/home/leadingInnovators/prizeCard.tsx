@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 
 import Spline from '@splinetool/react-spline'
 import Card from 'antd/es/card/Card'
@@ -37,8 +37,6 @@ const LIST_PRIZES = [
   },
 ]
 export const PrizeCard = () => {
-  const [selectedItem, setSelectedItem] = useState(0)
-
   const { width } = useWidth()
 
   const isMobile = useMemo(() => {
@@ -47,13 +45,6 @@ export const PrizeCard = () => {
     return result
   }, [width])
 
-  const mouseHover = (index: number) => {
-    setSelectedItem(index)
-  }
-
-  const mouseLeave = () => {
-    setSelectedItem(0)
-  }
   return (
     <Row
       wrap={isMobile}
@@ -61,6 +52,7 @@ export const PrizeCard = () => {
       justify="center"
       align="middle"
       style={{ cursor: 'pointer' }}
+      className="wrap-innovator"
     >
       {LIST_PRIZES.map(({ icon, title, descriptions }, idx) => (
         <Col
@@ -68,15 +60,7 @@ export const PrizeCard = () => {
           key={idx}
           style={{ display: 'flex', justifyContent: 'center' }}
         >
-          <Card
-            className={`ant-card-bordered ${
-              selectedItem === idx
-                ? 'active-card animation-card'
-                : 'un-active-card'
-            } `}
-            onMouseOver={() => mouseHover(idx)}
-            onMouseLeave={mouseLeave}
-          >
+          <Card className="ant-card-bordered">
             <Row gutter={[24, 24]} justify={'center'}>
               <Col className="icon-award">
                 <Spline scene={icon} />
@@ -84,7 +68,7 @@ export const PrizeCard = () => {
               <Col span={24}>
                 <Row gutter={[12, 12]} justify="center" align="middle">
                   <Col span={24}>
-                    <Typography.Title level={3}>{title}</Typography.Title>
+                    <Typography.Title level={4}>{title}</Typography.Title>
                   </Col>
                   <Col style={{ textAlign: 'center' }}>
                     <Typography.Text

@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { useMemo } from 'react'
-// import Spline from '@splinetool/react-spline'
 
 import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
@@ -27,13 +26,6 @@ const Banner = () => {
   return (
     <Row>
       <Col span={24}>
-        <Image
-          src={Line}
-          alt="line"
-          style={{ position: 'absolute', top: -120 }}
-        />
-      </Col>
-      <Col span={24}>
         <MaxWidthLayout>
           <Row gutter={[24, 24]} wrap={isMobile}>
             <Col xs={24 && { order: 2 }} md={12 && { order: 1 }}>
@@ -43,6 +35,7 @@ const Banner = () => {
                     <Typography.Title level={1} className="text-title-banner">
                       <span className="gradient-text gradient-text-banner-1">
                         Multi-sig
+                        <Image src={Line} alt="line" className="line-banner" />
                       </span>{' '}
                       meets
                     </Typography.Title>
@@ -77,14 +70,6 @@ const Banner = () => {
                 alt=""
                 style={{ height: '100%', width: '100%' }}
               />
-              {/* <iframe
-                className="blogs-banner"
-                src="https://www.youtube.com/watch?v=enK2b3Z1DH4?autoplay=1&loop=1&rel=0&controls=0&vq=hd1080&mute=1&playlist=aRgUx4shcyk"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;allowfullscreen=1"
-                allowFullScreen
-              /> */}
-              {/* <Spline scene="https://prod.spline.design/ggwuYlnJDuOzvQvE/scene.splinecode" /> */}
             </Col>
           </Row>
         </MaxWidthLayout>

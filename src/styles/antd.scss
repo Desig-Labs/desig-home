@@ -9,9 +9,12 @@
 .ant-btn {
   font-weight: 700;
   background-color: transparent !important;
-  border: 1px solid $PRIMARY !important;
+  border: 1px solid $PRIMARY;
 }
-
+.ant-btn-text{
+  border: none !important;
+  padding: 0 !important;
+}
 .ant-btn-primary {
   background-color: $PRIMARY !important;
   font-weight: 700;
