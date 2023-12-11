@@ -60,7 +60,10 @@ export const PrizeCard = () => {
           key={idx}
           style={{ display: 'flex', justifyContent: 'center' }}
         >
-          <Card className="ant-card-bordered">
+          <Card
+            className="ant-card-bordered"
+            bodyStyle={{ position: 'relative' }}
+          >
             <Row gutter={[24, 24]} justify={'center'}>
               <Col className="icon-award">
                 <Spline scene={icon} />
@@ -76,7 +79,7 @@ export const PrizeCard = () => {
                         opacity: 0.7,
                       }}
                     >
-                      {descriptions}
+                      {descriptions}ss
                     </Typography.Text>
                   </Col>
                 </Row>

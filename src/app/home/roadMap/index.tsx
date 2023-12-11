@@ -28,13 +28,9 @@ export const RoadMap = () => {
             Follow our journey to conquer the Web3 multi-sig realm
           </Typography.Text>
         </Col>
-        <Col span={24}>
+        <Col span={24} style={{ aspectRatio: 3 / 2 }}>
           {!isMobile ? (
-            <Image
-              src={RoadMapImg}
-              alt="roadmap"
-              style={{ height: '70%', width: 'auto' }}
-            />
+            <Image src={RoadMapImg} alt="roadmap" fill />
           ) : (
             <RoadmapMobile />
           )}
