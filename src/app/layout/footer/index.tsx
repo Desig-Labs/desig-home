@@ -1,140 +1,136 @@
 'use client'
-import Link from 'next/link'
 
-import { Button, Col, Divider, Row, Space, Typography } from 'antd'
-import IonIcon from 'components/ionicon'
+import { Button, Col, Row, Space, Typography } from 'antd'
+import Image from 'next/image'
 import Brand from 'components/brand'
 import MaxWidthLayout from 'components/maxWidthLayout'
+import Arrow from 'static/images/btn-link.svg'
 
-import styles from './index.module.scss'
+import style from './index.module.scss'
 import { useTheme } from 'providers/ui.provider'
 import {
-  applestore,
-  chromestore,
-  email,
+  blog,
+  docs,
+  core,
   github,
-  googlestore,
-  mirror,
-  pitchdeck,
+  web3,
+  brandkit,
   twitter,
   youtube,
+  linkedin,
+  link3,
+  debank,
 } from 'configs/socials.constant'
 
+export const RESOURCES = [
+  {
+    name: 'Blog',
+    url: blog,
+  },
+  {
+    name: 'Docs',
+    url: docs,
+  },
+  {
+    name: 'Core',
+    url: core,
+  },
+  {
+    name: 'Github',
+    url: github,
+  },
+  {
+    name: 'Web3 Library',
+    url: web3,
+  },
+  {
+    name: 'Brand Kit',
+    url: brandkit,
+  },
+]
+
+export const FOLLOW_US = [
+  {
+    name: 'Twitter',
+    url: twitter,
+  },
+  {
+    name: 'Link3',
+    url: link3,
+  },
+  {
+    name: 'DeBank',
+    url: debank,
+  },
+  {
+    name: 'YouTube',
+    url: youtube,
+  },
+  {
+    name: 'LinkedIn',
+    url: linkedin,
+  },
+]
 export default function Footer() {
   const { theme } = useTheme()
 
   return (
     <MaxWidthLayout>
-      <Row className={styles.footer} gutter={[36, 36]} justify="center">
+      <Row className={style.footer} gutter={[56, 56]} justify="center">
         <Col flex="auto">
-          <Space>
-            <Brand size={16} theme={theme} />
-            <Divider type="vertical" />
+          <Space direction="vertical" size={24}>
+            <Brand size={32} theme={theme} />
+            <Typography.Text className="caption" type="secondary">
+              Desig © 2023, All Rights Reserved.
+            </Typography.Text>
+          </Space>
+        </Col>
+        <Col>
+          <Space direction="vertical" size={24}>
+            <Typography.Text strong>Products</Typography.Text>
+            <Space direction="vertical" size={16}>
+              <Typography.Text type="secondary">
+                Multi-sig Wallet
+              </Typography.Text>
+              <Typography.Text type="secondary">
+                Multisig-as-a-service
+              </Typography.Text>
+            </Space>
+          </Space>
+        </Col>
+        <Col>
+          <Space direction="vertical" size={24}>
+            <Typography.Text strong>Resources</Typography.Text>
             <Space direction="vertical">
-              <Typography.Text className="caption" strong>
-                The blockchain-agnostic multisig solution.
-              </Typography.Text>
-              <Typography.Text className="caption" type="secondary">
-                Desig © 2023, All Rights Reserved.
-              </Typography.Text>
+              {RESOURCES.map(({ name, url }, index) => (
+                <Button
+                  key={index}
+                  href={url}
+                  type="text"
+                  className="btn-footer"
+                >
+                  <Space>
+                    <Typography.Text type="secondary">{name}</Typography.Text>
+                    <Image src={Arrow} alt="arrow" />
+                  </Space>
+                </Button>
+              ))}
             </Space>
           </Space>
         </Col>
         <Col>
-          <Space direction="vertical" align="end">
-            <Typography.Text type="secondary" strong>
-              DOWNLOAD
-            </Typography.Text>
-            <Space style={{ marginRight: -4 }}>
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-chrome" />}
-                href={chromestore}
-                target="_blank"
-              />
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-apple" />}
-                href={applestore}
-                target="_blank"
-              />
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-android" />}
-                href={googlestore}
-                target="_blank"
-              />
+          <Space direction="vertical" size={24}>
+            <Typography.Text strong>Follow us</Typography.Text>
+            <Space direction="vertical">
+              {FOLLOW_US.map(({ name, url }, index) => (
+                <Button key={index} href={url} type="text" className="">
+                  <Space>
+                    <Typography.Text type="secondary">{name}</Typography.Text>
+                    <Image src={Arrow} alt="arrow" />
+                  </Space>
+                </Button>
+              ))}
             </Space>
-          </Space>
-        </Col>
-        <Col>
-          <Space direction="vertical" align="end">
-            <Typography.Text type="secondary" strong>
-              FOLLOW US
-            </Typography.Text>
-            <Space style={{ marginRight: -4 }}>
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-youtube" />}
-                href={youtube}
-                target="_blank"
-              />
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-twitter" />}
-                href={twitter}
-                target="_blank"
-              />
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-github" />}
-                href={github}
-                target="_blank"
-              />
-            </Space>
-            <Space style={{ marginRight: -4 }}>
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-mirror" />}
-                href={mirror}
-                target="_blank"
-              />
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-discord" />}
-                disabled
-              />
-              <Button
-                size="small"
-                type="text"
-                icon={<IonIcon name="logo-telegram" />}
-                disabled
-              />
-            </Space>
-          </Space>
-        </Col>
-        <Col>
-          <Space direction="vertical" align="end">
-            <Typography.Text type="secondary" strong>
-              INFO
-            </Typography.Text>
-            <Link href={pitchdeck} target="_blank">
-              <Typography.Text>Pitch Deck</Typography.Text>
-            </Link>
-            <Link href="/policy">
-              <Typography.Text>Policy</Typography.Text>
-            </Link>
-            <Link href={email} target="_blank">
-              <Typography.Text>Contact Us</Typography.Text>
-            </Link>
           </Space>
         </Col>
       </Row>
