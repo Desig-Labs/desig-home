@@ -12,7 +12,7 @@ import './index.scss'
 
 const LIST_PRIZES = [
   {
-    icon: 'https://prod.spline.design/i4Ox-WywmgxNTpJx/scene.splinecode',
+    icon: 'https://prod.spline.design/nuUbDpfMnQBMxLCI/scene.splinecode',
     title: '1st Overall Prize',
     descriptions: 'at Sui Network x KuCoin Labs Summer Hackathon.',
     disable: true,
@@ -30,7 +30,7 @@ const LIST_PRIZES = [
     disable: false,
   },
   {
-    icon: 'https://prod.spline.design/kLqoAcuzkyPKKUM6/scene.splinecode',
+    icon: 'https://prod.spline.design/jHhpMrKRfe5U2nPe/scene.splinecode',
     title: '3rd place',
     descriptions: 'at Solana Hyperdriver MCM.',
     disable: false,
