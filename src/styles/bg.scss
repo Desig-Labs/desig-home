@@ -1,0 +1,10 @@
+@import './var.scss';
+
+.bg {
+    &-primary{
+        background: $PRIMARY;
+    }
+    &-secondary{
+        background: $CARD_FILL;
+    }
+}

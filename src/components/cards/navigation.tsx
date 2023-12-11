@@ -17,8 +17,8 @@ export function NavigationCard({
       <Row gutter={[24, 24]}>
         <Col span={24}>
           <Space>
-            <Typography.Title level={3}>{title}</Typography.Title>
-            <Typography.Title level={3}>
+            <Typography.Title>{title}</Typography.Title>
+            <Typography.Title level={4}>
               <IonIcon name="arrow-forward-outline" />
             </Typography.Title>
           </Space>

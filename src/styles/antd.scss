@@ -1,5 +1,36 @@
 @import '~antd/dist/reset.css';
+@import './var.scss';
 
 .ant-typography:not(.reset) {
   margin: 0 !important;
 }
+
+//Button
+.ant-btn {
+  font-weight: 700;
+  background-color: transparent !important;
+  border: 1px solid $PRIMARY;
+}
+.ant-btn-text{
+  border: none !important;
+  padding: 0 !important;
+}
+.ant-btn-primary {
+  background-color: $PRIMARY !important;
+  font-weight: 700;
+  border: none !important;
+  box-shadow: none !important;
+  &:hover{
+    background-color: $DARK_PURPLE !important;
+    color: $NEUTRAL40 !important;
+  }
+}
+
+//Card
+.ant-card {
+  background: $CARD_FILL !important;
+  border-radius: 32px !important;
+  box-shadow: none !important;
+  border: none
+}
+

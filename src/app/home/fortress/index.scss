@@ -1,0 +1,33 @@
+.gradient-fortress{
+    background: linear-gradient(265deg, #FAE2B6 5.05%, #EF90B8 31.26%, #B684F0 46.98%);
+}
+
+.img-fortress{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-fortress{
+    padding: 64px;
+}
+
+.btn-fortress{
+    padding-top: 24px;
+}
+
+@media (max-width: 991.9px) {
+    .card-fortress{
+        padding: 32px;
+    }  
+}
+
+@media (max-width: 575.9px) {
+    .card-fortress{
+        padding: 16px;
+    }  
+    .btn-fortress{
+        width: 100% !important;
+    }
+}

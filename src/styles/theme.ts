@@ -1,11 +1,13 @@
 import { ThemeConfig } from 'antd/es/config-provider/context'
+import { THEME_CONFIG, COLORS } from './vars'
 
 import { theme } from 'antd'
 
-export const generateTheme = (mode: Theme): ThemeConfig => ({
-  algorithm: mode === 'light' ? theme.defaultAlgorithm : theme.darkAlgorithm,
+export const generateTheme = (): ThemeConfig => ({
+  algorithm: theme.darkAlgorithm,
   token: {
-    colorPrimary: '#7767F6',
+    ...THEME_CONFIG.token,
+    colorPrimary: COLORS.PRIMARY,
     fontFamily: "'Satoshi', sans-serif",
   },
 })

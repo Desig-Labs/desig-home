@@ -1,5 +1,5 @@
 'use client'
-import { CSSProperties, useEffect, useState } from 'react'
+import { CSSProperties } from 'react'
 
 import Image from 'next/image'
 
@@ -25,19 +25,8 @@ export default function Brand({
   size = 24,
   style = {},
   named = true,
-  theme = '',
 }: BrandProps) {
-  const [system, setSystem] = useState<Theme>('light')
-
-  useEffect(() => {
-    setSystem(
-      window.matchMedia('(prefers-color-scheme: light)').matches
-        ? 'light'
-        : 'dark',
-    )
-  }, [])
-
-  const src = named ? brands[theme || system] : logo
+  const src = named ? brands['dark'] : logo
   return (
     <Image
       alt="desig-brand"

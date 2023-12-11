@@ -1,0 +1,16 @@
+@import './var.scss';
+
+.color {
+    &-primary {
+        color: $PRIMARY;
+    }
+    &-white {
+        color: $NEUTRAL05 ;
+    }
+    &-black {
+        color: $NEUTRAL100 ;
+    }
+    &-gray {
+        color: $NEUTRAL40 ;
+    }
+}

@@ -101,7 +101,7 @@ export default function UiProvider({ children }: { children: ReactNode }) {
   }, [width, setWidth])
 
   return (
-    <ConfigProvider theme={generateTheme(theme)}>
+    <ConfigProvider theme={generateTheme()}>
       <Layout style={{ minHeight: '100vh', overflow: 'hidden' }}>
         {children}
       </Layout>
