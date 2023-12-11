@@ -2,13 +2,18 @@
 
 import { Col, Row, Typography } from 'antd'
 import Image from 'next/image'
-
 import MaxWidthLayout from 'components/maxWidthLayout'
+import RoadmapMobile from './mobile'
+
+import { Infix, useWidth } from 'providers/ui.provider'
 
 import RoadMapImg from 'static/images/roadmap/road-map.svg'
 import './index.scss'
 
 export const RoadMap = () => {
+  const { infix } = useWidth()
+  const isMobile = infix < Infix.xl
+
   return (
     <MaxWidthLayout>
       <Row gutter={[24, 24]} justify="center">
@@ -24,11 +29,15 @@ export const RoadMap = () => {
           </Typography.Text>
         </Col>
         <Col span={24}>
-          <Image
-            src={RoadMapImg}
-            alt="roadmap"
-            style={{ height: '70%', width: 'auto' }}
-          />
+          {!isMobile ? (
+            <Image
+              src={RoadMapImg}
+              alt="roadmap"
+              style={{ height: '70%', width: 'auto' }}
+            />
+          ) : (
+            <RoadmapMobile />
+          )}
         </Col>
       </Row>
     </MaxWidthLayout>
