@@ -17,7 +17,9 @@ export default function JourneyCard({ title, desc, bg }: JourneyCardProps) {
       }}
     >
       <Col span={24}>
-        <Typography.Title level={3}>{title}</Typography.Title>
+        <Typography.Text style={{ fontSize: '24px' }} strong>
+          {title}
+        </Typography.Text>
       </Col>
       <Col span={24}>
         <Typography.Text style={{ color: '#A0A0A1' }}>{desc}</Typography.Text>

@@ -17,9 +17,9 @@ export default function Banner() {
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <Space direction="vertical">
-                <Typography.Title level={1}>
-                  Transcend your co-ownership wallet limits
-                </Typography.Title>
+                <Typography.Title level={1}>Transcend your </Typography.Title>
+                <Typography.Title level={1}>co-ownership </Typography.Title>
+                <Typography.Title level={1}>wallet limits</Typography.Title>
               </Space>
             </Col>
             <Col span={24}>

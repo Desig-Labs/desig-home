@@ -20,9 +20,7 @@ export default function FeatureCard({ title, desc, img }: CraftedCardProps) {
           <Typography.Title level={4}>{title}</Typography.Title>
         </Col>
         <Col span={24}>
-          <Typography.Text style={{ color: '#A0A0A1', fontSize: '16px' }}>
-            {desc}
-          </Typography.Text>
+          <Typography.Text style={{ color: '#A0A0A1' }}>{desc}</Typography.Text>
         </Col>
       </Row>
     </Card>

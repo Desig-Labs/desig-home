@@ -29,7 +29,7 @@ export default function CraftedCard({ title, desc, url3d }: CraftedCardProps) {
             </Col>
           </Row>
         </Col>
-        <Col xs={24} md={12}>
+        <Col xs={24} md={8}>
           <Spline style={{ height: '340px' }} scene={url3d} />
         </Col>
       </Row>
