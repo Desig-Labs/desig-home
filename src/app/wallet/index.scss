@@ -1,3 +1,11 @@
+.wallet-page{
+    gap: 180px;
+}
+
+.section-container{
+    gap: 80px
+}
+
 .journey-card{
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -24,6 +32,14 @@
 }
 
 @media (max-width: 786px) {
+    .wallet-page{
+        gap: 48px;
+    }
+
+    .section-container{
+        gap: 16px
+    }
+
     .item-responsive{
         flex-direction: column-reverse !important;
     }

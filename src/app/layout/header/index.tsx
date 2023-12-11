@@ -60,6 +60,7 @@ export default function Header() {
               className="btn-access ant-btn"
               style={{ borderRadius: '12px', padding: '4px 12px' }}
               icon={<IonIcon name="key-outline" />}
+              onClick={() => router.push('/install-app')}
             >
               Get Early Access
             </Button>

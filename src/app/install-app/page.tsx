@@ -1,8 +1,8 @@
 'use client'
-import { Card, Col, Row, Space, Typography } from 'antd'
-import MaxWidthLayout from 'components/maxWidthLayout'
 import Image from 'next/image'
 
+import { Card, Col, Row, Space, Typography } from 'antd'
+import MaxWidthLayout from 'components/maxWidthLayout'
 import google from 'static/images/logo/google.svg'
 import chPlay from 'static/images/logo/ch-play.svg'
 import appStore from 'static/images/logo/app-store.svg'
@@ -31,10 +31,10 @@ const platforms = [
   },
 ]
 
-const InstallApp = () => {
+export default function InstallApp() {
   return (
-    <Row>
-      <Col span={24} className="install-app" />
+    <Row className="content-install-app">
+      <Col span={24} className="bg-install-app" />
       <Col span={24}>
         <MaxWidthLayout>
           <Row gutter={[24, 24]} className="content">
@@ -42,8 +42,9 @@ const InstallApp = () => {
               <Col key={i} xs={24} md={8}>
                 <Card
                   bordered={false}
-                  style={{ borderRadius: 24, height: '100%' }}
+                  style={{ borderRadius: 28, height: '100%' }}
                   hoverable
+                  bodyStyle={{ padding: 32 }}
                   onClick={() => window.open(url, '_blank')}
                 >
                   <Row gutter={[24, 24]} align="middle">
@@ -57,7 +58,11 @@ const InstallApp = () => {
                     )}
                     <Col span={24}>
                       <Space direction="vertical">
-                        <Typography.Title level={4}>{title}</Typography.Title>
+                        <Typography.Text
+                          style={{ fontSize: '20px', fontWeight: 700 }}
+                        >
+                          {title}
+                        </Typography.Text>
                         <Typography.Text type="secondary">
                           {desc}
                         </Typography.Text>
@@ -73,5 +78,3 @@ const InstallApp = () => {
     </Row>
   )
 }
-
-export default InstallApp

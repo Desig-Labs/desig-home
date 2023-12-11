@@ -1,4 +1,5 @@
 'use client'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
@@ -8,6 +9,8 @@ import SWAP from 'static/images/wallet/feature/swap.png'
 import STAKING from 'static/images/wallet/feature/staking.png'
 import CASHFLOW from 'static/images/wallet/feature/cashflow.png'
 import CHATTING from 'static/images/wallet/feature/chatting.png'
+
+import 'swiper/css'
 
 const LIST_FEATURE = [
   {
@@ -35,7 +38,7 @@ const LIST_FEATURE = [
 export default function MoreFeature() {
   return (
     <MaxWidthLayout>
-      <Row gutter={[0, 80]} justify="start">
+      <Row className="section-container" justify="start">
         <Col span={20}>
           <Row gutter={[0, 16]}>
             <Col span={24}>
@@ -46,13 +49,22 @@ export default function MoreFeature() {
           </Row>
         </Col>
         <Col span={24}>
-          <Row gutter={[24, 24]} wrap={false}>
+          <Swiper
+            spaceBetween={24}
+            slidesPerView={1}
+            style={{
+              overflow: 'unset',
+              margin: 0,
+              width: 318,
+              height: '100%',
+            }}
+          >
             {LIST_FEATURE.map(({ title, desc, img }) => (
-              <Col key={title}>
+              <SwiperSlide key={title}>
                 <FeatureCard title={title} desc={desc} img={img} />
-              </Col>
+              </SwiperSlide>
             ))}
-          </Row>
+          </Swiper>
         </Col>
       </Row>
     </MaxWidthLayout>

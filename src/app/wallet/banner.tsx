@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
@@ -8,6 +9,7 @@ import IonIcon from 'components/ionicon'
 import BANNER from 'static/images/wallet/banner.png'
 
 export default function Banner() {
+  const router = useRouter()
   return (
     <MaxWidthLayout>
       <Row
@@ -35,14 +37,19 @@ export default function Banner() {
                 size="large"
                 className="banner-btn-access ant-btn-primary"
                 icon={<IonIcon name="key-outline" />}
+                onClick={() => router.push('/install-app')}
               >
                 Get Early Access
               </Button>
             </Col>
           </Row>
         </Col>
-        <Col>
-          <Image width={431} height={431} alt="wallet" src={BANNER} />
+        <Col xs={24} md={12}>
+          <Image
+            style={{ width: '100%', height: '100%' }}
+            alt="wallet"
+            src={BANNER}
+          />
         </Col>
       </Row>
     </MaxWidthLayout>

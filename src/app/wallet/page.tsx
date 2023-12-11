@@ -14,7 +14,7 @@ import LIGHT_RIGHT from 'static/images/wallet/light-right.png'
 
 export default function WalletPage() {
   return (
-    <Row gutter={[0, 192]}>
+    <Row className="wallet-page">
       <Col span={24}>
         <Row>
           <Col className="effect-responsive">

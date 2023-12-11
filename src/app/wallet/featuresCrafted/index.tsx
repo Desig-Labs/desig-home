@@ -4,28 +4,32 @@ import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import CraftedCard from './craftedCard'
 
+import SOCIAL_RECOVERY from 'static/images/wallet/crafted/social-recovery.png'
+import STAKING from 'static/images/wallet/crafted/staking.png'
+import CASHFLOW from 'static/images/wallet/crafted/cashflow.png'
+
 const LIST_CRAFTED = [
   {
     title: 'Social Recovery',
     desc: 'Regain access to your account through your preferred social connections, ensuring a seamless recovery experience.',
-    url3d: 'https://prod.spline.design/4Kzk9j6XVPr0DrBr/scene.splinecode',
+    url3d: SOCIAL_RECOVERY,
   },
   {
     title: 'Staking Aggregator',
     desc: 'Leverage the power of staking with Desig&apos;s built-in aggregator. Get the best returns on your investments without the hassle of manually tracking each staking platform or validator.',
-    url3d: 'https://prod.spline.design/9SERW4VTZFooMlmn/scene.splinecode',
+    url3d: STAKING,
   },
   {
     title: 'Cashflow Management',
     desc: 'Take control of your finances with ease. Organize transactions by category, create custom categories, and track your expenses visually with insightful pie charts.',
-    url3d: 'https://prod.spline.design/GuUSgjW2igLoOEGs/scene.splinecode',
+    url3d: CASHFLOW,
   },
 ]
 
 export default function FeatureCrafted() {
   return (
     <MaxWidthLayout>
-      <Row gutter={[0, 80]} justify="start">
+      <Row className="section-container" justify="start">
         <Col span={20}>
           <Row gutter={[0, 16]}>
             <Col span={24}>

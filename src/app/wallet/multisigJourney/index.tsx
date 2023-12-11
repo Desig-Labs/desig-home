@@ -1,8 +1,11 @@
 'use client'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import JourneyCard from './journeyCard'
+
+import 'swiper/css'
 
 const LIST_JOURNEY = [
   {
@@ -40,7 +43,7 @@ const LIST_JOURNEY = [
 export default function MultisigJourney() {
   return (
     <MaxWidthLayout>
-      <Row gutter={[0, 80]} justify="start">
+      <Row className="section-container" justify="start">
         <Col span={20}>
           <Row gutter={[0, 16]}>
             <Col span={24}>
@@ -61,13 +64,22 @@ export default function MultisigJourney() {
           </Row>
         </Col>
         <Col span={24}>
-          <Row gutter={[24, 24]} wrap={false}>
+          <Swiper
+            spaceBetween={24}
+            slidesPerView={1}
+            style={{
+              overflow: 'unset',
+              margin: 0,
+              width: 490,
+              height: '100%',
+            }}
+          >
             {LIST_JOURNEY.map(({ title, desc, bg }) => (
-              <Col key={title}>
+              <SwiperSlide key={title}>
                 <JourneyCard title={title} desc={desc} bg={bg} />
-              </Col>
+              </SwiperSlide>
             ))}
-          </Row>
+          </Swiper>
         </Col>
       </Row>
     </MaxWidthLayout>

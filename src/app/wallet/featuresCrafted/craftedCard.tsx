@@ -1,11 +1,12 @@
 'use client'
+import Image, { StaticImageData } from 'next/image'
+
 import { Card, Col, Row, Typography } from 'antd'
-import Spline from '@splinetool/react-spline'
 
 type CraftedCardProps = {
   title: string
   desc: string
-  url3d: string
+  url3d: StaticImageData
 }
 
 export default function CraftedCard({ title, desc, url3d }: CraftedCardProps) {
@@ -29,8 +30,12 @@ export default function CraftedCard({ title, desc, url3d }: CraftedCardProps) {
             </Col>
           </Row>
         </Col>
-        <Col>
-          <Spline style={{ height: '340px', width: '340px' }} scene={url3d} />
+        <Col xs={24} md={12}>
+          <Image
+            style={{ width: '100%', height: '100%' }}
+            alt={title}
+            src={url3d}
+          />
         </Col>
       </Row>
     </Card>
