@@ -39,7 +39,7 @@ export default function FeatureCrafted() {
               </Typography.Title>
             </Col>
             <Col span={24}>
-              <Typography.Text style={{ fontSize: 20 }} type="secondary">
+              <Typography.Text className="description" type="secondary">
                 See how Desig transform the digital asset management world for
                 teams.
               </Typography.Text>
