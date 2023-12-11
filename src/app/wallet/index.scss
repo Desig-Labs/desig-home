@@ -1,0 +1,62 @@
+.wallet-page{
+    gap: 180px;
+}
+
+.section-container{
+    gap: 80px
+}
+
+.journey-card{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100%;
+    width: 490px;
+    padding: 40px 32px;
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.crafted-card{
+    .ant-card-body{
+        padding: 32px 64px;
+    }
+}
+
+.feature-card{
+    width: 318px;
+    height: 100%;
+    .ant-card-cover{
+        border-radius: 32px;
+    }
+}
+
+@media (max-width: 786px) {
+    .wallet-page{
+        gap: 48px;
+    }
+
+    .section-container{
+        gap: 16px
+    }
+
+    .item-responsive{
+        flex-direction: column-reverse !important;
+    }
+
+    .banner-btn-access{
+        width: 100%;
+    }
+
+    .crafted-card{
+        .ant-card-body{
+            padding: 16px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .effect-responsive{
+        display: none;
+    }
+}
