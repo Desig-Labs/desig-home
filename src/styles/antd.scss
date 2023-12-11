@@ -20,6 +20,10 @@
   font-weight: 700;
   border: none !important;
   box-shadow: none !important;
+  &:hover{
+    background-color: $DARK_PURPLE !important;
+    color: $NEUTRAL40 !important;
+  }
 }
 
 //Card
@@ -27,5 +31,6 @@
   background: $CARD_FILL !important;
   border-radius: 32px !important;
   box-shadow: none !important;
+  border: none
 }
 

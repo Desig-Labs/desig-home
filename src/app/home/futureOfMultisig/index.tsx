@@ -23,7 +23,11 @@ export const FutureOfMultisig = () => {
               </Typography.Title>
             </Col>
             <Col>
-              <Typography.Text className="description" type="secondary">
+              <Typography.Text
+                style={{ textAlign: 'center' }}
+                className="description"
+                type="secondary"
+              >
                 Be an OG on Desig and experience next-level shared custody.
               </Typography.Text>
             </Col>

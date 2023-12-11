@@ -29,7 +29,7 @@ export const FortressCard = () => {
     <Row gutter={[32, 32]}>
       {FORTRESS_WEB3.map(({ title, description, url }, index) => (
         <Col span={24} key={index}>
-          <Card bodyStyle={{ padding: 64 }}>
+          <Card bodyStyle={{ padding: 0 }} className="card-fortress">
             <Row gutter={[24, 24]} align="middle" justify="center">
               <Col span={24} order={2} md={{ order: 1, span: 12 }}>
                 <Row gutter={[16, 16]}>
@@ -41,8 +41,8 @@ export const FortressCard = () => {
                       {description}
                     </Typography.Text>
                   </Col>
-                  <Col style={{ paddingTop: 24 }}>
-                    <Button className="ant-btn">
+                  <Col className="btn-fortress">
+                    <Button className="ant-btn" style={{ width: '100%' }}>
                       Learn more
                       <Image
                         src={Arrow}

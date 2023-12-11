@@ -8,3 +8,26 @@
     display: flex;
     justify-content: center;
 }
+
+.card-fortress{
+    padding: 64px;
+}
+
+.btn-fortress{
+    padding-top: 24px;
+}
+
+@media (max-width: 991.9px) {
+    .card-fortress{
+        padding: 32px;
+    }  
+}
+
+@media (max-width: 575.9px) {
+    .card-fortress{
+        padding: 16px;
+    }  
+    .btn-fortress{
+        width: 100% !important;
+    }
+}
