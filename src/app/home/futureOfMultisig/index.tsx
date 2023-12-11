@@ -1,4 +1,5 @@
 import { Button, Col, Row, Space, Typography } from 'antd'
+import { useRouter } from 'next/navigation'
 
 import MaxWidthLayout from 'components/maxWidthLayout'
 import IonIcon from 'components/ionicon'
@@ -6,6 +7,7 @@ import IonIcon from 'components/ionicon'
 import './index.scss'
 
 export const FutureOfMultisig = () => {
+  const router = useRouter()
   return (
     <MaxWidthLayout>
       <Row gutter={[40, 40]} justify="center">
@@ -38,6 +40,7 @@ export const FutureOfMultisig = () => {
             <Button
               className="ant-btn-primary"
               icon={<IonIcon name="key-outline" />}
+              onClick={() => router.push('/install-app')}
             >
               Get Early Access
             </Button>

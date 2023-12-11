@@ -33,7 +33,7 @@ export default function Header() {
             <Brand
               size={32}
               theme="dark"
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/home')}
               style={{ cursor: 'pointer' }}
             />
           </Col>

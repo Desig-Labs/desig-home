@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { useMemo } from 'react'
+import { useRouter } from 'next/navigation'
 
 import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
@@ -16,6 +17,7 @@ import './index.scss'
 
 const Banner = () => {
   const { width } = useWidth()
+  const router = useRouter()
 
   const isMobile = useMemo(() => {
     let result = true
@@ -58,6 +60,7 @@ const Banner = () => {
                     size="large"
                     className="ant-btn-primary btn-get-access-banner"
                     icon={<IonIcon name="key-outline" />}
+                    onClick={() => router.push('/install-app')}
                   >
                     Get Early Access
                   </Button>

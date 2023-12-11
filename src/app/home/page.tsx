@@ -2,12 +2,12 @@
 
 import { Col, Row } from 'antd'
 
-import Banner from './banner/page'
 import { LeadingInnovators } from './leadingInnovators'
 import { Feature } from './feature'
 import { Fortress } from './fortress'
 import { RoadMap } from './roadMap'
 import { FutureOfMultisig } from './futureOfMultisig'
+import Banner from './banner'
 
 export default function Home() {
   return (

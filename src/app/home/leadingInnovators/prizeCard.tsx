@@ -18,13 +18,13 @@ const LIST_PRIZES = [
     disable: true,
   },
   {
-    icon: 'https://prod.spline.design/kLqoAcuzkyPKKUM6/scene.splinecode',
+    icon: 'https://prod.spline.design/2kf3KFipvmlQFnS4/scene.splinecode',
     title: 'Outstanding Project Award',
     descriptions: 'at Zetachain x Dorahacks Omnichain Hackathon.',
     disable: false,
   },
   {
-    icon: 'https://prod.spline.design/W9Hgv0WCjJAVcqTQ/scene.splinecode',
+    icon: 'https://prod.spline.design/gTswT3fi6gD4qy7M/scene.splinecode',
     title: 'Honorable Mentions',
     descriptions: 'at Sui Liquidity Staking Hackathon.',
     disable: false,
