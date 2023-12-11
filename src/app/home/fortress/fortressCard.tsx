@@ -13,8 +13,7 @@ import './index.scss'
 const FORTRESS_WEB3 = [
   {
     title: 'The Multi-sig Wallet',
-    description:
-      'With Desig&apos;s cutting-edge technologies, take control without compromise. No keys. No central entity. A wallet designed to transform your digital asset management experience',
+    description: `With Desig's cutting-edge technologies, take control without compromise. No keys. No central entity. A wallet designed to transform your digital asset management experience`,
     url: Multisig,
   },
   {
