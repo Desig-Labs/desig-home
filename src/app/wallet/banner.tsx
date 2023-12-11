@@ -1,8 +1,11 @@
 'use client'
+import Image from 'next/image'
+
 import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import IonIcon from 'components/ionicon'
-import Spline from '@splinetool/react-spline'
+
+import BANNER from 'static/images/wallet/banner.png'
 
 export default function Banner() {
   return (
@@ -38,11 +41,8 @@ export default function Banner() {
             </Col>
           </Row>
         </Col>
-        <Col xs={24} md={12}>
-          <Spline
-            style={{ height: '431px' }}
-            scene="https://prod.spline.design/BQZqYlKPGsOOI9nr/scene.splinecode"
-          />
+        <Col>
+          <Image width={431} height={431} alt="wallet" src={BANNER} />
         </Col>
       </Row>
     </MaxWidthLayout>

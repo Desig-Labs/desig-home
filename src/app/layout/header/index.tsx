@@ -41,7 +41,11 @@ export default function Header() {
             <Space size={40}>
               {SECTIONS_LIST.map(({ title, route }) => (
                 <Typography.Text
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    fontSize: '14px',
+                    fontWeight: 700,
+                  }}
                   key={route}
                   onClick={() => router.push(route)}
                   className={path === route ? 'tab active' : 'tab'}

@@ -8,7 +8,7 @@ const LIST_CRAFTED = [
   {
     title: 'Social Recovery',
     desc: 'Regain access to your account through your preferred social connections, ensuring a seamless recovery experience.',
-    url3d: 'https://prod.spline.design/pTVfBz8Z-nBr0FZ3/scene.splinecode',
+    url3d: 'https://prod.spline.design/4Kzk9j6XVPr0DrBr/scene.splinecode',
   },
   {
     title: 'Staking Aggregator',
