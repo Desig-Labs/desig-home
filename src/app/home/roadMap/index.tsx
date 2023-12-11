@@ -27,7 +27,7 @@ export const RoadMap = () => {
           <Image
             src={RoadMapImg}
             alt="roadmap"
-            style={{ height: '70%', width: 'auto' }}
+            style={{ height: '120%', width: '120%' }}
           />
         </Col>
       </Row>

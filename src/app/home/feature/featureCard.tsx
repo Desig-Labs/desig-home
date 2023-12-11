@@ -10,8 +10,13 @@ import { useWidth } from 'providers/ui.provider'
 export type FeatureCardProps = {
   title: string
   icon: StaticImageData
+  maxWidth: string | number
 }
-export const FeatureCard = ({ title = '', icon }: FeatureCardProps) => {
+export const FeatureCard = ({
+  title = '',
+  icon,
+  maxWidth,
+}: FeatureCardProps) => {
   const { width } = useWidth()
 
   const isMobile = useMemo(() => {
@@ -31,7 +36,11 @@ export const FeatureCard = ({ title = '', icon }: FeatureCardProps) => {
           <Typography.Title level={4}>{title}</Typography.Title>
         </Col>
         <Col className="icon-feature">
-          <Image src={icon} alt="" style={{ width: '50%', height: '50%' }} />
+          <Image
+            src={icon}
+            alt=""
+            style={{ width: '50%', height: '50%', maxWidth }}
+          />
         </Col>
       </Row>
     </Card>
