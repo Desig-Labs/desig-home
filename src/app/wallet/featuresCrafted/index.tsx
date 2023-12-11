@@ -13,12 +13,12 @@ const LIST_CRAFTED = [
   {
     title: 'Staking Aggregator',
     desc: 'Leverage the power of staking with Desig&apos;s built-in aggregator. Get the best returns on your investments without the hassle of manually tracking each staking platform or validator.',
-    url3d: 'https://prod.spline.design/1w0XKFpb7FuoDr7i/scene.splinecode',
+    url3d: 'https://prod.spline.design/9SERW4VTZFooMlmn/scene.splinecode',
   },
   {
     title: 'Cashflow Management',
     desc: 'Take control of your finances with ease. Organize transactions by category, create custom categories, and track your expenses visually with insightful pie charts.',
-    url3d: 'https://prod.spline.design/b9On7vDzG0JnGrDy/scene.splinecode',
+    url3d: 'https://prod.spline.design/GuUSgjW2igLoOEGs/scene.splinecode',
   },
 ]
 
