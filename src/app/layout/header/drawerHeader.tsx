@@ -1,7 +1,7 @@
 import { useRouter } from 'next/navigation'
 import { Fragment, useState } from 'react'
 
-import { Button, Drawer, List, Typography } from 'antd'
+import { Button, Drawer, List } from 'antd'
 import IonIcon from 'components/ionicon'
 import Brand from 'components/brand'
 
@@ -39,12 +39,21 @@ const DrawerHeader = () => {
       >
         <List
           dataSource={SECTIONS_LIST}
-          renderItem={({ title, route }) => (
+          renderItem={({ title, route, disabled }) => (
             <List.Item
-              onClick={() => router.push(route)}
-              style={{ cursor: 'pointer' }}
+              onClick={() => {
+                router.push(route)
+                setVisible(false)
+              }}
             >
-              <Typography.Title level={5}>{title}</Typography.Title>
+              <Button
+                type="text"
+                block
+                style={{ fontSize: 18, textAlign: 'start' }}
+                disabled={disabled}
+              >
+                {title}
+              </Button>
             </List.Item>
           )}
         />

@@ -21,7 +21,7 @@ export default function WalletPage() {
             <Image
               src={LIGHT_LEFT}
               alt=""
-              style={{ position: 'absolute', top: -152, left: 0 }}
+              style={{ position: 'absolute', top: -198, left: 0 }}
             />
           </Col>
           <Col span={24}>
@@ -31,7 +31,7 @@ export default function WalletPage() {
             <Image
               src={LIGHT_RIGHT}
               alt=""
-              style={{ position: 'absolute', top: -152, right: 0 }}
+              style={{ position: 'absolute', top: -198, right: 0 }}
             />
           </Col>
         </Row>

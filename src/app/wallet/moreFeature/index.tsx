@@ -51,16 +51,14 @@ export default function MoreFeature() {
         <Col span={24}>
           <Swiper
             spaceBetween={24}
-            slidesPerView={1}
+            slidesPerView="auto"
             style={{
               overflow: 'unset',
-              margin: 0,
-              width: 318,
               height: '100%',
             }}
           >
             {LIST_FEATURE.map(({ title, desc, img }) => (
-              <SwiperSlide key={title}>
+              <SwiperSlide style={{ width: 'unset' }} key={title}>
                 <FeatureCard title={title} desc={desc} img={img} />
               </SwiperSlide>
             ))}

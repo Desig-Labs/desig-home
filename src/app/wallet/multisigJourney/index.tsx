@@ -66,16 +66,14 @@ export default function MultisigJourney() {
         <Col span={24}>
           <Swiper
             spaceBetween={24}
-            slidesPerView={1}
+            slidesPerView="auto"
             style={{
               overflow: 'unset',
-              margin: 0,
-              width: 490,
               height: '100%',
             }}
           >
             {LIST_JOURNEY.map(({ title, desc, bg }) => (
-              <SwiperSlide key={title}>
+              <SwiperSlide style={{ width: 'unset' }} key={title}>
                 <JourneyCard title={title} desc={desc} bg={bg} />
               </SwiperSlide>
             ))}

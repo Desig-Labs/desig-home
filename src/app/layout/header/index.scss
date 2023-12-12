@@ -1,8 +1,7 @@
 @import 'styles/var.scss';
 
 .header {
-  padding-bottom: 24px;
-  margin-bottom: 64px;
+  margin-bottom: 100px;
 
   .tabs-section {
     background-color: #0B081E;
@@ -12,10 +11,16 @@
 
     .tab{
       color: $NEUTRAL40;
+      font-weight: 700;
+      font-size: 14px;
 
       &.active{
         color: $NEUTRAL05;
       }
+    }
+
+    .ant-btn-text:disabled{
+      color: rgba(255, 255, 255, 0.25);
     }
   }
 }
@@ -28,7 +33,7 @@
 
     .ant-drawer-header{
       padding: 16px;
-      border-bottom: 0;
+      border-bottom: 0.5px solid #404043;
 
       .ant-drawer-header-title{
         flex-direction: row-reverse;
@@ -45,7 +50,6 @@
 
       .ant-list-item{
         padding: 16px;
-        border-top: 0.5px solid #404043;
         border-bottom: 0.5px solid #404043;
       }
     }
