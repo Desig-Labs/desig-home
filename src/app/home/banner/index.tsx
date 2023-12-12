@@ -3,20 +3,20 @@
 import Image from 'next/image'
 import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
+import { useWindowSize } from 'react-use'
 
 import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import IonIcon from 'components/ionicon'
 
-import { useWidth } from 'providers/ui.provider'
 import { ScrollChainList } from 'app/layout/ChainList'
 import Img from './desig-web.png'
-
 import Line from 'static/images/line.svg'
+
 import './index.scss'
 
 const Banner = () => {
-  const { width } = useWidth()
+  const { width } = useWindowSize()
   const router = useRouter()
 
   const isMobile = useMemo(() => {
