@@ -20,7 +20,7 @@ const LIST_FEATURE = [
   },
   {
     title: 'Staking Aggregator',
-    desc: 'Maximize your staking potential with Desig&apos;s all-in-one aggregator. Simplify your investment and tracking of platforms and validators.',
+    desc: 'Maximize your staking potential with Desig‘s all-in-one aggregator. Simplify your investment and tracking of platforms and validators.',
     img: STAKING,
   },
   {

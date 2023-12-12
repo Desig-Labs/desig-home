@@ -16,7 +16,7 @@ const LIST_CRAFTED = [
   },
   {
     title: 'Staking Aggregator',
-    desc: 'Leverage the power of staking with Desig&apos;s built-in aggregator. Get the best returns on your investments without the hassle of manually tracking each staking platform or validator.',
+    desc: 'Leverage the power of staking with Desig‘s built-in aggregator. Get the best returns on your investments without the hassle of manually tracking each staking platform or validator.',
     url3d: STAKING,
   },
   {

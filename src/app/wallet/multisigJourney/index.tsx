@@ -30,7 +30,7 @@ const LIST_JOURNEY = [
   },
   {
     title: 'Stay in the Know, Anywhere',
-    desc: 'Get instant, real-time alerts on all multi-sig activities, whether you&apos;re on your mobile or PC.',
+    desc: 'Get instant, real-time alerts on all multi-sig activities, whether you‘re on your mobile or PC.',
     bg: '/journey/bg-stay-in.png',
   },
   {
