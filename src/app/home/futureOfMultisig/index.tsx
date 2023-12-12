@@ -12,12 +12,13 @@ export const FutureOfMultisig = () => {
     <MaxWidthLayout>
       <Row gutter={[40, 40]} justify="center">
         <Col>
-          <Row gutter={[16, 16]} justify="center">
+          <Row
+            gutter={[16, 16]}
+            justify="center"
+            style={{ textAlign: 'center' }}
+          >
             <Col>
-              <Typography.Title
-                level={2}
-                style={{ maxWidth: 720, textAlign: 'center' }}
-              >
+              <Typography.Title level={2} style={{ maxWidth: 720 }}>
                 Transform your future of{' '}
                 <span className="gradient-text gradient-text-future">
                   multi-sig management
@@ -25,7 +26,7 @@ export const FutureOfMultisig = () => {
                 {` `}today
               </Typography.Title>
             </Col>
-            <Col style={{ textAlign: 'center' }}>
+            <Col>
               <Typography.Text className="description" type="secondary">
                 Be an OG on Desig and experience next-level shared custody.
               </Typography.Text>

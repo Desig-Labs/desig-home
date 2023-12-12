@@ -12,7 +12,11 @@ export const Fortress = () => {
     <MaxWidthLayout>
       <Row gutter={[80, 80]} justify="center">
         <Col>
-          <Row gutter={[16, 16]} justify="center">
+          <Row
+            gutter={[16, 16]}
+            justify="center"
+            style={{ textAlign: 'center' }}
+          >
             <Col>
               <Typography.Title level={2}>
                 Choose your own{' '}
@@ -21,7 +25,7 @@ export const Fortress = () => {
                 </span>
               </Typography.Title>
             </Col>
-            <Col style={{ textAlign: 'center' }}>
+            <Col>
               <Typography.Text className="description" type="secondary">
                 Use our multi-function wallet or build your own customized
                 system.
