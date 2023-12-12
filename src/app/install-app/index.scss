@@ -1,28 +1,30 @@
 .content-install-app{
-  margin-top: -152px;
+  margin-top: -188px;
 
   .bg-install-app {
     background-image: url('../../static/images/install-app.svg');
     width: 100%;
-    aspect-ratio: 16/5;
+    aspect-ratio: 15/5;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 40px;
     position: relative;
   }
-  
+
   .content {
-    margin-top: -24px;
+    margin-top: 96px;
   }
 }
 
 
 @media (max-width: 767px) {
   .content-install-app{
-    margin-top: -64px;
+    margin-top: -180px;
 
     .bg-install-app {
-      border-radius: 0 !important;
+      background-image: url('../../static/images/install-app-mobile.svg');
+      aspect-ratio: 7/5;
+      border-radius: 0;
     }
     
     .content {
