@@ -1,7 +1,6 @@
 'use client'
 
-import { Col, Row } from 'antd'
-import Home from './home/page'
+import Home from './home'
 
 export default async function App() {
   return <Home />
