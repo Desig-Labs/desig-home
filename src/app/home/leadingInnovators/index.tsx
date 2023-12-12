@@ -27,7 +27,7 @@ export const LeadingInnovators = () => {
                 </Typography.Title>
               </Typography.Title>
             </Col>
-            <Col>
+            <Col style={{ textAlign: 'center' }}>
               <Typography.Text className="description" type="secondary">
                 Within{' '}
                 <span className="color-white" style={{ fontWeight: 700 }}>

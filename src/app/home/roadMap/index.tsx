@@ -16,14 +16,14 @@ export const RoadMap = () => {
 
   return (
     <MaxWidthLayout>
-      <Row gutter={[24, 24]} justify="center">
+      <Row gutter={[16, 16]} justify="center">
         <Col>
           <Typography.Title level={2}>
             <span className="gradient-text gradient-road-map">Our Vision</span>
             {` `}for the Future
           </Typography.Title>
         </Col>
-        <Col>
+        <Col style={{ textAlign: 'center' }}>
           <Typography.Text className="description" type="secondary">
             Follow our journey to conquer the Web3 multi-sig realm
           </Typography.Text>

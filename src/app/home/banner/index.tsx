@@ -26,7 +26,7 @@ const Banner = () => {
   }, [width])
 
   return (
-    <Row>
+    <Row style={{ marginTop: 32 }}>
       <Col span={24}>
         <MaxWidthLayout>
           <Row gutter={[24, 24]} wrap={isMobile}>

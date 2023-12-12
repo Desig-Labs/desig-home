@@ -10,7 +10,6 @@
     "lint:watch": "nodemon --watch src --ext ts,tsx --exec 'next lint'"
   },
   "dependencies": {
-    "@desig/supported-chains": "^1.0.46",
     "@mdx-js/react": "^2.3.0",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.512",

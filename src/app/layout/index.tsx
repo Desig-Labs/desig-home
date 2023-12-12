@@ -35,11 +35,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           async
         />
         <Script
-          type="module"
-          src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
-          async
-        />
-        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-73FGM6E65P"
           strategy="afterInteractive"
         />
