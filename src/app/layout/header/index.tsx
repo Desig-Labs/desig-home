@@ -1,7 +1,7 @@
 'use client'
 import { usePathname, useRouter } from 'next/navigation'
 
-import { Button, Col, Row, Space, Typography } from 'antd'
+import { Button, Col, Row, Space } from 'antd'
 import Brand from 'components/brand'
 import IonIcon from 'components/ionicon'
 import DrawerHeader from './drawerHeader'
@@ -9,10 +9,10 @@ import DrawerHeader from './drawerHeader'
 import './index.scss'
 
 export const SECTIONS_LIST = [
-  { title: 'Wallet', route: '/wallet' },
-  { title: 'Services', route: '/services' },
-  { title: 'Docs', route: '/docs' },
-  { title: 'Blog', route: '/blog' },
+  { title: 'Wallet', route: '/wallet', disabled: false },
+  { title: 'Services', route: '/services', disabled: true },
+  { title: 'Docs', route: '/docs', disabled: true },
+  { title: 'Blog', route: '/blog', disabled: true },
 ]
 
 export default function Header() {
@@ -33,25 +33,22 @@ export default function Header() {
             <Brand
               size={32}
               theme="dark"
-              onClick={() => router.push('/home')}
+              onClick={() => router.push('/')}
               style={{ cursor: 'pointer' }}
             />
           </Col>
           <Col className="tabs-section">
             <Space size={40}>
-              {SECTIONS_LIST.map(({ title, route }) => (
-                <Typography.Text
-                  style={{
-                    cursor: 'pointer',
-                    fontSize: '14px',
-                    fontWeight: 700,
-                  }}
-                  key={route}
+              {SECTIONS_LIST.map(({ title, route, disabled }) => (
+                <Button
+                  key={title}
+                  type="text"
+                  disabled={disabled}
                   onClick={() => router.push(route)}
                   className={path === route ? 'tab active' : 'tab'}
                 >
                   {title}
-                </Typography.Text>
+                </Button>
               ))}
             </Space>
           </Col>
