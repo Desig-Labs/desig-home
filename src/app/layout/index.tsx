@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body id="dark">
         <CsrProvider>
           <UiProvider>
             <Header />
