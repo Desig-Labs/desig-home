@@ -30,7 +30,10 @@ export const LeadingInnovators = () => {
             <Col style={{ textAlign: 'center' }}>
               <Typography.Text className="description" type="secondary">
                 Within{' '}
-                <span className="color-white" style={{ fontWeight: 700 }}>
+                <span
+                  className="color-white"
+                  style={{ fontWeight: 700, position: 'relative' }}
+                >
                   8 months
                   <Image src={IMG} alt="line" className="line-under" />
                 </span>
