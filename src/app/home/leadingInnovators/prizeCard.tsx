@@ -79,7 +79,7 @@ export const PrizeCard = () => {
                         opacity: 0.7,
                       }}
                     >
-                      {descriptions}ss
+                      {descriptions}
                     </Typography.Text>
                   </Col>
                 </Row>
