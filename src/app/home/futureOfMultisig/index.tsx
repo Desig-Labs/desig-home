@@ -26,7 +26,7 @@ export const FutureOfMultisig = () => {
             </Col>
             <Col>
               <Typography.Text
-                style={{ textAlign: 'center' }}
+                style={{ display: 'flex', textAlign: 'center' }}
                 className="description"
                 type="secondary"
               >
@@ -46,9 +46,9 @@ export const FutureOfMultisig = () => {
             </Button>
             <Button
               href="mailto:hi@desig.io"
-              icon={<IonIcon name="mail-outline" />}
+              icon={<IonIcon name="chatbubbles-outline" />}
             >
-              Mail to
+              Talk to us
             </Button>
           </Space>
         </Col>
