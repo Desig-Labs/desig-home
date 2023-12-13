@@ -25,6 +25,13 @@
     var(--_animation-direction, forwards) linear infinite;
 }
 
+.swiper-slide-chain{
+  display: flex;
+  width: unset !important;
+  margin-right: 80px !important;
+  align-items: center;
+}
+
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 0.5rem));
@@ -43,4 +50,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 868px) {
+  .swiper-slide-chain{
+    margin-right: 32px !important;
+  }
 }

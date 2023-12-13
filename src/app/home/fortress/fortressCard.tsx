@@ -15,18 +15,20 @@ const FORTRESS_WEB3 = [
     title: 'The Multi-sig Wallet',
     description: `With Desig's cutting-edge technologies, take control without compromise. No keys. No central entity. A wallet designed to transform your digital asset management experience`,
     url: Multisig,
+    onMore: 'Learn more',
   },
   {
     title: 'Multisig-as-a-Service',
     description:
       'Choose your own set of fighters. Drag and drop your preferred functions and build your own financial system, tailored to your needs and wants. Get 24/7 support from global-winning technical experts',
     url: Service_Desig,
+    onMore: 'Coming soon',
   },
 ]
 export const FortressCard = () => {
   return (
     <Row gutter={[32, 32]}>
-      {FORTRESS_WEB3.map(({ title, description, url }, index) => (
+      {FORTRESS_WEB3.map(({ title, description, url, onMore }, index) => (
         <Col span={24} key={index}>
           <Card bodyStyle={{ padding: 0 }} className="card-fortress">
             <Row gutter={[24, 24]} align="middle" justify="center">
@@ -42,7 +44,7 @@ export const FortressCard = () => {
                   </Col>
                   <Col className="btn-fortress">
                     <Button className="ant-btn" style={{ width: '100%' }}>
-                      Learn more
+                      {onMore}
                       <Image
                         src={Arrow}
                         alt="arrow"
