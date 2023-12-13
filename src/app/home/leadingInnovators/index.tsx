@@ -15,9 +15,14 @@ export const LeadingInnovators = () => {
     <MaxWidthLayout>
       <Row gutter={[80, 80]} align="middle" justify="center">
         <Col>
-          <Row gutter={[16, 8]} wrap={true} justify="center">
+          <Row
+            gutter={[16, 8]}
+            wrap={true}
+            justify="center"
+            style={{ textAlign: 'center' }}
+          >
             <Col>
-              <Typography.Title level={2} style={{ textAlign: 'center' }}>
+              <Typography.Title level={2}>
                 Revered by
                 <Typography.Title
                   level={2}
@@ -30,7 +35,10 @@ export const LeadingInnovators = () => {
             <Col>
               <Typography.Text className="description" type="secondary">
                 Within{' '}
-                <span className="color-white" style={{ fontWeight: 700 }}>
+                <span
+                  className="color-white"
+                  style={{ fontWeight: 700, position: 'relative' }}
+                >
                   8 months
                   <Image src={IMG} alt="line" className="line-under" />
                 </span>

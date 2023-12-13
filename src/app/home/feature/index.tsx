@@ -80,7 +80,7 @@ export const Feature = () => {
                 Secure. Private. Effortless.
               </Typography.Title>
             </Col>
-            <Col>
+            <Col style={{ textAlign: 'center' }}>
               <Typography.Text className="description" type="secondary">
                 Harmonizing proven technology and user-centric design for
                 multi-sig excellence.

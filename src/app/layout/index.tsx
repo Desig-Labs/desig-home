@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body id="dark">
         <CsrProvider>
           <UiProvider>
             <Header />
@@ -32,11 +32,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Script
           type="module"
           src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-          async
-        />
-        <Script
-          type="module"
-          src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"
           async
         />
         <Script

@@ -1,12 +1,11 @@
 'use client'
 
 import { useMemo } from 'react'
+import { useWindowSize } from 'react-use'
 
 import Spline from '@splinetool/react-spline'
 import Card from 'antd/es/card/Card'
 import { Col, Row, Typography } from 'antd'
-
-import { useWidth } from 'providers/ui.provider'
 
 import './index.scss'
 
@@ -37,7 +36,7 @@ const LIST_PRIZES = [
   },
 ]
 export const PrizeCard = () => {
-  const { width } = useWidth()
+  const { width } = useWindowSize()
 
   const isMobile = useMemo(() => {
     let result = true
@@ -79,7 +78,7 @@ export const PrizeCard = () => {
                         opacity: 0.7,
                       }}
                     >
-                      {descriptions}ss
+                      {descriptions}
                     </Typography.Text>
                   </Col>
                 </Row>

@@ -7,7 +7,6 @@ import MaxWidthLayout from 'components/maxWidthLayout'
 import Arrow from 'static/images/btn-link.svg'
 
 import style from './index.module.scss'
-import { useTheme } from 'providers/ui.provider'
 import {
   blog,
   docs,
@@ -71,15 +70,14 @@ export const FOLLOW_US = [
     url: linkedin,
   },
 ]
-export default function Footer() {
-  const { theme } = useTheme()
 
+export default function Footer() {
   return (
     <MaxWidthLayout>
       <Row className={style.footer} gutter={[56, 56]} justify="start">
         <Col flex="auto">
           <Space direction="vertical" size={24}>
-            <Brand size={32} theme={theme} />
+            <Brand size={32} theme="dark" />
             <Typography.Text className="caption" type="secondary">
               Desig © 2023, All Rights Reserved.
             </Typography.Text>

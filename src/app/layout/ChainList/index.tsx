@@ -1,9 +1,10 @@
+'use client'
+
 import { useMemo } from 'react'
+import { useWindowSize } from 'react-use'
 
 import { Col, Row, Typography } from 'antd'
 import { InfiniteSwiper } from 'components/infiniteSwiper'
-
-import { useWidth } from 'providers/ui.provider'
 
 import 'swiper/css'
 import './index.scss'
@@ -29,7 +30,7 @@ export const CHAINS = [
   'zeta-chain.svg',
 ]
 export const ScrollChainList = () => {
-  const { width } = useWidth()
+  const { width } = useWindowSize()
 
   const perview = useMemo(() => {
     let result = 3

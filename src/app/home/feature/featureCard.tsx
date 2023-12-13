@@ -1,11 +1,12 @@
 'use client'
 
+import React, { useMemo } from 'react'
+import { useWindowSize } from 'react-use'
+
 import { Card, Col, Row, Typography } from 'antd'
 import Image, { StaticImageData } from 'next/image'
-import React, { useMemo } from 'react'
 
 import './index.scss'
-import { useWidth } from 'providers/ui.provider'
 
 export type FeatureCardProps = {
   title: string
@@ -17,7 +18,7 @@ export const FeatureCard = ({
   icon,
   maxWidth,
 }: FeatureCardProps) => {
-  const { width } = useWidth()
+  const { width } = useWindowSize()
 
   const isMobile = useMemo(() => {
     let result = true
