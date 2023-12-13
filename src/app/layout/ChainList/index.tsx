@@ -13,18 +13,20 @@ export const PATH_RAW_IMG =
   'https://raw.githubusercontent.com/Desig-Labs/desig-assets/master/assets/listLogoChain/'
 
 export const CHAINS = [
+  'aptos.svg',
   'arbitrum.svg',
   'avax.svg',
   'base.svg',
-  'comdex.svg',
-  'hedera.svg',
+  'bsc.svg',
+  'eth.svg',
   'linea.svg',
   'moonbeam.svg',
   'movement.svg',
   'polygon.svg',
   'sei.svg',
   'shardeum.svg',
-  'starkne.svg',
+  'solana.svg',
+  'sui.svg',
   'taiko.svg',
   'viction.svg',
   'zeta-chain.svg',

@@ -79,7 +79,7 @@ export default function Footer() {
           <Space direction="vertical" size={24}>
             <Brand size={32} theme="dark" />
             <Typography.Text className="caption" type="secondary">
-              Desig © 2023, All Rights Reserved.
+              Desig Labs © 2023, All Rights Reserved.
             </Typography.Text>
           </Space>
         </Col>

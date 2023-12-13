@@ -48,7 +48,7 @@ export const FutureOfMultisig = () => {
               href="mailto:hi@desig.io"
               icon={<IonIcon name="mail-outline" />}
             >
-              Mail to
+              Talk to us
             </Button>
           </Space>
         </Col>

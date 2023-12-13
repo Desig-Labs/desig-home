@@ -38,7 +38,7 @@ export const InfiniteSwiper = ({
       loop={true}
     >
       {data.map((src, index) => (
-        <SwiperSlide style={{ width: 'auto' }} key={index}>
+        <SwiperSlide className="swiper-slide-chain" key={index}>
           <Image preview={false} alt="" src={`${rootPath}${src}`} />
         </SwiperSlide>
       ))}
