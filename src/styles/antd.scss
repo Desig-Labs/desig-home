@@ -11,7 +11,7 @@
   background-color: transparent !important;
   border: 1px solid $PRIMARY;
 }
-.ant-btn-text{
+.ant-btn-text {
   border: none !important;
   padding: 0 !important;
 }
@@ -20,7 +20,7 @@
   font-weight: 700;
   border: none !important;
   box-shadow: none !important;
-  &:hover{
+  &:hover {
     background-color: $DARK_PURPLE !important;
     color: $NEUTRAL40 !important;
   }
@@ -28,9 +28,12 @@
 
 //Card
 .ant-card {
-  background: $CARD_FILL !important;
-  border-radius: 32px !important;
+  &:not(.card-transparent) {
+    background: $CARD_FILL !important;
+  }
+  &:not(.flexible-radius) {
+    border-radius: 32px !important;
+  }
   box-shadow: none !important;
-  border: none
+  border: none;
 }
-

@@ -1,63 +1,105 @@
-.gradient-feature{
-    background: linear-gradient(266deg, #FAE2B6 17.15%, #EF90B8 60.53%, #B684F0 86.55%);
+.gradient-feature {
+  background: linear-gradient(
+    266deg,
+    #fae2b6 17.15%,
+    #ef90b8 60.53%,
+    #b684f0 86.55%
+  );
 }
 
-.grid-layout{
-    display: grid;
-    grid-template-areas: 
-        "a b c"
-        "d b c"
-        "d e c"
-        "d e f"
-        "g g h";
+.grid-layout {
+  display: grid;
+  grid-template-areas:
+    'a b c'
+    'd b c'
+    'd e c'
+    'd e f'
+    'g g h';
 }
 
-.item-grid{
-   height: 100%;
-   width: 100%;
+.item-grid {
+  height: 100%;
+  width: 100%;
 }
 
-.icon-feature{
-   display: flex; 
-   justify-content: end;
-   align-items: end;
-   height: 100%;
-   width: 100%
+.icon-feature {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  height: 100%;
+  width: 100%;
 }
 
 .item1 {
-   grid-area: a;
+  grid-area: a;
 }
 .item2 {
-   grid-area: b;
+  grid-area: b;
 }
 .item3 {
-   grid-area: c;
+  grid-area: c;
 }
 .item4 {
-   grid-area: d;
+  grid-area: d;
 }
 .item5 {
-   grid-area: e;
+  grid-area: e;
 }
 .item6 {
-   grid-area: f;
+  grid-area: f;
 }
 .item7 {
-   grid-area: g;
+  grid-area: g;
 }
 .item8 {
-   grid-area: h
+  grid-area: h;
+}
+
+.flip-card {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: translateZ(-10px);
+  height: 100%;
+  &:hover {
+    .flip-card-front {
+      transform: rotateY(-180deg) translateZ(5px);
+    }
+    .flip-card-back {
+      transform: rotateY(0deg) translateZ(30px);
+    }
+  }
+  &-back,
+  &-front {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  &-front {
+    position: relative;
+    transform: rotateY(0deg) translateZ(5px);
+  }
+  &-back {
+    position: absolute;
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+    top: 12px;
+    left: 12px;
+    background-color: transparent !important;
+    backdrop-filter: blur(15px);
+    transform: rotateY(180deg) translateZ(-5px);
+    border-radius: 24px !important;
+    border: 1px solid #0b081e2e !important;
+  }
 }
 
 @media screen and (max-width: 991.9px) {
-   .grid-layout{
-        display: flex;
-    }
-   .item-grid{
-      height: 200px;
-   }
-   .icon-feature{
-      width: 300px;
-   }
+  .grid-layout {
+    display: flex;
+  }
+  .item-grid {
+    height: 200px;
+  }
+  .icon-feature {
+    width: 300px;
+  }
 }
