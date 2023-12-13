@@ -35,10 +35,10 @@ export const ScrollChainList = () => {
   const { width } = useWindowSize()
 
   const perview = useMemo(() => {
-    let result = 4
-    if (width > 575) result = 5
-    if (width > 992) result = 6
-    if (width > 1200) result = 7
+    let result = 3
+    if (width > 575) result = 4
+    if (width > 992) result = 5
+    if (width > 1200) result = 6
     return result
   }, [width])
 
@@ -47,7 +47,7 @@ export const ScrollChainList = () => {
       <Col span={24}>
         <InfiniteSwiper
           rootPath={PATH_RAW_IMG}
-          data={new Array(7).fill(CHAINS).flat(Infinity)}
+          data={new Array(6).fill(CHAINS).flat(Infinity)}
           spacing={30}
           perViews={perview}
         />
@@ -60,7 +60,7 @@ export const ScrollChainList = () => {
       <Col span={24}>
         <InfiniteSwiper
           rootPath={PATH_RAW_IMG}
-          data={new Array(7).fill(CHAINS).flat(Infinity)}
+          data={new Array(6).fill(CHAINS).flat(Infinity)}
           spacing={30}
           perViews={perview}
           reverse={true}
