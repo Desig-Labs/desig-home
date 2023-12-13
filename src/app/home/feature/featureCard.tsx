@@ -40,7 +40,9 @@ export const FeatureCard = ({
             <Typography.Title level={4}>{title}</Typography.Title>
           </Col>
           <Col span={24}>
-            <Typography.Text>{desc}</Typography.Text>
+            <Typography.Text className={isMobile ? 'caption' : ''}>
+              {desc}
+            </Typography.Text>
           </Col>
         </Row>
       </Card>
@@ -51,15 +53,22 @@ export const FeatureCard = ({
         bodyStyle={{ height: '100%' }}
         className="ant-card flip-card-front"
       >
-        <Row gutter={[16, 16]} wrap={!isMobile}>
-          <Col md={24} flex={isMobile ? ' auto' : 'none'}>
+        <Row gutter={[16, 16]}>
+          <Col
+            span={isMobile ? 24 : undefined}
+            flex={isMobile ? 'none' : 'auto'}
+          >
             <Typography.Title level={4}>{title}</Typography.Title>
           </Col>
-          <Col className="icon-feature">
+          <Col span={isMobile ? 24 : undefined} className="icon-feature">
             <Image
               src={icon}
               alt=""
-              style={{ width: '50%', height: '50%', maxWidth }}
+              style={{
+                width: '50%',
+                height: 'auto',
+                maxWidth,
+              }}
             />
           </Col>
         </Row>
