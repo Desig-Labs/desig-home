@@ -8,7 +8,7 @@
 }
 
 .text-title-banner{
-    font-size: 70px !important;
+    font-size: 60px !important;
     line-height: normal !important;
 }
 
@@ -20,7 +20,7 @@
 }
 .line-banner{
   position: absolute;
-   top: -120px !important;
+   top: -100px !important;
    left: -300px !important
 }
 
@@ -49,8 +49,9 @@
     }
     .line-banner{
       position: absolute;
-       top: -177px !important;
-       left: -130px !important
+      top: -130px !important;
+      left: -160px !important;
+      transform: rotate(20deg);
     }
 }
 

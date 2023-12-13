@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation'
 
 import { Button, Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
-import IonIcon from 'components/ionicon'
 
 import SHINE from 'static/images/wallet/shine.png'
 
@@ -31,13 +30,12 @@ export default function Attention() {
           <Row gutter={[0, 16]}>
             <Col span={24}>
               <Typography.Title level={2}>
-                Transform your future of
+                Get your <span className="gradient-text">Omnichain Smart</span>
               </Typography.Title>
             </Col>
             <Col span={24}>
               <Typography.Title level={2}>
-                <span className="gradient-text">multi-sig management</span>{' '}
-                today
+                <span className="gradient-text">Multisig wallet</span> on the go
               </Typography.Title>
             </Col>
             <Col span={24}>
@@ -49,10 +47,9 @@ export default function Attention() {
               <Button
                 size="large"
                 className="ant-btn-primary"
-                icon={<IonIcon name="key-outline" />}
                 onClick={() => router.push('/install-app')}
               >
-                Get Early Access
+                Download Now
               </Button>
             </Col>
           </Row>
