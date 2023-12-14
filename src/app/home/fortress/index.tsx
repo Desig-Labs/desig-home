@@ -27,8 +27,8 @@ export const Fortress = () => {
             </Col>
             <Col>
               <Typography.Text className="description" type="secondary">
-                Use our multi-function wallet or build your own customized
-                system.
+                Use our Smart multisig wallet or build your Tailor-made multisig
+                setup
               </Typography.Text>
             </Col>
           </Row>

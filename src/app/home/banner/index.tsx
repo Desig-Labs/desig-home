@@ -54,7 +54,7 @@ const Banner = () => {
       <Col span={24}>
         <MaxWidthLayout>
           <Row gutter={[24, 24]} wrap={isMobile}>
-            <Col xs={{ order: 2, span: 24 }} md={{ order: 1, span: 10 }}>
+            <Col xs={{ order: 2, span: 24 }} md={{ order: 1, span: 12 }}>
               <Row gutter={[16, 16]}>
                 <Col span={24}>
                   <Space direction="vertical">
@@ -65,10 +65,10 @@ const Banner = () => {
                       Omnichain
                     </Typography.Title>
                     <Typography.Title level={1} className="text-title-banner">
-                      <span className="gradient-text gradient-text-banner-1">
-                        Multi-Smart Multisig
+                      <span className="gradient-text gradient-text-banner">
+                        Smart Multisig
                         <Image src={Line} alt="line" className="line-banner" />
-                      </span>{' '}
+                      </span>
                     </Typography.Title>
                   </Space>
                 </Col>
@@ -92,13 +92,13 @@ const Banner = () => {
             </Col>
             <Col
               xs={{ order: 1, span: 24 }}
-              md={{ order: 2, span: 14 }}
+              md={{ order: 2, span: 12 }}
               style={{ textAlign: 'right' }}
             >
               <Image
                 src={Img}
                 alt=""
-                style={{ width: '100%', height: '80%' }}
+                style={{ width: '100%', height: '100%' }}
               />
             </Col>
           </Row>

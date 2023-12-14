@@ -25,16 +25,16 @@ export const RESOURCES = [
     url: blog,
   },
   {
+    name: 'Github',
+    url: github,
+  },
+  {
     name: 'Docs',
     url: docs,
   },
   {
     name: 'Core',
     url: core,
-  },
-  {
-    name: 'Github',
-    url: github,
   },
   {
     name: 'Web3 Library',
@@ -78,7 +78,7 @@ export default function Footer() {
             <Typography.Text strong>Products</Typography.Text>
             <Space direction="vertical" size={16}>
               <Typography.Text type="secondary">
-                Multi-sig Wallet
+                Multisig Wallet
               </Typography.Text>
               <Typography.Text type="secondary">
                 Multisig-as-a-service

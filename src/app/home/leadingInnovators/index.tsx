@@ -23,7 +23,7 @@ export const LeadingInnovators = () => {
           >
             <Col>
               <Typography.Title level={2}>
-                Revered by
+                Esteemed by
                 <Typography.Title
                   level={2}
                   className="gradient-text gradient-text-leading"
@@ -39,11 +39,18 @@ export const LeadingInnovators = () => {
                   className="color-white"
                   style={{ fontWeight: 700, position: 'relative' }}
                 >
-                  8 months
+                  6 months
                   <Image src={IMG} alt="line" className="line-under" />
                 </span>
-                , Desig brought home Golds and Silvers from multiple hackathons
-                across the globe.
+                , Desig brought home{' '}
+                <span className="color-white" style={{ fontWeight: 700 }}>
+                  Gold
+                </span>{' '}
+                and{' '}
+                <span className="color-white" style={{ fontWeight: 700 }}>
+                  Silver
+                </span>{' '}
+                from multiple hackathons across the globe.
               </Typography.Text>
             </Col>
           </Row>

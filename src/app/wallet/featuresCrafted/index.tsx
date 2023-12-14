@@ -35,8 +35,8 @@ export default function FeatureCrafted() {
           <Row gutter={[0, 16]}>
             <Col span={24}>
               <Typography.Title level={2}>
-                <span className="gradient-text">Features crafted </span>
-                with you in mind
+                <span className="gradient-text">Smart Features </span>
+                crafted with you in mind
               </Typography.Title>
             </Col>
             <Col span={24}>

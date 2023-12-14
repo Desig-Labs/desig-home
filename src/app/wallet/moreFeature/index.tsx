@@ -32,18 +32,18 @@ const LIST_FEATURE = [
   },
 
   {
-    title: 'Scheduled Transaction',
+    title: 'Scheduled Transaction (Coming Soon)',
     desc: 'Automate future transactions by scheduling actions ahead of time',
     img: SCHEDULED,
   },
 
   {
-    title: 'Restaking',
+    title: 'Restaking (Coming Soon)',
     desc: 'Maximize returns via effortless asset restaking across chains',
     img: RESTAKING,
   },
   {
-    title: 'RWA Aggregator',
+    title: 'RWA Aggregator (Coming Soon)',
     desc: 'Maximize your investment potential with real-world asset investment',
     img: AGGREGATOR,
   },
