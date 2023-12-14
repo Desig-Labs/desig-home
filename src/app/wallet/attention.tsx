@@ -30,12 +30,10 @@ export default function Attention() {
           <Row gutter={[0, 16]}>
             <Col span={24}>
               <Typography.Title level={2}>
-                Get your <span className="gradient-text">Omnichain Smart</span>
-              </Typography.Title>
-            </Col>
-            <Col span={24}>
-              <Typography.Title level={2}>
-                <span className="gradient-text">Multisig wallet</span> on the go
+                Get your{' '}
+                <Typography.Title level={2} className="gradient-text">
+                  Omnichain Smart Multisig wallet
+                </Typography.Title>
               </Typography.Title>
             </Col>
             <Col span={24}>

@@ -27,8 +27,14 @@ export const Fortress = () => {
             </Col>
             <Col>
               <Typography.Text className="description" type="secondary">
-                Use our Smart multisig wallet or build your Tailor-made multisig
-                setup
+                Use our{' '}
+                <span className="color-white" style={{ fontWeight: 700 }}>
+                  Smart multisig wallet
+                </span>{' '}
+                or build your{' '}
+                <span className="color-white" style={{ fontWeight: 700 }}>
+                  Tailor-made multisig setup
+                </span>
               </Typography.Text>
             </Col>
           </Row>

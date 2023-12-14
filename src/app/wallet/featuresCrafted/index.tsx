@@ -41,8 +41,11 @@ export default function FeatureCrafted() {
             </Col>
             <Col span={24}>
               <Typography.Text className="description" type="secondary">
-                More than safekeeping: Grow your wealth with Desig&apos;s Smart
-                Finance features.
+                More than safekeeping: Grow your wealth with Desig&apos;s{' '}
+                <span className="color-white" style={{ fontWeight: 700 }}>
+                  Smart Financial
+                </span>{' '}
+                features.
               </Typography.Text>
             </Col>
           </Row>

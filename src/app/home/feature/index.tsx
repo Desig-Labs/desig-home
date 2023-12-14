@@ -90,8 +90,15 @@ export const Feature = () => {
             </Col>
             <Col style={{ textAlign: 'center' }}>
               <Typography.Text className="description" type="secondary">
-                Harmonizing Smart technology and User-centric design for
-                Multisig excellence
+                Harmonizing{' '}
+                <span className="color-white" style={{ fontWeight: 700 }}>
+                  Smart
+                </span>{' '}
+                technology and{' '}
+                <span className="color-white" style={{ fontWeight: 700 }}>
+                  User-centric
+                </span>{' '}
+                design for Multisig excellence
               </Typography.Text>
             </Col>
           </Row>
