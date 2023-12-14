@@ -12,15 +12,15 @@ import './index.scss'
 
 const FORTRESS_WEB3 = [
   {
-    title: 'The Multi-sig Wallet',
-    description: `With Desig's cutting-edge technologies, take control without compromise. No keys. No central entity. A wallet designed to transform your digital asset management experience`,
+    title: 'Smart Multisig On The Go',
+    description: `Experience the first Omnichain Smart Multisig wallet that streamlines treasury ops. Watch your funds flourish with intuitive tracking, smart allocation & insightful cashflow reports. Enjoy gasless vault control, intel-driven swap, and optimal staking with our Aggregator to ensure maximum yield and return. Get your Smart Multisig on the go today!`,
     url: Multisig,
     onMore: 'Learn more',
   },
   {
     title: 'Multisig-as-a-Service',
     description:
-      'Choose your own set of fighters. Drag and drop your preferred functions and build your own financial system, tailored to your needs and wants. Get 24/7 support from global-winning technical experts',
+      'Select a bespoke set of smart fighters. Utilize a drag-and-drop interface to pick your chosen features and create a financial ecosystem customized for your specific requirements. Get 24/7 support from global-winning technical experts.',
     url: Service_Desig,
     onMore: 'Coming soon',
   },

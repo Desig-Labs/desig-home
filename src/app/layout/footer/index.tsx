@@ -17,13 +17,11 @@ import {
   twitter,
   youtube,
   linkedin,
-  link3,
-  debank,
 } from 'configs/socials.constant'
 
 export const RESOURCES = [
   {
-    name: 'Blog',
+    name: 'Blog (Coming soon)',
     url: blog,
   },
   {
@@ -43,7 +41,7 @@ export const RESOURCES = [
     url: web3,
   },
   {
-    name: 'Brand Kit',
+    name: 'Brand & Press',
     url: brandkit,
   },
 ]
@@ -52,14 +50,6 @@ export const FOLLOW_US = [
   {
     name: 'Twitter',
     url: twitter,
-  },
-  {
-    name: 'Link3',
-    url: link3,
-  },
-  {
-    name: 'DeBank',
-    url: debank,
   },
   {
     name: 'YouTube',
