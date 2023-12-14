@@ -10,7 +10,7 @@
     padding: 12px 24px;
 
     .tab{
-      color: $NEUTRAL40;
+      color: $NEUTRAL40 !important;
       font-weight: 700;
       font-size: 14px;
 
@@ -24,6 +24,7 @@
     }
   }
 }
+
 
 .header-drawer{
   display: none;
@@ -43,6 +44,10 @@
           margin-inline-end: 0;
         }
       }
+    }
+
+    .tab{
+      color: $NEUTRAL40 !important;
     }
 
     .ant-drawer-body{

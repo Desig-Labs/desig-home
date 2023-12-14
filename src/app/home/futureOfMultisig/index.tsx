@@ -11,31 +11,16 @@ export const FutureOfMultisig = () => {
   return (
     <MaxWidthLayout>
       <Row gutter={[40, 40]} justify="center">
-        <Col>
-          <Row
-            gutter={[16, 16]}
-            justify="center"
-            style={{ textAlign: 'center' }}
-          >
-            <Col>
-              <Typography.Title level={2} style={{ maxWidth: 720 }}>
-                Experience the first
-              </Typography.Title>
-              <Typography.Title level={2} style={{ maxWidth: 720 }}>
-                <span className="gradient-text gradient-text-future">
-                  Smart Omnichain Multisig
-                </span>
-              </Typography.Title>
-              <Typography.Title level={2} style={{ maxWidth: 720 }}>
-                tailored for User Simplicity
-              </Typography.Title>
-            </Col>
-            <Col>
-              <Typography.Text className="description" type="secondary">
-                Be an OG on Desig and experience next-level shared custody.
-              </Typography.Text>
-            </Col>
-          </Row>
+        <Col style={{ maxWidth: 720, textAlign: 'center' }}>
+          <Typography.Title level={2}>Experience the first</Typography.Title>
+          <Typography.Title level={2}>
+            <span className="gradient-text gradient-text-future">
+              Smart Omnichain Multisig
+            </span>
+          </Typography.Title>
+          <Typography.Title level={2}>
+            tailored for User Simplicity
+          </Typography.Title>
         </Col>
         <Col>
           <Space>
@@ -52,7 +37,7 @@ export const FutureOfMultisig = () => {
               href="mailto:hi@desig.io"
               icon={<IonIcon name="chatbubbles-outline" />}
             >
-              Talk to us
+              Talk To Us
             </Button>
           </Space>
         </Col>

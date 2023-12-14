@@ -58,17 +58,15 @@ const Banner = () => {
               <Row gutter={[16, 16]}>
                 <Col span={24}>
                   <Space direction="vertical">
-                    <Typography.Title level={1} className="text-title-banner">
-                      The First{' '}
+                    <Typography.Title level={1}>
+                      The First Omnichain
                     </Typography.Title>
-                    <Typography.Title level={1} className="text-title-banner">
-                      Omnichain
-                    </Typography.Title>
-                    <Typography.Title level={1} className="text-title-banner">
-                      <span className="gradient-text gradient-text-banner">
-                        Smart Multisig
-                        <Image src={Line} alt="line" className="line-banner" />
-                      </span>
+                    <Typography.Title
+                      level={1}
+                      className="gradient-text gradient-text-banner"
+                    >
+                      Smart Multisig
+                      <Image src={Line} alt="line" className="line-banner" />
                     </Typography.Title>
                   </Space>
                 </Col>

@@ -7,6 +7,8 @@ import Brand from 'components/brand'
 
 import { SECTIONS_LIST } from '.'
 
+import './index.scss'
+
 const DrawerHeader = () => {
   const [visible, setVisible] = useState(false)
   const router = useRouter()
@@ -51,6 +53,7 @@ const DrawerHeader = () => {
                 block
                 style={{ fontSize: 18, textAlign: 'start' }}
                 disabled={disabled}
+                className="tab"
               >
                 {title}
               </Button>
