@@ -4,25 +4,26 @@ import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import CraftedCard from './craftedCard'
 
-import SOCIAL_RECOVERY from 'static/images/wallet/crafted/social-recovery.png'
+import SWAP from 'static/images/wallet/crafted/swap.png'
 import STAKING from 'static/images/wallet/crafted/staking.png'
 import CASHFLOW from 'static/images/wallet/crafted/cashflow.png'
 
 const LIST_CRAFTED = [
   {
-    title: 'Social Recovery',
-    desc: 'Regain access to your account through your preferred social connections, ensuring a seamless recovery experience.',
-    url3d: SOCIAL_RECOVERY,
+    title: 'Cashflow Management',
+    desc: 'Effortlessly track, customize, and analyze cash flows with tailored reports. Access period-specific, chain-based financial analyses and year-over-year growth report with interactive charts.',
+    url3d: CASHFLOW,
   },
   {
     title: 'Staking Aggregator',
-    desc: 'Leverage the power of staking with Desig’s built-in aggregator. Get the best returns on your investments without the hassle of manually tracking each staking platform or validator.',
+    desc: 'Maximize returns with insights on validators and staking platforms on a user-friendly dashboard with tailored recommendations. One-click staking provides real-time data and an Expert Scorecard for informed decisions.',
     url3d: STAKING,
   },
+
   {
-    title: 'Cashflow Management',
-    desc: 'Take control of your finances with ease. Organize transactions by category, create custom categories, and track your expenses visually with insightful pie charts.',
-    url3d: CASHFLOW,
+    title: 'Intel-driven Swap',
+    desc: 'Maximize efficiency with our Data-Powered Swap using top aggregators across 16 chains. Our innovative solution optimizes conversion costs and boosts capital efficiency for higher returns on every transaction.',
+    url3d: SWAP,
   },
 ]
 
@@ -34,14 +35,17 @@ export default function FeatureCrafted() {
           <Row gutter={[0, 16]}>
             <Col span={24}>
               <Typography.Title level={2}>
-                <span className="gradient-text">Features crafted </span>
-                with you in mind
+                <span className="gradient-text">Smart Features </span>
+                crafted with you in mind
               </Typography.Title>
             </Col>
             <Col span={24}>
               <Typography.Text className="description" type="secondary">
-                See how Desig transform the digital asset management world for
-                teams.
+                More than safekeeping: Grow your wealth with Desig&apos;s{' '}
+                <span className="color-white" style={{ fontWeight: 700 }}>
+                  Smart Financial
+                </span>{' '}
+                features.
               </Typography.Text>
             </Col>
           </Row>

@@ -28,7 +28,7 @@ export const RoadMap = () => {
         </Col>
         <Col style={{ textAlign: 'center' }}>
           <Typography.Text className="description" type="secondary">
-            Follow our journey to conquer the Web3 multi-sig realm
+            Follow our journey to conquer the Web3 multisig realm
           </Typography.Text>
         </Col>
         <Col span={24} style={{ aspectRatio: 3 / 2 }}>

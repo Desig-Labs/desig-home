@@ -12,24 +12,23 @@ export default function Banner() {
   const router = useRouter()
   return (
     <MaxWidthLayout>
-      <Row
-        className="item-responsive"
-        gutter={[0, 16]}
-        align="middle"
-        justify="space-between"
-      >
-        <Col xs={24} md={12}>
+      <Row className="item-responsive" gutter={[0, 16]} justify="space-between">
+        <Col xs={24} md={14}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
               <Space direction="vertical">
-                <Typography.Title level={1}>Transcend your </Typography.Title>
-                <Typography.Title level={1}>co-ownership </Typography.Title>
-                <Typography.Title level={1}>wallet limits</Typography.Title>
+                <Typography.Title level={1}>Omnichain</Typography.Title>
+                <Typography.Title level={1} className="gradient-text">
+                  Smart Multisig
+                </Typography.Title>
+                <Typography.Title level={1} className="gradient-text">
+                  On The Go
+                </Typography.Title>
               </Space>
             </Col>
             <Col span={24}>
               <Typography.Text type="secondary" className="description">
-                Unleash your team&apos;s financial dominance on omni-chain.
+                Simplify your Treasury operations
               </Typography.Text>
             </Col>
             <Col span={24} style={{ marginTop: 28 }}>
@@ -44,7 +43,7 @@ export default function Banner() {
             </Col>
           </Row>
         </Col>
-        <Col xs={24} md={12}>
+        <Col xs={24} md={10}>
           <Image
             style={{ width: '100%', height: '100%' }}
             alt="wallet"

@@ -30,7 +30,7 @@ export default function CraftedCard({ title, desc, url3d }: CraftedCardProps) {
             </Col>
           </Row>
         </Col>
-        <Col xs={24} md={12}>
+        <Col xs={24} md={10}>
           <Image
             style={{ width: '100%', height: '100%' }}
             alt={title}

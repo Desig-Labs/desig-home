@@ -19,11 +19,15 @@ export const FutureOfMultisig = () => {
           >
             <Col>
               <Typography.Title level={2} style={{ maxWidth: 720 }}>
-                Transform your future of{' '}
+                Experience the first
+              </Typography.Title>
+              <Typography.Title level={2} style={{ maxWidth: 720 }}>
                 <span className="gradient-text gradient-text-future">
-                  multi-sig management
+                  Smart Omnichain Multisig
                 </span>
-                {` `}today
+              </Typography.Title>
+              <Typography.Title level={2} style={{ maxWidth: 720 }}>
+                tailored for User Simplicity
               </Typography.Title>
             </Col>
             <Col>
@@ -46,7 +50,7 @@ export const FutureOfMultisig = () => {
             <Button
               size="large"
               href="mailto:hi@desig.io"
-              icon={<IonIcon name="mail-outline" />}
+              icon={<IonIcon name="chatbubbles-outline" />}
             >
               Talk to us
             </Button>

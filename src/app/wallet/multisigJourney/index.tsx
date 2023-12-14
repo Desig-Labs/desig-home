@@ -9,29 +9,34 @@ import 'swiper/css'
 
 const LIST_JOURNEY = [
   {
-    title: 'Effortless Multichain Management',
-    desc: 'Seamlessly grow and manage shared funds across diverse blockchains in one simple app.',
-    bg: '/journey/bg-efforless.png',
+    title: 'Omnichain Asset Movement',
+    desc: 'Unlock the power to move your assets effortlessly across vaults and chains. Navigate the blockchain world with zero restrictions.',
+    bg: '/journey/bg-asset.png',
   },
   {
-    title: 'Zero-Cost Transactions',
-    desc: 'Say goodbye to gas fees and transaction costs – manage your assets directly from shared vaults.',
-    bg: '/journey/bg-zero-cost.png',
+    title: 'Universal Gas Settlement',
+    desc: 'Say goodbye to limitations by paying gas fees with any native token, ensuring flexibility and convenience in your transactions.',
+    bg: '/journey/bg-gas.png',
   },
   {
-    title: 'Swift Vault Setup',
-    desc: 'Create multi-chain vaults in under 5 minutes with 4 simple steps.',
+    title: 'Gasless Vault Control',
+    desc: 'Say goodbye to vault management costs – manage your assets directly from shared vaults.',
     bg: '/journey/bg-vault.png',
   },
   {
-    title: 'Mobile-First Accessibility',
-    desc: 'Your finances are at your fingertips with our intuitive mobile app designed for your convenience.',
-    bg: '/journey/bg-mobile.png',
+    title: 'Effortless Multichain Management',
+    desc: 'Seamlessly grow and manage shared funds across diverse blockchains in one simple app.',
+    bg: '/journey/bg-effortless.png',
+  },
+  {
+    title: 'Unified Wallet Address',
+    desc: 'Simplifying multichain operations through a singular wallet address for all EVM-compatible chains',
+    bg: '/journey/bg-wallet.png',
   },
   {
     title: 'Stay in the Know, Anywhere',
     desc: 'Get instant, real-time alerts on all multi-sig activities, whether you’re on your mobile or PC.',
-    bg: '/journey/bg-stay-in.png',
+    bg: '/journey/bg-stay.png',
   },
   {
     title: 'Security First',
@@ -48,17 +53,16 @@ export default function MultisigJourney() {
           <Row gutter={[0, 16]}>
             <Col span={24}>
               <Typography.Title level={2}>
-                Empower your{' '}
+                Streamline your multisig journey, the{' '}
                 <span style={{ paddingRight: 4 }} className="gradient-text">
-                  multi-sig journey
+                  Desig{' '}
                 </span>
-                , the Desig way
+                way
               </Typography.Title>
             </Col>
             <Col span={24}>
               <Typography.Text className="description" type="secondary">
-                See how Desig transform the digital asset management world for
-                teams.
+                Unlocking omnichain control through user-centric wallet design
               </Typography.Text>
             </Col>
           </Row>

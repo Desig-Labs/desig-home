@@ -17,14 +17,16 @@ import {
   twitter,
   youtube,
   linkedin,
-  link3,
-  debank,
 } from 'configs/socials.constant'
 
 export const RESOURCES = [
   {
-    name: 'Blog',
+    name: 'Blog (Coming soon)',
     url: blog,
+  },
+  {
+    name: 'Github',
+    url: github,
   },
   {
     name: 'Docs',
@@ -35,15 +37,11 @@ export const RESOURCES = [
     url: core,
   },
   {
-    name: 'Github',
-    url: github,
-  },
-  {
     name: 'Web3 Library',
     url: web3,
   },
   {
-    name: 'Brand Kit',
+    name: 'Brand & Press',
     url: brandkit,
   },
 ]
@@ -52,14 +50,6 @@ export const FOLLOW_US = [
   {
     name: 'Twitter',
     url: twitter,
-  },
-  {
-    name: 'Link3',
-    url: link3,
-  },
-  {
-    name: 'DeBank',
-    url: debank,
   },
   {
     name: 'YouTube',
@@ -88,7 +78,7 @@ export default function Footer() {
             <Typography.Text strong>Products</Typography.Text>
             <Space direction="vertical" size={16}>
               <Typography.Text type="secondary">
-                Multi-sig Wallet
+                Multisig Wallet
               </Typography.Text>
               <Typography.Text type="secondary">
                 Multisig-as-a-service

@@ -5,33 +5,47 @@ import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import FeatureCard from './featureCard'
 
-import SWAP from 'static/images/wallet/feature/swap.png'
-import STAKING from 'static/images/wallet/feature/staking.png'
-import CASHFLOW from 'static/images/wallet/feature/cashflow.png'
+import SOCIAL_RECOVERY from 'static/images/wallet/feature/social-recovery.png'
 import CHATTING from 'static/images/wallet/feature/chatting.png'
+import NOTIFICATION from 'static/images/wallet/feature/noti.png'
+import SCHEDULED from 'static/images/wallet/feature/scheduled.png'
+import RESTAKING from 'static/images/wallet/feature/restaking.png'
+import AGGREGATOR from 'static/images/wallet/feature/aggregator.png'
 
 import 'swiper/css'
 
 const LIST_FEATURE = [
   {
-    title: 'Intel-driven Swap',
-    desc: 'Receive instant updates on your financial activities and market changes, keeping you in the know at all times.',
-    img: SWAP,
-  },
-  {
-    title: 'Staking Aggregator',
-    desc: 'Maximize your staking potential with Desig’s all-in-one aggregator. Simplify your investment and tracking of platforms and validators.',
-    img: STAKING,
-  },
-  {
-    title: 'Cashflow Management',
-    desc: 'Track, allocate, and analyze cash flows with intuitive, customizable reports. Customize categories with period-specific, chain-based financial analysis, and overview YoY growth reports featuring interactive charts.',
-    img: CASHFLOW,
+    title: 'Social Recovery',
+    desc: 'Effortless account recovery via trusted social channels',
+    img: SOCIAL_RECOVERY,
   },
   {
     title: 'In-app Chatting',
-    desc: 'Connect with fellow users effortlessly through in-app chat. Discuss strategies, share insights, and stay informed.',
+    desc: 'Seamless and secure multisig collaboration at your fingertips',
     img: CHATTING,
+  },
+  {
+    title: 'Notification On The Go',
+    desc: 'Stay instantly informed with real-time updates across devices',
+    img: NOTIFICATION,
+  },
+
+  {
+    title: 'Scheduled Transaction (Coming Soon)',
+    desc: 'Automate future transactions by scheduling actions ahead of time',
+    img: SCHEDULED,
+  },
+
+  {
+    title: 'Restaking (Coming Soon)',
+    desc: 'Maximize returns via effortless asset restaking across chains',
+    img: RESTAKING,
+  },
+  {
+    title: 'RWA Aggregator (Coming Soon)',
+    desc: 'Maximize your investment potential with real-world asset investment',
+    img: AGGREGATOR,
   },
 ]
 

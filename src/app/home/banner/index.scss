@@ -1,14 +1,10 @@
-.gradient-text-banner-1{
+.gradient-text-banner{
     font-size: 70px !important;
     background: linear-gradient(270deg, #FAE2B6 -5.65%, #EF90B8 57.47%, #B684F0 90.18%)
 }
-.gradient-text-banner-2{
-    font-size: 70px !important;
-    background: linear-gradient(273deg, #FAE2B6 36.03%, #EF90B8 92.68%, #B684F0 129.11%) ;
-}
 
 .text-title-banner{
-    font-size: 70px !important;
+    font-size: 60px !important;
     line-height: normal !important;
 }
 
@@ -20,7 +16,7 @@
 }
 .line-banner{
   position: absolute;
-   top: -120px !important;
+   top: -100px !important;
    left: -300px !important
 }
 
@@ -49,81 +45,8 @@
     }
     .line-banner{
       position: absolute;
-       top: -177px !important;
-       left: -130px !important
+      top: -130px !important;
+      left: -160px !important;
+      transform: rotate(20deg);
     }
 }
-
-
-.wrap-blogs-banner {
-    position: relative;
-    display: flex;
-    width: 100%;
-    margin-top: -120px;
-    padding: 140px 0;
-    justify-content: center;
-    &.awn {
-      height: 100vh;
-      align-items: center;
-      pointer-events: none;
-      padding: 0;
-      @media (max-width: 1200px) {
-        height: 80vh;
-      }
-      @media (max-width: 992px) {
-        height: 70vh;
-      }
-      @media (max-width: 768px) {
-        height: 50vh;
-      }
-      @media (max-width: 575px) {
-        height: 40vh;
-      }
-    }
-    iframe {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      object-fit: cover;
-    }
-    .ant-image {
-      position: absolute;
-      width: 100%;
-      min-height: 160px;
-      left: 0;
-      bottom: 0;
-      z-index: 1;
-      img {
-        object-fit: cover;
-        object-position: bottom;
-      }
-    }
-    .ant-typography {
-      position: relative;
-      z-index: 3;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 90px;
-      background: #000;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      bottom: 0;
-      background: linear-gradient(0deg, #000 0%, transparent 40%);
-      pointer-events: none;
-      z-index: 2;
-    }
-  }
-  

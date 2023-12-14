@@ -20,6 +20,9 @@
 .crafted-card{
     .ant-card-body{
         padding: 32px 64px;
+        height: 404px;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -56,6 +59,12 @@
 
     .journey-card{
         width: 343px;
+    }
+
+    .crafted-card{
+        .ant-card-body{
+            height: unset;
+        }
     }
 }
 
