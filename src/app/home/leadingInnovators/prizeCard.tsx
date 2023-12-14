@@ -31,7 +31,7 @@ const LIST_PRIZES = [
   {
     icon: 'https://prod.spline.design/jHhpMrKRfe5U2nPe/scene.splinecode',
     title: '3rd place',
-    descriptions: 'at Solana Hyperdriver MCM.',
+    descriptions: 'at Solana Hyperdrive MCM.',
     disable: false,
   },
 ]
