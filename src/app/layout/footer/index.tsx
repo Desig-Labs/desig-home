@@ -18,6 +18,7 @@ import {
   youtube,
   linkedin,
 } from 'configs/socials.constant'
+import { useRouter } from 'next/navigation'
 
 export const RESOURCES = [
   {
@@ -62,6 +63,8 @@ export const FOLLOW_US = [
 ]
 
 export default function Footer() {
+  const router = useRouter()
+
   return (
     <MaxWidthLayout>
       <Row className={style.footer} gutter={[56, 56]} justify="start">
@@ -77,11 +80,18 @@ export default function Footer() {
           <Space direction="vertical" size={24}>
             <Typography.Text strong>Products</Typography.Text>
             <Space direction="vertical" size={16}>
-              <Typography.Text type="secondary">
+              <Typography.Text
+                type="secondary"
+                onClick={() => router.push('/wallet')}
+                style={{ cursor: 'pointer' }}
+              >
                 Multisig Wallet
               </Typography.Text>
-              <Typography.Text type="secondary">
-                Multisig-as-a-service
+              <Typography.Text
+                type="secondary"
+                style={{ cursor: 'not-allowed' }}
+              >
+                Multisig-as-a-service (Coming soon)
               </Typography.Text>
             </Space>
           </Space>
