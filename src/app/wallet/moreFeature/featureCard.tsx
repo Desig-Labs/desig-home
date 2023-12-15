@@ -14,6 +14,7 @@ export default function FeatureCard({ title, desc, img }: CraftedCardProps) {
     <Card
       cover={<Image width={318} height={238} alt={title} src={img} />}
       className="feature-card"
+      style={{ cursor: 'grab' }}
     >
       <Row gutter={[0, 12]}>
         <Col span={24}>

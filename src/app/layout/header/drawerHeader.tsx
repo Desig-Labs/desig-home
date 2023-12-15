@@ -1,4 +1,4 @@
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Fragment, useState } from 'react'
 
 import { Button, Drawer, List } from 'antd'
@@ -12,6 +12,7 @@ import './index.scss'
 const DrawerHeader = () => {
   const [visible, setVisible] = useState(false)
   const router = useRouter()
+  const path = usePathname()
 
   return (
     <Fragment>
@@ -53,7 +54,7 @@ const DrawerHeader = () => {
                 block
                 style={{ fontSize: 18, textAlign: 'start' }}
                 disabled={disabled}
-                className="tab"
+                className={path === route ? 'tab active' : 'tab'}
               >
                 {title}
               </Button>

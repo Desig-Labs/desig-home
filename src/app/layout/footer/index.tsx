@@ -91,12 +91,7 @@ export default function Footer() {
             <Typography.Text strong>Resources</Typography.Text>
             <Space direction="vertical">
               {RESOURCES.map(({ name, url }, index) => (
-                <Button
-                  key={index}
-                  href={url}
-                  type="text"
-                  className="btn-footer"
-                >
+                <Button key={index} href={url} type="text" target="_blank">
                   <Space>
                     <Typography.Text type="secondary">{name}</Typography.Text>
                     <Image src={Arrow} alt="arrow" />
@@ -111,7 +106,7 @@ export default function Footer() {
             <Typography.Text strong>Follow us</Typography.Text>
             <Space direction="vertical">
               {FOLLOW_US.map(({ name, url }, index) => (
-                <Button key={index} href={url} type="text" className="">
+                <Button key={index} href={url} type="text" target="_blank">
                   <Space>
                     <Typography.Text type="secondary">{name}</Typography.Text>
                     <Image src={Arrow} alt="arrow" />

@@ -10,7 +10,7 @@
     padding: 12px 24px;
 
     .tab{
-      color: $NEUTRAL40 !important;
+      color: $NEUTRAL40;
       font-weight: 700;
       font-size: 14px;
 
@@ -47,7 +47,10 @@
     }
 
     .tab{
-      color: $NEUTRAL40 !important;
+      color: $NEUTRAL40;
+      &.active{
+        color: $NEUTRAL05;
+      }
     }
 
     .ant-drawer-body{
