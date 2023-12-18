@@ -10,8 +10,8 @@ export const FutureOfMultisig = () => {
   const router = useRouter()
   return (
     <MaxWidthLayout>
-      <Row gutter={[40, 40]} justify="center">
-        <Col style={{ maxWidth: 720, textAlign: 'center' }}>
+      <Row gutter={[40, 40]} justify="center" style={{ paddingTop: 20 }}>
+        <Col span={24} style={{ textAlign: 'center' }}>
           <Typography.Title level={2}>Experience the first</Typography.Title>
           <Typography.Title level={2}>
             <span className="gradient-text gradient-text-future">

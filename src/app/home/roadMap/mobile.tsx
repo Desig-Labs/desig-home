@@ -44,12 +44,14 @@ export default function RoadmapMobile() {
           style={{ overflow: 'unset' }}
         >
           {ROAD_MAP.map((src, index) => (
-            <SwiperSlide style={{ width: 'auto' }} key={index}>
+            <SwiperSlide key={index}>
               <Image
                 src={src}
                 alt="roadmap"
-                width={340}
-                style={{ objectFit: 'cover', pointerEvents: 'none' }}
+                style={{
+                  objectFit: 'cover',
+                  cursor: 'grab',
+                }}
               />
             </SwiperSlide>
           ))}
