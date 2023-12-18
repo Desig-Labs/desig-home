@@ -14,6 +14,7 @@ export default function JourneyCard({ title, desc, bg }: JourneyCardProps) {
       className="journey-card"
       style={{
         backgroundImage: `url(${bg})`,
+        cursor: 'grab',
       }}
     >
       <Col span={24}>

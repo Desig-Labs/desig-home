@@ -18,6 +18,7 @@ import {
   youtube,
   linkedin,
 } from 'configs/socials.constant'
+import { useRouter } from 'next/navigation'
 
 export const RESOURCES = [
   {
@@ -62,6 +63,8 @@ export const FOLLOW_US = [
 ]
 
 export default function Footer() {
+  const router = useRouter()
+
   return (
     <MaxWidthLayout>
       <Row className={style.footer} gutter={[56, 56]} justify="start">
@@ -77,11 +80,18 @@ export default function Footer() {
           <Space direction="vertical" size={24}>
             <Typography.Text strong>Products</Typography.Text>
             <Space direction="vertical" size={16}>
-              <Typography.Text type="secondary">
+              <Typography.Text
+                type="secondary"
+                onClick={() => router.push('/wallet')}
+                style={{ cursor: 'pointer' }}
+              >
                 Multisig Wallet
               </Typography.Text>
-              <Typography.Text type="secondary">
-                Multisig-as-a-service
+              <Typography.Text
+                type="secondary"
+                style={{ cursor: 'not-allowed' }}
+              >
+                Multisig-as-a-service (Coming soon)
               </Typography.Text>
             </Space>
           </Space>
@@ -91,12 +101,7 @@ export default function Footer() {
             <Typography.Text strong>Resources</Typography.Text>
             <Space direction="vertical">
               {RESOURCES.map(({ name, url }, index) => (
-                <Button
-                  key={index}
-                  href={url}
-                  type="text"
-                  className="btn-footer"
-                >
+                <Button key={index} href={url} type="text" target="_blank">
                   <Space>
                     <Typography.Text type="secondary">{name}</Typography.Text>
                     <Image src={Arrow} alt="arrow" />
@@ -111,7 +116,7 @@ export default function Footer() {
             <Typography.Text strong>Follow us</Typography.Text>
             <Space direction="vertical">
               {FOLLOW_US.map(({ name, url }, index) => (
-                <Button key={index} href={url} type="text" className="">
+                <Button key={index} href={url} type="text" target="_blank">
                   <Space>
                     <Typography.Text type="secondary">{name}</Typography.Text>
                     <Image src={Arrow} alt="arrow" />

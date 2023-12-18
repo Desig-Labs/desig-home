@@ -66,7 +66,9 @@ const Banner = () => {
                       className="gradient-text gradient-text-banner"
                     >
                       Smart Multisig
-                      <Image src={Line} alt="line" className="line-banner" />
+                      {!isMobile && (
+                        <Image src={Line} alt="line" className="line-banner" />
+                      )}
                     </Typography.Title>
                   </Space>
                 </Col>
