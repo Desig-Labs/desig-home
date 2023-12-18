@@ -60,7 +60,7 @@ export const FeatureCard = ({
           >
             <Typography.Title level={4}>{title}</Typography.Title>
           </Col>
-          <Col span={isMobile ? 24 : undefined} className="icon-feature">
+          <Col span={24} className="icon-feature">
             <Image
               src={icon}
               alt=""
