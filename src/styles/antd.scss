@@ -34,6 +34,8 @@
   &:not(.flexible-radius) {
     border-radius: 32px !important;
   }
+  &:not(.ant-card-bordered) {
+    border: none;
+  }
   box-shadow: none !important;
-  border: none;
 }

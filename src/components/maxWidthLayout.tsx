@@ -1,11 +1,23 @@
-import { ReactNode } from 'react'
+import { CSSProperties, ReactNode } from 'react'
 
 import { Col, Row } from 'antd'
 
-const MaxWidthLayout = ({ children }: { children: ReactNode }) => {
+export const MAX_SCREEN_WIDTH = 1200
+
+const MaxWidthLayout = ({
+  children,
+  style,
+}: {
+  children: ReactNode
+  style?: CSSProperties
+}) => {
   return (
-    <Row gutter={[24, 24]} style={{ padding: '0px 24px' }} justify="center">
-      <Col xs={24} md={22} xl={18}>
+    <Row
+      gutter={[24, 24]}
+      style={{ padding: '0px 24px', ...style }}
+      justify="center"
+    >
+      <Col style={{ width: '100%', maxWidth: MAX_SCREEN_WIDTH }}>
         {children}
       </Col>
     </Row>
