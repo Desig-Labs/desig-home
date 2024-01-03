@@ -18,21 +18,21 @@ export default function WalletPage() {
       <Col span={24}>
         <Row>
           <Col className="effect-responsive">
-            <Image
-              src={LIGHT_LEFT}
-              alt=""
-              style={{ position: 'absolute', top: -198, left: 0 }}
-            />
+            <div className="effect-responsive--inner left">
+              <div className="effect-responsive--inner-item">
+                <Image src={LIGHT_LEFT} alt="" />
+              </div>
+            </div>
           </Col>
           <Col span={24}>
             <Banner />
           </Col>
           <Col className="effect-responsive">
-            <Image
-              src={LIGHT_RIGHT}
-              alt=""
-              style={{ position: 'absolute', top: -198, right: 0 }}
-            />
+            <div className="effect-responsive--inner right">
+              <div className="effect-responsive--inner-item">
+                <Image src={LIGHT_RIGHT} alt="" />
+              </div>
+            </div>
           </Col>
         </Row>
       </Col>
