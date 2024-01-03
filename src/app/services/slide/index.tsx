@@ -9,6 +9,7 @@ import WheelView from './wheelView'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
+import './index.scss'
 
 const MockupArray = [
   {
@@ -32,8 +33,9 @@ export default function SlideView() {
     <Row gutter={[0, 146]}>
       <Col>
         <Card
+          className="flexible-radius"
           bodyStyle={{ padding: '8px 12px' }}
-          style={{ borderRadius: 0, borderColor: '#ffffff1a' }}
+          style={{ borderColor: '#ffffff1a', borderRadius: 12 }}
           bordered
         >
           <Typography className="text-gradient">

@@ -14,8 +14,11 @@
   &--item {
     display: flex;
     flex-direction: column;
+    gap: 24px;
     &-dot {
       position: relative;
+      width: 56px;
+      height: 56px;
       &::before {
         content: '';
         position: absolute;

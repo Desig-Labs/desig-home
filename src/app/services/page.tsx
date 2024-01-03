@@ -50,7 +50,7 @@ export default function ServicesPage() {
           </Row>
         </Col>
 
-        <Col span={24} style={{ position: 'relative', padding: '300px 0' }}>
+        <Col span={24} style={{ position: 'relative', padding: '500px 0' }}>
           <Image src={lightLeft} alt="light" className="light-left-service" />
           <SlideView />
         </Col>

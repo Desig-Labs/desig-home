@@ -1,11 +1,3 @@
-%flex-center {
-  display: flex;
-  justify-content: center;
-}
-%active-bg {
-  background: #252238;
-}
-
 .light-service {
   position: absolute;
   width: 130%;
@@ -13,34 +5,6 @@
   top: -200px;
   transform: translateX(-50%);
   filter: blur(15px);
-}
-
-.wheel-wrapped {
-  position: relative;
-  width: 0;
-  height: 0;
-  @extend %flex-center;
-  align-items: center;
-  .wheel-wrapper-inner {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    @extend %flex-center;
-    align-items: center;
-    transition: all 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-    border-radius: 100%;
-    border: 2px dashed #404043;
-    .wheel-item {
-      position: absolute;
-      width: 0;
-      height: 100%;
-      @extend %flex-center;
-      img {
-        position: relative;
-        transition: all 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-      }
-    }
-  }
 }
 
 .light-left-service {
@@ -62,35 +26,4 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.pricing-segmented {
-  background: #000;
-  border-radius: 50px;
-  padding: 4px;
-  .ant-segmented-item,
-  .ant-segmented-thumb {
-    padding: 12px 20px;
-    border-radius: 50px;
-    font-size: 20;
-    font-weight: 500;
-    &-selected {
-      @extend %active-bg;
-    }
-  }
-  .ant-segmented-thumb {
-    @extend %active-bg;
-  }
-}
-
-.feature-swiper-pagination {
-  .swiper-pagination-bullet {
-    background-color: #404043;
-    width: 12px;
-    height: 12px;
-    cursor: pointer;
-    &.swiper-pagination-bullet-active {
-      background-color: #7767f6;
-    }
-  }
 }

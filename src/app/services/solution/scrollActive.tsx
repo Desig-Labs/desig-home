@@ -1,12 +1,13 @@
 'use client'
 
-import { Typography } from 'antd'
+import { Space, Typography } from 'antd'
+import Image, { StaticImageData } from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
 export type ScrollActiveItem = {
   title: string
   description: string
-  icon: string
+  icon: string | StaticImageData
 }
 
 export type ScrollActiveProps = { items: ScrollActiveItem[] }
@@ -55,18 +56,13 @@ export default function ScrollActive({ items }: ScrollActiveProps) {
       />
       {items.map(({ icon, description, title }, idx) => (
         <div className="scroll-active-wrapped--item" key={title + idx}>
-          <div
-            style={{
-              width: 56,
-              height: 56,
-              marginBottom: 24,
-            }}
-            className="scroll-active-wrapped--item-dot"
-          >
-            <Typography.Text>{icon}</Typography.Text>
+          <div style={{}} className="scroll-active-wrapped--item-dot">
+            <Image src={icon} alt="icon" width={56} height={56} />
           </div>
-          <Typography.Title level={5}>{title}</Typography.Title>
-          <Typography.Text>{description}</Typography.Text>
+          <Space direction="vertical" size={12}>
+            <Typography.Title level={4}>{title}</Typography.Title>
+            <Typography.Text type="secondary">{description}</Typography.Text>
+          </Space>
         </div>
       ))}
     </div>

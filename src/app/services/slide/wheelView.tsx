@@ -1,10 +1,12 @@
-import SOCIAL_RECOVERY from 'static/images/wallet/feature/social-recovery.png'
-import CHATTING from 'static/images/wallet/feature/chatting.png'
-import NOTIFICATION from 'static/images/wallet/feature/noti.png'
-import Image from 'next/image'
 import { useMemo } from 'react'
 
-const imageArr = [SOCIAL_RECOVERY, CHATTING, NOTIFICATION]
+import Image from 'next/image'
+
+import ease from 'static/images/services/ease.png'
+import ease2 from 'static/images/services/ease.png'
+import ease3 from 'static/images/services/ease.png'
+
+const imageArr = [ease, ease2, ease3]
 
 const DEFAULT_ROTATE = 90
 
@@ -35,9 +37,11 @@ export default function WheelView({ activeIdx = 0 }: WheelViewProps) {
                 opacity: activeIdx === idx ? 1 : 0.5,
                 filter: activeIdx === idx ? 'blur(0px)' : 'blur(15px)',
                 transform: `translateY(-50%) rotate(90deg) scale(${
-                  activeIdx === idx ? 1 : 0.2
+                  activeIdx === idx ? 1 : 0.4
                 })`,
+                objectFit: 'contain',
               }}
+              height={300}
             />
           </div>
         ))}
