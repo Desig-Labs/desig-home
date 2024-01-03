@@ -32,7 +32,7 @@ export const TAGS = [
   },
 ]
 
-export const useAcademyPaging = (pageIds: string[], metadata: PageMap) => {
+export const useBlogCard = (pageIds: string[], metadata: PageMap) => {
   const params = useSearchParams()
   const tag = params.get('tag') || ''
   const availableIds = useMemo(
@@ -75,7 +75,7 @@ export const useAcademyPaging = (pageIds: string[], metadata: PageMap) => {
   }
 }
 
-export const useAcademyPage = (
+export const useBlogPage = (
   pageId: string,
 ): {
   data: Partial<{
