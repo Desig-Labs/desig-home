@@ -1,12 +1,13 @@
-import { Env } from './env'
-
 /**
  * Contructor
  */
 
+import { Env } from './env'
+
 type Conf = {
   eddsa: string
   ecdsa: string
+  notionDatabaseId: string
 }
 
 const conf: Record<Env, Conf> = {
@@ -16,6 +17,7 @@ const conf: Record<Env, Conf> = {
   development: {
     eddsa: 'https://eddsa.desig.dev',
     ecdsa: 'https://ecdsa.desig.dev',
+    notionDatabaseId: process.env.NOTION_DATABASE_ID || '',
   },
 
   /**
@@ -24,6 +26,7 @@ const conf: Record<Env, Conf> = {
   test: {
     eddsa: 'https://eddsa.desig.dev',
     ecdsa: 'https://ecdsa.desig.dev',
+    notionDatabaseId: process.env.NOTION_DATABASE_ID || '',
   },
 
   /**
@@ -32,6 +35,7 @@ const conf: Record<Env, Conf> = {
   production: {
     eddsa: 'https://eddsa.desig.dev',
     ecdsa: 'https://ecdsa.desig.dev',
+    notionDatabaseId: process.env.NOTION_DATABASE_ID || '',
   },
 }
 

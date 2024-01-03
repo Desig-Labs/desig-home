@@ -14,11 +14,14 @@
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^0.9.512",
     "antd": "^5.4.2",
+    "axios": "^1.6.3",
     "next": "13.3.0",
+    "notion-client": "^6.16.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-use": "^17.4.0",
     "swiper": "^11.0.5",
+    "swr": "^2.2.4",
     "zustand": "^4.3.7"
   },
   "devDependencies": {
@@ -34,6 +37,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "nodemon": "^2.0.22",
+    "notion-types": "^6.16.0",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
     "sass": "^1.62.0",
