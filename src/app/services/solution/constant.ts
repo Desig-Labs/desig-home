@@ -3,13 +3,14 @@ import scalability from 'static/images/services/scalability.png'
 import tss from 'static/images/services/tss.png'
 import robust from 'static/images/services/robust.png'
 import flexible from 'static/images/services/flexible.png'
+import customer from 'static/images/services/customer.png'
 
 export const Enterprise = [
   {
     title: 'Brand Customization',
     description:
       "Tailor the look and feel of your multisig platform to match your brand's identity, ensuring a seamless and cohesive user experience.",
-    icon: noti,
+    icon: customer,
   },
   {
     title: 'Notifications & Alerts',

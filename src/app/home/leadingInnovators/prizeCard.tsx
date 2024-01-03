@@ -7,6 +7,7 @@ import Spline from '@splinetool/react-spline'
 import Card from 'antd/es/card/Card'
 import { Col, Row, Typography } from 'antd'
 
+import { Infix } from 'providers/ui.provider'
 import './index.scss'
 
 const LIST_PRIZES = [
@@ -38,11 +39,7 @@ const LIST_PRIZES = [
 export const PrizeCard = () => {
   const { width } = useWindowSize()
 
-  const isMobile = useMemo(() => {
-    let result = true
-    if (width > 992) result = false
-    return result
-  }, [width])
+  const isMobile = useMemo(() => width <= Infix.lg, [width])
 
   return (
     <Row

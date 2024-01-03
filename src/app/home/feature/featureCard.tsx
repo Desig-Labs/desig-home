@@ -6,6 +6,7 @@ import { useWindowSize } from 'react-use'
 import { Card, Col, Row, Typography } from 'antd'
 import Image, { StaticImageData } from 'next/image'
 
+import { Infix } from 'providers/ui.provider'
 import './index.scss'
 
 export type FeatureCardProps = {
@@ -22,11 +23,7 @@ export const FeatureCard = ({
 }: FeatureCardProps) => {
   const { width } = useWindowSize()
 
-  const isMobile = useMemo(() => {
-    let result = true
-    if (width > 992) result = false
-    return result
-  }, [width])
+  const isMobile = useMemo(() => width <= Infix.lg, [width])
 
   return (
     <div className="flip-card">

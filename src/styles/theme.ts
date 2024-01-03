@@ -7,6 +7,7 @@ export const generateTheme = (): ThemeConfig => ({
   algorithm: theme.darkAlgorithm,
   token: {
     ...THEME_CONFIG.token,
+    ...THEME_CONFIG.components,
     colorPrimary: COLORS.PRIMARY,
     fontFamily: "'Satoshi', sans-serif",
   },

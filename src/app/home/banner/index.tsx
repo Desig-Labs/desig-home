@@ -9,6 +9,7 @@ import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import IonIcon from 'components/ionicon'
 
+import { Infix } from 'providers/ui.provider'
 import { ScrollChainList } from 'app/layout/ChainList'
 import Img from './desig-web.png'
 import Line from 'static/images/line.svg'
@@ -30,11 +31,7 @@ const Banner = () => {
   const router = useRouter()
   const [txtIndex, setTxtIndex] = useState(0)
 
-  const isMobile = useMemo(() => {
-    let result = true
-    if (width > 768) result = false
-    return result
-  }, [width])
+  const isMobile = useMemo(() => width <= Infix.md, [width])
 
   useEffect(() => {
     const interval = setInterval(
