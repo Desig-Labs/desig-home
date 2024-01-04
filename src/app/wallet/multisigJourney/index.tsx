@@ -1,5 +1,6 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay } from 'swiper/modules'
 
 import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
@@ -69,12 +70,19 @@ export default function MultisigJourney() {
         </Col>
         <Col span={24}>
           <Swiper
+            modules={[Autoplay]}
             spaceBetween={24}
             slidesPerView="auto"
             style={{
               overflow: 'unset',
               height: '100%',
             }}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            speed={3000}
+            loop
           >
             {LIST_JOURNEY.map(({ title, desc, bg }) => (
               <SwiperSlide style={{ width: 'unset' }} key={title}>

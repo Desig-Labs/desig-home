@@ -1,75 +1,194 @@
-.wallet-page{
-    gap: 180px;
+@keyframes lightAnimRight {
+  0% {
+    transform: rotate(0deg);
+  }
+  33.33% {
+    transform: rotate(20deg);
+  }
+  66.66% {
+    transform: rotate(0deg);
+  }
+  83.33% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes shadowLightAnimRight {
+  0% {
+    transform: rotateX(70deg) translateX(30%) scaleX(1);
+  }
+  33.33% {
+    transform: rotateX(70deg) translateX(-70%) scaleX(1.2);
+  }
+  66.66% {
+    transform: rotateX(70deg) translateX(30%) scaleX(1);
+  }
+  83.33% {
+    transform: rotateX(70deg) translateX(60%) scaleX(0.9);
+  }
+  100% {
+    transform: rotateX(70deg) translateX(30%) scaleX(1);
+  }
 }
 
-.section-container{
-    gap: 80px
+@keyframes lightAnimLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+  33.33% {
+    transform: rotate(-20deg);
+  }
+  66.66% {
+    transform: rotate(0deg);
+  }
+  83.33% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-.journey-card{
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    height: 100%;
-    width: 490px;
-    padding: 40px 32px;
+@keyframes shadowLightAnimLeft {
+  0% {
+    transform: rotateX(70deg) translateX(70%) scaleX(1);
+  }
+  33.33% {
+    transform: rotateX(70deg) translateX(170%) scaleX(1.2);
+  }
+  66.66% {
+    transform: rotateX(70deg) translateX(70%) scaleX(1);
+  }
+  83.33% {
+    transform: rotateX(70deg) translateX(40%) scaleX(0.9);
+  }
+  100% {
+    transform: rotateX(70deg) translateX(70%) scaleX(1);
+  }
+}
+
+.wallet-page {
+  gap: 180px;
+}
+
+.section-container {
+  gap: 80px;
+}
+
+.journey-card {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 100%;
+  width: 490px;
+  padding: 40px 32px;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.crafted-card {
+  .ant-card-body {
+    padding: 32px 64px;
+    min-height: 404px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.feature-card {
+  width: 318px;
+  height: 100%;
+  .ant-card-cover {
     border-radius: 32px;
-    border: 1px solid rgba(255, 255, 255, 0.10);
-}
-
-.crafted-card{
-    .ant-card-body{
-        padding: 32px 64px;
-        height: 404px;
-        display: flex;
-        align-items: center;
-    }
-}
-
-.feature-card{
-    width: 318px;
-    height: 100%;
-    .ant-card-cover{
-        border-radius: 32px;
-    }
+  }
 }
 
 @media (max-width: 786px) {
-    .wallet-page{
-        gap: 100px;
-    }
+  .wallet-page {
+    gap: 100px;
+  }
 
-    .section-container{
-        gap: 46px
-    }
+  .section-container {
+    gap: 46px;
+  }
 
-    .item-responsive{
-        flex-direction: column-reverse !important;
-    }
+  .item-responsive {
+    flex-direction: column-reverse !important;
+  }
 
-    .banner-btn-access{
-        width: 100%;
-    }
+  .banner-btn-access {
+    width: 100%;
+  }
 
-    .crafted-card{
-        .ant-card-body{
-            padding: 16px;
-        }
+  .crafted-card {
+    .ant-card-body {
+      padding: 16px;
     }
+  }
 
-    .journey-card{
-        width: 343px;
-    }
+  .journey-card {
+    width: 343px;
+  }
 
-    .crafted-card{
-        .ant-card-body{
-            height: unset;
-        }
+  .crafted-card {
+    .ant-card-body {
+      height: unset;
     }
+  }
 }
 
 @media (max-width: 1080px) {
-    .effect-responsive{
-        display: none;
+  .effect-responsive {
+    display: none;
+  }
+}
+
+.effect-responsive {
+  img {
+    filter: blur(10px);
+  }
+  .effect-responsive--inner {
+    position: absolute;
+    top: -198px;
+    &::after {
+      position: absolute;
+      content: '';
+      width: 300px;
+      height: 150px;
+      background-color: #3749695d;
+      box-shadow: 75px 0 25px 25px #3749695d;
+      filter: blur(20px);
+      border-radius: 50%;
+      top: 50%;
+      transform: rotateX(70deg);
     }
+    &.left {
+      left: 0;
+      .effect-responsive--inner-item {
+        transform-origin: 0% 0%;
+        animation: lightAnimLeft 8s 0s linear infinite backwards;
+      }
+      &::after {
+        transform-origin: left;
+        animation: shadowLightAnimLeft 8s 0s linear infinite backwards;
+      }
+    }
+    &.right {
+      right: 0;
+      .effect-responsive--inner-item {
+        transform-origin: 100% 0%;
+        animation: lightAnimRight 8s 0s linear infinite backwards;
+      }
+      &::after {
+        transform-origin: right;
+        animation: shadowLightAnimRight 8s 0s linear infinite backwards;
+      }
+    }
+
+    .effect-responsive--inner-item {
+      position: relative;
+    }
+  }
 }

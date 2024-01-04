@@ -1,0 +1,29 @@
+.light-service {
+  position: absolute;
+  width: 130%;
+  left: 50%;
+  top: -200px;
+  transform: translateX(-50%);
+  filter: blur(15px);
+}
+
+.light-left-service {
+  pointer-events: none;
+  position: absolute;
+  left: -20%;
+  top: -15%;
+  transform: rotate(-45deg);
+}
+
+.text-gradient {
+  display: inline;
+  background: linear-gradient(
+    266deg,
+    #fae2b6 8.33%,
+    #ef90b8 63.02%,
+    #b684f0 95.83%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

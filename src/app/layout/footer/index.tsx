@@ -17,6 +17,8 @@ import {
   twitter,
   youtube,
   linkedin,
+  link3,
+  discord,
 } from 'configs/socials.constant'
 import { useRouter } from 'next/navigation'
 
@@ -59,6 +61,14 @@ export const FOLLOW_US = [
   {
     name: 'LinkedIn',
     url: linkedin,
+  },
+  {
+    name: 'Discord',
+    url: discord,
+  },
+  {
+    name: 'Link3',
+    url: link3,
   },
 ]
 

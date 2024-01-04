@@ -1,6 +1,7 @@
 'use client'
 
 import { useWindowSize } from 'react-use'
+import { useMemo } from 'react'
 
 import { Col, Row, Typography } from 'antd'
 import Image from 'next/image'
@@ -15,7 +16,7 @@ import './index.scss'
 export const RoadMap = () => {
   const { width } = useWindowSize()
 
-  const isMobile = width < Infix.xl
+  const isMobile = useMemo(() => width <= Infix.xl, [width])
 
   return (
     <MaxWidthLayout>

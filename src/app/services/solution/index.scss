@@ -1,0 +1,43 @@
+.scroll-active-wrapped {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 48px 0 48px 48px;
+  &--line {
+    position: absolute;
+    width: 1px;
+    background-color: #7767f6;
+    left: 7.5px;
+    top: 0;
+  }
+  &--item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &-dot {
+      position: relative;
+      width: 56px;
+      height: 56px;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background-color: #707072;
+        left: -48px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &.active {
+      .scroll-active-wrapped--item-dot {
+        &::before {
+          background-color: #7767f6;
+          box-shadow: 0 0 15px #7767f6;
+        }
+      }
+    }
+  }
+}

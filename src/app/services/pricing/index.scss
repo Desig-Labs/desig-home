@@ -1,0 +1,75 @@
+%active-bg {
+  background: #252238;
+}
+
+.pricing-segmented {
+  background: #000;
+  border-radius: 50px;
+  padding: 4px;
+  .ant-segmented-item,
+  .ant-segmented-thumb {
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 20;
+    font-weight: 500;
+    &-selected {
+      @extend %active-bg;
+    }
+  }
+  .ant-segmented-thumb {
+    @extend %active-bg;
+  }
+  .ant-segmented-item-label {
+    white-space: normal;
+  }
+}
+
+.service-moon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100vw;
+  height: 50vw;
+  margin-bottom: 20%;
+  &::after {
+    position: absolute;
+    content: '';
+    background-image: url('./moon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 120%;
+    height: 100%;
+    bottom: calc(-100% - 56px);
+    left: 50%;
+    right: 0;
+    transform: rotateX(180deg) translateX(-50%);
+    filter: blur(15px);
+    opacity: 0.5;
+  }
+  img {
+    width: 120%;
+    object-fit: contain;
+    object-position: bottom;
+    @media (max-width: 992px) {
+      width: 180%;
+    }
+  }
+}
+
+.pricing-card {
+  border-color: #ffffff1a;
+  height: 100%;
+  .ant-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+    height: 100%;
+    &::after,
+    &::before {
+      content: none;
+    }
+  }
+}
