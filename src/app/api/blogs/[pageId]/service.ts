@@ -23,7 +23,6 @@ export const getDatabase = async () => {
     const page = extractProperties(value, map, pageId)
     if (page.title) {
       metadata[pageId] = page
-      console.log('metadata', metadata)
     }
   })
 

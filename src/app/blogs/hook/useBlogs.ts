@@ -56,7 +56,11 @@ export const useBlogCard = (pageIds: string[], metadata: PageMap) => {
       availableIds.filter((pageId) => {
         const { tags } = metadata[pageId] || { tags: [] }
         if (!tag) return true
-        if (tag === 'Others') return !tags.includes(tag)
+        if (tag === 'Others')
+          return !TAGS.map(({ tag }) => tags.includes(tag)).reduce(
+            (a, b) => a || b,
+            false,
+          )
         return tags.includes(tag)
       }),
     [availableIds, tag, metadata],
@@ -90,7 +94,6 @@ export const useBlogPage = (
     Error
   >([pageId, 'blog'], async () => {
     const { data } = await axios.get(`/api/blogs/${pageId}`)
-    console.log('data', data)
     return data
   })
 
