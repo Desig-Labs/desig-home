@@ -10,6 +10,7 @@ export type PricingData = {
   symbol: string
   content: PricingContentData[]
   color: string
+  cta: string
 }
 
 export const Standard: PricingData = {
@@ -44,6 +45,7 @@ export const Standard: PricingData = {
     },
   ],
   color: '#E3B4FA',
+  cta: 'Get started',
 }
 
 export const Advanced: PricingData = {
@@ -71,6 +73,7 @@ export const Advanced: PricingData = {
     },
   ],
   color: '#F5A489',
+  cta: 'Get started',
 }
 
 export const Custom: PricingData = {
@@ -98,4 +101,5 @@ export const Custom: PricingData = {
     },
   ],
   color: '#ADA4FA',
+  cta: 'Contact us',
 }

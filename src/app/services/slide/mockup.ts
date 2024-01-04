@@ -1,6 +1,6 @@
 import ease from 'static/images/services/ease.png'
-import ease2 from 'static/images/services/ease.png'
-import ease3 from 'static/images/services/ease.png'
+import ease2 from 'static/images/services/ease2.png'
+import ease3 from 'static/images/services/ease3.png'
 
 export const MOCKUP_DESIG_SERVICE = [
   {
@@ -11,11 +11,11 @@ export const MOCKUP_DESIG_SERVICE = [
   {
     title: 'Customizability',
     desc: "Every business is unique. Customize Desig's multisig to fit your business needs.",
-    img: ease2.src,
+    img: ease3.src,
   },
   {
     title: 'Cost-Efficient',
     desc: 'Eliminate exorbitant smart contract fees and enjoy our competitive pricing.',
-    img: ease3.src,
+    img: ease2.src,
   },
 ]

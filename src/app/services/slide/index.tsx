@@ -5,13 +5,13 @@ import { useWindowSize } from 'react-use'
 
 import { Card, Col, Row, Typography } from 'antd'
 import MobileView from './mobileView'
+import SlideView from './slideView'
 
 import { Infix } from 'providers/ui.provider'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
 import './index.scss'
-import SlideView from './slideView'
 
 export default function SlideService() {
   const { width } = useWindowSize()

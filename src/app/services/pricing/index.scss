@@ -19,6 +19,9 @@
   .ant-segmented-thumb {
     @extend %active-bg;
   }
+  .ant-segmented-item-label {
+    white-space: normal;
+  }
 }
 
 .service-moon {

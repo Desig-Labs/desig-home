@@ -7,9 +7,9 @@ import PricingCard from './pricingCard'
 import Image from 'next/image'
 
 import { MAX_SCREEN_WIDTH } from 'components/maxWidthLayout'
+import { Infix } from 'providers/ui.provider'
 import moon from './moon.png'
 import './index.scss'
-import { Infix } from 'providers/ui.provider'
 
 export default function Pricing() {
   const { width } = useWindowSize()
@@ -46,7 +46,11 @@ export default function Pricing() {
               className="pricing-segmented"
               options={[
                 { value: 'enterprise', label: 'Enterprise multisig solution' },
-                { value: 'headless', label: 'Headless multisig solution' },
+                {
+                  value: 'headless',
+                  label: 'Headless multisig solution',
+                  disabled: true,
+                },
               ]}
             />
           </Col>

@@ -13,6 +13,8 @@ import Image from 'next/image'
 import { Infix } from 'providers/ui.provider'
 import lightBg from 'static/images/services/light-service.png'
 import lightLeft from 'static/images/services/light-left.svg'
+import Img from 'static/images/services/desig-web.png'
+
 import './index.scss'
 
 export default function ServicesPage() {
@@ -39,6 +41,7 @@ export default function ServicesPage() {
                   block={isMobile}
                   type="primary"
                   size="large"
+                  href="mailto:hi@desig.io"
                   icon={<IonIcon name="chatbubbles-outline" />}
                 >
                   Talk to us
@@ -47,12 +50,17 @@ export default function ServicesPage() {
             </Col>
 
             <Col xs={{ span: 24, order: 1 }} lg={{ span: 8, order: 2 }}>
-              <iframe
+              {/* <iframe
                 style={{ width: '100%', aspectRatio: 16 / 9 }}
                 src="https://www.youtube.com/embed/n1rfOF-jOUc?si=D1EWw0_NKJXN8NYO"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
+              /> */}
+              <Image
+                src={Img}
+                alt=""
+                style={{ width: '100%', height: '100%' }}
               />
             </Col>
           </Row>

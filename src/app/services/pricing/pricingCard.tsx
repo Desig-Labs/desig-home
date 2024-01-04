@@ -105,8 +105,8 @@ export default function PricingCard({ type }: PricingCardProps) {
           </Row>
         </Col>
       </Row>
-      <Button size="large" block className="ant-btn-primary">
-        Get started
+      <Button size="large" block className="" disabled>
+        {data.cta}
       </Button>
     </Card>
   )
