@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
+
 import {
   getDatabase,
   getPageMap,
   getPageMetadata,
   getRecommends,
-} from './service'
+} from '../service'
 
 export async function GET(
   _req: NextRequest,
