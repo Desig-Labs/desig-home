@@ -32,7 +32,46 @@ export const TAGS = [
   },
 ]
 
-export const useBlogCard = (pageIds: string[], metadata: PageMap) => {
+export const useBlogs = (): {
+  data: Partial<{
+    pageIds: string[]
+    metadataMap: PageMap
+  }>
+  error: Error | undefined
+} => {
+  const { data, error } = useSWR<
+    { pageIds: string[]; metadataMap: PageMap },
+    Error
+  >('/api/blogs', async () => {
+    const { data } = await axios.get(`/api/blogs`)
+    return data
+  })
+
+  return { data: data || {}, error }
+}
+
+export const useBlogDetails = (
+  pageId: string,
+): {
+  data: Partial<{
+    map: ExtendedRecordMap
+    recommends: string[]
+    metadata: PageMetadata
+  }>
+  error: Error | undefined
+} => {
+  const { data, error } = useSWR<
+    { map: ExtendedRecordMap; recommends: string[] },
+    Error
+  >([pageId, 'blog'], async () => {
+    const { data } = await axios.get(`/api/blogs/${pageId}`)
+    return data
+  })
+
+  return { data: data || {}, error }
+}
+
+export const useBlogTypes = (pageIds: string[], metadata: PageMap) => {
   const params = useSearchParams()
   const tag = params.get('tag') || ''
   const availableIds = useMemo(
@@ -77,25 +116,4 @@ export const useBlogCard = (pageIds: string[], metadata: PageMap) => {
     pinnedIds,
     thumbnailIds,
   }
-}
-
-export const useBlogPage = (
-  pageId: string,
-): {
-  data: Partial<{
-    map: ExtendedRecordMap
-    recommends: string[]
-    metadata: PageMetadata
-  }>
-  error: Error | undefined
-} => {
-  const { data, error } = useSWR<
-    { map: ExtendedRecordMap; recommends: string[] },
-    Error
-  >([pageId, 'blog'], async () => {
-    const { data } = await axios.get(`/api/blogs/${pageId}`)
-    return data
-  })
-
-  return { data: data || {}, error }
 }

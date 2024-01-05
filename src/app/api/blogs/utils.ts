@@ -34,3 +34,7 @@ export const extractProperties = (
     pinned,
   }
 }
+
+export const normalizePageTitle = (title: string) => {
+  return title.replace(/[^a-zA-Z0-9]/g, '-')
+}
