@@ -42,8 +42,8 @@ export const useBlogs = (): {
   const { data, error } = useSWR<
     { pageIds: string[]; metadataMap: PageMap },
     Error
-  >('/api/blogs', async () => {
-    const { data } = await axios.get(`/api/blogs`)
+  >('/api/blog', async () => {
+    const { data } = await axios.get(`/api/blog`)
     return data
   })
 
@@ -64,7 +64,7 @@ export const useBlogDetails = (
     { map: ExtendedRecordMap; recommends: string[] },
     Error
   >([pageId, 'blog'], async () => {
-    const { data } = await axios.get(`/api/blogs/${pageId}`)
+    const { data } = await axios.get(`/api/blog/${pageId}`)
     return data
   })
 
