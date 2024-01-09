@@ -6,7 +6,7 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 24px;
+  padding: 0 12px;
 
   .ellipse-bottom {
     position: absolute;
@@ -77,6 +77,12 @@
   
 @media (max-width: 786px) {
 .blog-page{
+
+  .ellipse-bottom {
+    width: 280%;
+    top: -350px;
+  }
+
   .banner-card{
     display: flex;
     flex-direction: column;
