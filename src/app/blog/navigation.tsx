@@ -1,7 +1,8 @@
 'use client'
-import { TAGS, useBlogCard } from './hook/useBlogs'
-import { Col, Row, Typography } from 'antd'
-import Link from 'next/link'
+import { useState } from 'react'
+
+import { Tabs } from 'antd'
+import ListBlog from './listBlog'
 
 export type NavigationProps = {
   pageIds: string[]
@@ -9,23 +10,67 @@ export type NavigationProps = {
 }
 
 export default function Navigation({ pageIds, metadataMap }: NavigationProps) {
-  const { tag: activeTag } = useBlogCard(pageIds, metadataMap)
+  const [activeTab, setActiveTab] = useState('')
 
   return (
-    <Row gutter={[12, 12]} align="middle" className="blog-tabs" wrap>
-      {TAGS.map(({ title, tag }) => (
-        <Col key={tag}>
-          <Link
-            className={tag === activeTag ? 'active-tab' : 'tab'}
-            href={{
-              pathname: '/blog',
-              query: tag ? { tag } : {},
-            }}
-          >
-            <Typography.Text>{title}</Typography.Text>
-          </Link>
-        </Col>
-      ))}
-    </Row>
+    <Tabs
+      onChange={(key) => setActiveTab(key)}
+      className="blog-tabs"
+      defaultActiveKey={activeTab}
+      activeKey={activeTab}
+      items={[
+        {
+          key: '',
+          label: 'News',
+          children: (
+            <ListBlog category="" pageIds={pageIds} metadataMap={metadataMap} />
+          ),
+        },
+        {
+          key: 'campaign',
+          label: 'Campaign',
+          children: (
+            <ListBlog
+              category="Campaign"
+              pageIds={pageIds}
+              metadataMap={metadataMap}
+            />
+          ),
+        },
+        {
+          key: 'desig-101',
+          label: 'Desig 101',
+          children: (
+            <ListBlog
+              category="Desig 101"
+              pageIds={pageIds}
+              metadataMap={metadataMap}
+            />
+          ),
+        },
+        {
+          key: 'technology',
+          label: 'Technology',
+          children: (
+            <ListBlog
+              category="Technology"
+              pageIds={pageIds}
+              metadataMap={metadataMap}
+            />
+          ),
+        },
+        {
+          key: 'lab-updates',
+          label: 'Lab Updates',
+          children: (
+            <ListBlog
+              category="Lab Updates"
+              pageIds={pageIds}
+              metadataMap={metadataMap}
+            />
+          ),
+        },
+      ]}
+    />
   )
 }

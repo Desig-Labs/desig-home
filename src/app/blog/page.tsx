@@ -6,7 +6,6 @@ import Navigation from './navigation'
 import { Col, Input, Row, Typography, Button } from 'antd'
 
 import { useBlogs } from './hook/useBlogs'
-import ListBlog from './listBlog'
 
 export default function BlogPage() {
   const {
@@ -48,14 +47,7 @@ export default function BlogPage() {
         <Banner pageIds={pageIds} metadataMap={metadataMap} />
       </Col>
       <Col span={24}>
-        <Row gutter={[24, 24]}>
-          <Col span={24}>
-            <Navigation pageIds={pageIds} metadataMap={metadataMap} />
-          </Col>
-          <Col span={24}>
-            <ListBlog pageIds={pageIds} metadataMap={metadataMap} />
-          </Col>
-        </Row>
+        <Navigation pageIds={pageIds} metadataMap={metadataMap} />
       </Col>
     </Row>
   )

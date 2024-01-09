@@ -1,4 +1,3 @@
-import { useSearchParams } from 'next/navigation'
 import { useMemo } from 'react'
 import useSWR from 'swr'
 import { ExtendedRecordMap } from 'notion-types'
@@ -70,10 +69,9 @@ export const useBlogPage = (
 export const useBlogCard = (
   pageIds: string[],
   metadata: PageMap,
+  category?: string,
   nextBlog = 1,
 ) => {
-  const params = useSearchParams()
-  const tag = params.get('tag') || ''
   const availableIds = useMemo(
     () =>
       pageIds.filter((pageId) => {
@@ -94,10 +92,10 @@ export const useBlogCard = (
     () =>
       availableIds.filter((pageId) => {
         const { tags } = metadata[pageId] || { tags: [] }
-        if (!tag) return true
-        return tags.includes(tag)
+        if (!category) return true
+        return tags.includes(category)
       }),
-    [availableIds, tag, metadata],
+    [availableIds, category, metadata],
   )
 
   const total = useMemo(() => taggedIds.length, [taggedIds])
@@ -106,7 +104,6 @@ export const useBlogCard = (
   }, [nextBlog, taggedIds, total])
 
   return {
-    tag,
     total,
     pinnedIds,
     thumbnailIds,

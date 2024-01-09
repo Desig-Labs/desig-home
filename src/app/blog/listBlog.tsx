@@ -10,13 +10,18 @@ import { LIMIT, useBlogCard } from './hook/useBlogs'
 import { normalizePageTitle } from 'app/api/blog/utils'
 
 export type ListBlogProps = {
+  category: string
   pageIds: string[]
   metadataMap: PageMap
 }
 
-export default function ListBlog({ pageIds, metadataMap }: ListBlogProps) {
+export default function ListBlog({
+  pageIds,
+  metadataMap,
+  category,
+}: ListBlogProps) {
   const [visible, setVisible] = useState(1)
-  const { thumbnailIds } = useBlogCard(pageIds, metadataMap, visible)
+  const { thumbnailIds } = useBlogCard(pageIds, metadataMap, category, visible)
 
   const readMore = () => {
     setVisible(visible + 1)
