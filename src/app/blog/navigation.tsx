@@ -1,8 +1,6 @@
 'use client'
 import { TAGS, useBlogCard } from './hook/useBlogs'
-import { Col, Row, Tabs, Typography } from 'antd'
-import { useRouter } from 'next/navigation'
-import ListBlog from './listBlog'
+import { Col, Row, Typography } from 'antd'
 import Link from 'next/link'
 
 export type NavigationProps = {
@@ -19,7 +17,10 @@ export default function Navigation({ pageIds, metadataMap }: NavigationProps) {
         <Col key={tag}>
           <Link
             className={tag === activeTag ? 'active-tab' : 'tab'}
-            href={`/blogs?tab=${tag}`}
+            href={{
+              pathname: '/blog',
+              query: tag ? { tag } : {},
+            }}
           >
             <Typography.Text>{title}</Typography.Text>
           </Link>

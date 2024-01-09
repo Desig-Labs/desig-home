@@ -26,10 +26,6 @@ export const TAGS = [
     title: 'Lab Updates',
     tag: 'Lab Updates',
   },
-  {
-    title: 'Others',
-    tag: 'Others',
-  },
 ]
 
 export const useBlogs = (): {
@@ -42,8 +38,8 @@ export const useBlogs = (): {
   const { data, error } = useSWR<
     { pageIds: string[]; metadataMap: PageMap },
     Error
-  >('/api/blogs', async () => {
-    const { data } = await axios.get(`/api/blogs`)
+  >('/api/blog', async () => {
+    const { data } = await axios.get(`/api/blog`)
     return data
   })
 
@@ -63,15 +59,19 @@ export const useBlogPage = (
   const { data, error } = useSWR<
     { map: ExtendedRecordMap; recommends: string[] },
     Error
-  >([pageId, 'blog'], async () => {
-    const { data } = await axios.get(`/api/blogs/${pageId}`)
+  >([pageId], async (pageId: string) => {
+    const { data } = await axios.get(`/api/blog/${pageId}`)
     return data
   })
 
   return { data: data || {}, error }
 }
 
-export const useBlogCard = (pageIds: string[], metadata: PageMap) => {
+export const useBlogCard = (
+  pageIds: string[],
+  metadata: PageMap,
+  nextBlog = 1,
+) => {
   const params = useSearchParams()
   const tag = params.get('tag') || ''
   const availableIds = useMemo(
@@ -95,11 +95,6 @@ export const useBlogCard = (pageIds: string[], metadata: PageMap) => {
       availableIds.filter((pageId) => {
         const { tags } = metadata[pageId] || { tags: [] }
         if (!tag) return true
-        if (tag === 'Others')
-          return !TAGS.map(({ tag }) => tags.includes(tag)).reduce(
-            (a, b) => a || b,
-            false,
-          )
         return tags.includes(tag)
       }),
     [availableIds, tag, metadata],
@@ -107,8 +102,8 @@ export const useBlogCard = (pageIds: string[], metadata: PageMap) => {
 
   const total = useMemo(() => taggedIds.length, [taggedIds])
   const thumbnailIds = useMemo(() => {
-    return taggedIds.slice(0, Math.min(LIMIT, total))
-  }, [taggedIds, total])
+    return taggedIds.slice(0, Math.min(nextBlog * LIMIT, total))
+  }, [nextBlog, taggedIds, total])
 
   return {
     tag,

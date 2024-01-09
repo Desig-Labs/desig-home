@@ -1,18 +1,14 @@
 'use client'
+import { Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { Col, Row, Space } from 'antd'
+import { Col, Row } from 'antd'
 import BannerCard from './bannerCard'
 
 import { useBlogCard } from '../hook/useBlogs'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-
-// Import Swiper styles
 import 'swiper/css'
 import 'swiper/css/navigation'
-
-// import required modules
-import { Navigation } from 'swiper/modules'
 
 export type BannerProps = {
   pageIds: string[]
@@ -27,7 +23,7 @@ export default function Banner({ pageIds, metadataMap }: BannerProps) {
       <Col span={24}>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           {pinnedIds.slice(0, 1).map((pageId) => (
-            <SwiperSlide key={pageId} style={{ width: '100%', height: '100%' }}>
+            <SwiperSlide key={pageId}>
               <BannerCard pageId={pageId} metadata={metadataMap[pageId]} />
             </SwiperSlide>
           ))}

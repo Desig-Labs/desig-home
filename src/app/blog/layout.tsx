@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
 import { ReactNode } from 'react'
+import Image from 'next/image'
+
+import ellipseBottom from 'static/images/blogs/ellips-bottom.png'
 
 import './index.scss'
 
@@ -9,5 +12,10 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return <div>{children}</div>
+  return (
+    <div className="blog-page">
+      <Image src={ellipseBottom} alt="light" className="ellipse-bottom" />
+      {children}
+    </div>
+  )
 }
