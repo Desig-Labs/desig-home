@@ -1,3 +1,17 @@
+.details-page{
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  .ant-skeleton{
+    max-width: 700px;
+    width: 100%;
+  }
+}
+
 .notion-app{
   background-color: transparent !important;
 
@@ -11,7 +25,7 @@
 
   .notion-page-has-cover {
     padding-top: 0;
-}
+  }
 
   .notion-asset-wrapper,
   .notion-asset-wrapper-video{
@@ -30,6 +44,7 @@
     max-width: 700px;
     width: 100%;
     .btn-forward{
+      z-index: 1;
       padding: 4px 10px 4px 4px !important;
       &:hover{
         background-color: #3B3752 !important;
@@ -39,5 +54,15 @@
 
   .notion-page-scroller{
     width: 100%;
+  }
+
+  .hero-image{
+    border-radius: 28px;
+    aspect-ratio: 16/9;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

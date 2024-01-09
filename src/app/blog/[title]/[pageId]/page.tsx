@@ -1,27 +1,28 @@
 'use client'
-import { useRouter } from 'next/navigation'
 import { NotionRenderer } from 'react-notion-x'
 import { Tweet } from 'react-tweet'
 
+import Hero from './hero'
 import { Equation } from './equation'
 import PageCollection from './collection'
-import { Skeleton, Button, Space } from 'antd'
-import IonIcon from 'components/ionicon'
-
-import { useBlogPage } from 'app/blog/hook/useBlogs'
 import RecommendBlogs from './recommendBlogs'
+import { Skeleton } from 'antd'
+
+import { useBlogPage, useBlogs } from 'app/blog/hook/useBlogs'
 
 export default function Page({
   params: { pageId },
 }: {
   params: { pageId: string }
 }) {
-  const { back } = useRouter()
   const {
     data: { map, recommends },
   } = useBlogPage(pageId)
+  const {
+    data: { metadataMap },
+  } = useBlogs()
 
-  if (!map || !recommends) return <Skeleton active />
+  if (!map || !recommends || !metadataMap) return <Skeleton active />
   return (
     <NotionRenderer
       recordMap={map}
@@ -30,19 +31,7 @@ export default function Page({
       darkMode
       className="body-blog-details"
       components={{
-        Header: () => (
-          <Space className="header-notion">
-            <Button
-              onClick={back}
-              type="text"
-              className="btn-forward"
-              size="large"
-            >
-              <IonIcon name="chevron-back-outline" /> Back
-            </Button>
-          </Space>
-        ),
-
+        Header: () => <Hero pageId={pageId} metadataMap={metadataMap} />,
         Collection: () => <PageCollection pageId={pageId} />,
         Tweet,
         Equation,

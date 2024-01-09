@@ -1,10 +1,9 @@
 'use client'
 import { useState } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import dayjs from 'dayjs'
 
-import { Col, Row, Card, Typography, Space, Divider, Button } from 'antd'
+import { Col, Row, Card, Typography, Space, Divider, Button, Image } from 'antd'
 import Tags from './tags'
 
 import { LIMIT, useBlogCard } from './hook/useBlogs'
@@ -53,19 +52,17 @@ export function BlogCard({
   return (
     <Link href={`/blog/${normalizePageTitle(title)}/${pageId}`}>
       <Card
-        cover={<Image width={319} height={180} alt={title} src={thumbnail} />}
+        cover={<Image preview={false} alt={title} src={thumbnail} />}
         className="blog-card"
         bodyStyle={{ padding: 0 }}
       >
         <Row gutter={[0, 24]}>
           <Col span={24}>
             <Space size={16}>
-              <Space size={8}>
-                <Tags pageId={pageId} />
-              </Space>
+              <Tags pageId={pageId} />
               <Divider
                 type="vertical"
-                style={{ height: '2em', borderColor: '#404043' }}
+                style={{ height: 20, borderColor: '#404043' }}
               />
               <Typography.Text style={{ fontWeight: 400, color: '#A0A0A1' }}>
                 {dayjs(publishedAt).format('MMM DD, YYYY')}

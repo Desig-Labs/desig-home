@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 
 export default function PageLayout({ children }: { children: ReactNode }) {
-  return <div style={{ width: '100%' }}>{children}</div>
+  return <div className="details-page">{children}</div>
 }
 
 export async function generateStaticParams() {

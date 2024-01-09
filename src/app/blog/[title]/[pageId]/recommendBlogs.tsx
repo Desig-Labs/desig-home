@@ -1,9 +1,11 @@
 'use client'
+import { Fragment } from 'react'
+
 import { Col, Row, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
+
 import { BlogCard } from 'app/blog/listBlog'
 import { useBlogs } from 'app/blog/hook/useBlogs'
-import { Fragment } from 'react'
 
 export type RecommendBlogsProps = {
   pageIds: string[]

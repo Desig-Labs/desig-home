@@ -27,8 +27,8 @@
     }
 
     .ant-card-cover img{
-      width: 500px;
-      height: 276px;
+      width: 520px;
+      height: 280px;
       border-radius: 28px;
     }
 
@@ -74,41 +74,67 @@
   }
   
 }
-  
+
 @media (max-width: 786px) {
-.blog-page{
-
-  .ellipse-bottom {
-    width: 280%;
-    top: -350px;
-  }
-
-  .banner-card{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    border: 0;
-
-    &:not(.card-transparent) {
-      background: none !important;
+  .blog-page{
+    .ellipse-bottom {
+      width: 280%;
+      top: -350px;
+    }
+  
+    .banner-card{
+      flex-direction: column;
+  
+      .ant-card-cover img{
+        width: 100%;
+        height: 300px;
+      }
+  
+      h4{
+        font-size: 24px;
+      }
+  
+      .banner-body{
+        width: 100%;
+        row-gap: 24px;
+        .timeline{
+          margin-bottom: 0;
+        }
+      }
     }
 
-    .ant-card-cover img{
-      width: 100%;
-      height: 200px;
-      border-radius: 20px;
-    }
+    .blog-card{
+      align-items: center;
+      .ant-card-cover{
+        max-width: 446px;
+        width: 100%;
+        img{
+          height: 250px;
+        }
+      }
 
-    h4{
-      font-size: 24px;
-    }
-
-    .banner-body{
-      row-gap: 24px;
-      .timeline{
-        margin-bottom: 0;
+      .ant-card-body{
+        max-width: 446px;
+        width: 100%;
       }
     }
   }
 }
+
+@media (max-width: 488px) {
+  .blog-page{
+    .banner-card{
+      .ant-card-cover img{
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+      }
+    }
+
+    .blog-card{
+      .ant-card-cover img{
+        height: 200px;
+      }
+    }
+  }
 }

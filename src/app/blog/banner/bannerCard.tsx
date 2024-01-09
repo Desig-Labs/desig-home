@@ -29,7 +29,7 @@ export default function BannerCard({
               <Tags pageId={pageId} />
               <Divider
                 type="vertical"
-                style={{ height: '2em', borderColor: '#404043' }}
+                style={{ height: 20, borderColor: '#404043' }}
               />
               <Typography.Text style={{ fontWeight: 400, color: '#A0A0A1' }}>
                 {dayjs(publishedAt).format('MMM DD, YYYY')}
