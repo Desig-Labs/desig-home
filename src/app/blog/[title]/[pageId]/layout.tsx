@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { getDatabase } from 'app/api/blog/service'
 import { normalizePageTitle } from 'app/api/blog/utils'
 
-import './index.scss'
+import '../../index.scss'
 import 'react-notion-x/src/styles.css'
 import ellipseBottom from 'static/images/blogs/ellips-bottom.png'
 

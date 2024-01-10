@@ -14,7 +14,7 @@ export default function Hero({ pageId, metadataMap }: HeroProps) {
   const { thumbnail } = metadataMap[pageId]
 
   return (
-    <Space direction="vertical" className="header-notion" size={20}>
+    <Space direction="vertical" className="header-details" size={20}>
       <Button onClick={back} type="text" className="btn-forward" size="large">
         <IonIcon name="chevron-back-outline" /> Back
       </Button>
