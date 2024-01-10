@@ -3,14 +3,14 @@ import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 
 import BannerCard from './bannerCard'
+import { Button, Col, Row } from 'antd'
+import IonIcon from 'components/ionicon'
 
 import { useBlogCard } from '../hook/useBlogs'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { Button, Col, Row } from 'antd'
-import IonIcon from 'components/ionicon'
 
 export type BannerProps = {
   pageIds: string[]

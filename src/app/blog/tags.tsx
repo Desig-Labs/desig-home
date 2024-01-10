@@ -1,7 +1,9 @@
 'use client'
-import { Space, Tag } from 'antd'
-import { useBlogs } from './hook/useBlogs'
 import { Fragment } from 'react'
+
+import { Space, Tag } from 'antd'
+
+import { useBlogs } from './hook/useBlogs'
 
 export type TagsProps = {
   pageId: string
