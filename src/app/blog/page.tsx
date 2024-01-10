@@ -1,11 +1,15 @@
 'use client'
 import { Fragment } from 'react'
+import Image from 'next/image'
 
 import Banner from './banner'
 import Navigation from './navigation'
 import { Col, Input, Row, Typography, Button } from 'antd'
 
 import { useBlogs } from './hook/useBlogs'
+
+import ellipseBottom from 'static/images/blogs/ellips-bottom.png'
+import './index.scss'
 
 export default function BlogPage() {
   const {
@@ -15,8 +19,11 @@ export default function BlogPage() {
   if (!pageIds || !metadataMap) return <Fragment />
 
   return (
-    <Row justify="center" gutter={[0, 120]}>
-      <Col span={24} style={{ marginTop: 24 }}>
+    <Row className="blog-page" justify="center" gutter={[0, 120]}>
+      <Col span={24}>
+        <Image src={ellipseBottom} alt="light" className="ellipse-bottom" />
+      </Col>
+      <Col span={24} style={{ marginTop: -60 }}>
         <Row gutter={[0, 20]} justify="center" style={{ textAlign: 'center' }}>
           <Col span={24}>
             <Typography.Title level={1}>

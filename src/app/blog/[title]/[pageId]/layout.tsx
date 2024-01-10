@@ -1,11 +1,13 @@
 import { ReactNode } from 'react'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 
 import { getDatabase } from 'app/api/blog/service'
 import { normalizePageTitle } from 'app/api/blog/utils'
 
 import './index.scss'
 import 'react-notion-x/src/styles.css'
+import ellipseBottom from 'static/images/blogs/ellips-bottom.png'
 
 export const metadata: Metadata = {
   title: 'Desig: The Blockchain-Agnostic Multisig Solution',
@@ -13,7 +15,12 @@ export const metadata: Metadata = {
 }
 
 export default function PageLayout({ children }: { children: ReactNode }) {
-  return <div className="details-page">{children}</div>
+  return (
+    <div className="details-page">
+      <Image src={ellipseBottom} alt="light" className="ellipse-bottom" />
+      {children}
+    </div>
+  )
 }
 
 export async function generateStaticParams() {

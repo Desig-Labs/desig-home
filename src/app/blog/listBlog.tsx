@@ -21,7 +21,12 @@ export default function ListBlog({
   category,
 }: ListBlogProps) {
   const [visible, setVisible] = useState(1)
-  const { thumbnailIds } = useBlogCard(pageIds, metadataMap, category, visible)
+  const { total, thumbnailIds } = useBlogCard(
+    pageIds,
+    metadataMap,
+    category,
+    visible,
+  )
 
   const readMore = () => {
     setVisible(visible + 1)
@@ -34,7 +39,7 @@ export default function ListBlog({
           <BlogCard pageId={pageId} metadata={metadataMap[pageId]} />
         </Col>
       ))}
-      {thumbnailIds.length >= visible * LIMIT && (
+      {total > visible * LIMIT && (
         <Col span={24} style={{ textAlign: 'center' }}>
           <Button className="btn-read-more" size="large" onClick={readMore}>
             Read More
