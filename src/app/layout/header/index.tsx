@@ -13,7 +13,7 @@ export const SECTIONS_LIST = [
   { title: 'Wallet', route: '/wallet', disabled: false },
   { title: 'Services', route: '/services', disabled: false },
   { title: 'Docs', route: '/docs', disabled: true },
-  { title: 'Blog', route: '/blog', disabled: true },
+  { title: 'Blog', route: '/blog', disabled: false },
 ]
 
 export default function Header() {
