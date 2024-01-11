@@ -17,7 +17,7 @@ const conf: Record<Env, Conf> = {
   development: {
     eddsa: 'https://eddsa.desig.dev',
     ecdsa: 'https://ecdsa.desig.dev',
-    notionDatabaseId: process.env.NEXT_PUBLIC_NOTION_DATABASE_ID || '',
+    notionDatabaseId: '677f0fd492ed4884af268db31eebb0ec',
   },
 
   /**
@@ -26,7 +26,7 @@ const conf: Record<Env, Conf> = {
   test: {
     eddsa: 'https://eddsa.desig.dev',
     ecdsa: 'https://ecdsa.desig.dev',
-    notionDatabaseId: process.env.NEXT_PUBLIC_NOTION_DATABASE_ID || '',
+    notionDatabaseId: '677f0fd492ed4884af268db31eebb0ec',
   },
 
   /**
@@ -35,7 +35,7 @@ const conf: Record<Env, Conf> = {
   production: {
     eddsa: 'https://eddsa.desig.dev',
     ecdsa: 'https://ecdsa.desig.dev',
-    notionDatabaseId: process.env.NEXT_PUBLIC_NOTION_DATABASE_ID || '',
+    notionDatabaseId: '677f0fd492ed4884af268db31eebb0ec',
   },
 }
 
