@@ -1,4 +1,3 @@
-import { useSearchParams } from 'next/navigation'
 import { useMemo } from 'react'
 import useSWR from 'swr'
 import { ExtendedRecordMap } from 'notion-types'
@@ -26,10 +25,6 @@ export const TAGS = [
     title: 'Lab Updates',
     tag: 'Lab Updates',
   },
-  {
-    title: 'Others',
-    tag: 'Others',
-  },
 ]
 
 export const useBlogs = (): {
@@ -50,7 +45,7 @@ export const useBlogs = (): {
   return { data: data || {}, error }
 }
 
-export const useBlogDetails = (
+export const useBlogPage = (
   pageId: string,
 ): {
   data: Partial<{
@@ -63,7 +58,7 @@ export const useBlogDetails = (
   const { data, error } = useSWR<
     { map: ExtendedRecordMap; recommends: string[] },
     Error
-  >([pageId, 'blog'], async () => {
+  >([pageId], async (pageId: string) => {
     const { data } = await axios.get(`/api/blog/${pageId}`)
     return data
   })
@@ -71,9 +66,12 @@ export const useBlogDetails = (
   return { data: data || {}, error }
 }
 
-export const useBlogTypes = (pageIds: string[], metadata: PageMap) => {
-  const params = useSearchParams()
-  const tag = params.get('tag') || ''
+export const useBlogCard = (
+  pageIds: string[],
+  metadata: PageMap,
+  category?: string,
+  nextBlog = 1,
+) => {
   const availableIds = useMemo(
     () =>
       pageIds.filter((pageId) => {
@@ -94,24 +92,18 @@ export const useBlogTypes = (pageIds: string[], metadata: PageMap) => {
     () =>
       availableIds.filter((pageId) => {
         const { tags } = metadata[pageId] || { tags: [] }
-        if (!tag) return true
-        if (tag === 'Others')
-          return !TAGS.map(({ tag }) => tags.includes(tag)).reduce(
-            (a, b) => a || b,
-            false,
-          )
-        return tags.includes(tag)
+        if (!category) return true
+        return tags.includes(category)
       }),
-    [availableIds, tag, metadata],
+    [availableIds, category, metadata],
   )
 
   const total = useMemo(() => taggedIds.length, [taggedIds])
   const thumbnailIds = useMemo(() => {
-    return taggedIds.slice(0, Math.min(LIMIT, total))
-  }, [taggedIds, total])
+    return taggedIds.slice(0, Math.min(nextBlog * LIMIT, total))
+  }, [nextBlog, taggedIds, total])
 
   return {
-    tag,
     total,
     pinnedIds,
     thumbnailIds,
