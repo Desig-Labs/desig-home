@@ -168,6 +168,13 @@
     padding: 30px 0;
   }
 
+  .notion-table-of-contents-item{
+    &:hover{
+      background-color: #3B3752;
+      color: #F3F3F3;
+    }
+  }
+
   .notion-link, .notion-link>span{
     opacity: 1;
     

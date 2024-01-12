@@ -11,7 +11,7 @@ import IonIcon from 'components/ionicon'
 
 import { Infix } from 'providers/ui.provider'
 import { ScrollChainList } from 'app/layout/ChainList'
-import Img from './desig-web.png'
+import Img from 'static/images/desig-web.png'
 import Line from 'static/images/line.svg'
 
 import './index.scss'

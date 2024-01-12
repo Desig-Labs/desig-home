@@ -5,7 +5,7 @@ import dayjs from 'dayjs'
 import { Col, Card, Row, Typography, Space, Divider, Image } from 'antd'
 import Tags from '../tags'
 
-import { normalizePageTitle } from 'app/api/blog/utils'
+import { normalizePageTitle } from 'app/api/utils'
 
 export type BannerCardProps = {
   pageId: string

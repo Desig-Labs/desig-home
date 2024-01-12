@@ -37,8 +37,8 @@ export const useBlogs = (): {
   const { data, error } = useSWR<
     { pageIds: string[]; metadataMap: PageMap },
     Error
-  >('/api/blog', async () => {
-    const { data } = await axios.get(`/api/blog`)
+  >('/api/database', async () => {
+    const { data } = await axios.get(`/api/database`)
     return data
   })
 
