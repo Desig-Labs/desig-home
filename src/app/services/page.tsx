@@ -13,7 +13,7 @@ import Image from 'next/image'
 import { Infix } from 'providers/ui.provider'
 import lightBg from 'static/images/services/light-service.png'
 import lightLeft from 'static/images/services/light-left.svg'
-import Img from 'static/images/services/desig-web.png'
+import Img from 'static/images/desig-web.png'
 
 import './index.scss'
 
