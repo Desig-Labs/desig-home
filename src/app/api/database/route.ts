@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 
-import { getDatabase } from './service'
+import { getDatabase } from '../service'
 
 export async function GET() {
   const { pageIds, metadataMap } = await getDatabase()

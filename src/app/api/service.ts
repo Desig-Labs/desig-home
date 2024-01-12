@@ -4,8 +4,19 @@ import { ExtendedRecordMap } from 'notion-types'
 import configs from 'configs'
 import { extractProperties } from './utils'
 
+const getNotionAPI = async () => {
+  try {
+    const api = new NotionAPI()
+    return api
+  } catch (error) {
+    console.error('error', error)
+  }
+}
+
 export const getDatabase = async () => {
-  const api = new NotionAPI()
+  const api = await getNotionAPI()
+  if (!api) throw new Error('Can not get Notion API')
+
   const map = await api.getPage(configs.notionDatabaseId)
   const block = { ...map.block }
   Object.keys(block).forEach((pageId) => {
@@ -39,8 +50,10 @@ export const getDatabase = async () => {
 }
 
 export const getPageMap = async (pageId: string) => {
-  const notion = new NotionAPI()
-  const map = await notion.getPage(pageId)
+  const api = await getNotionAPI()
+  if (!api) throw new Error('Can not get Notion API')
+
+  const map = await api.getPage(pageId)
   return map
 }
 
