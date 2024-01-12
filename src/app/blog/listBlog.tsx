@@ -7,7 +7,7 @@ import { Col, Row, Card, Typography, Space, Divider, Button, Image } from 'antd'
 import Tags from './tags'
 
 import { LIMIT, useBlogCard } from './hook/useBlogs'
-import { normalizePageTitle } from 'app/api/blog/utils'
+import { normalizePageTitle } from 'app/api/utils'
 
 export type ListBlogProps = {
   category: string

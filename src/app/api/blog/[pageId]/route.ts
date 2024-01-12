@@ -5,7 +5,7 @@ import {
   getPageMap,
   getPageMetadata,
   getRecommends,
-} from '../service'
+} from '../../service'
 
 export async function GET(
   _req: NextRequest,

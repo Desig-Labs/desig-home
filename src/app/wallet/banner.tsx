@@ -12,7 +12,7 @@ export default function Banner() {
   const router = useRouter()
   return (
     <MaxWidthLayout>
-      <Row className="item-responsive" gutter={[0, 16]} justify="space-between">
+      <Row className="item-responsive" gutter={[0, 16]}>
         <Col xs={24} md={14}>
           <Row gutter={[16, 16]}>
             <Col span={24}>
@@ -21,9 +21,7 @@ export default function Banner() {
                 <Typography.Title level={1} className="gradient-text">
                   Smart Multisig
                 </Typography.Title>
-                <Typography.Title level={1} className="gradient-text">
-                  On The Go
-                </Typography.Title>
+                <Typography.Title level={1}>On The Go</Typography.Title>
               </Space>
             </Col>
             <Col span={24}>
