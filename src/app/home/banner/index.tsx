@@ -95,7 +95,7 @@ const Banner = () => {
               <Image
                 src={Img}
                 alt=""
-                style={{ width: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
               />
             </Col>
           </Row>

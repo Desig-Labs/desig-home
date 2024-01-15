@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import type { Metadata } from 'next'
+import { ResolvingMetadata } from 'next'
 import Image from 'next/image'
 
 import { getDatabase } from 'app/api/service'
@@ -9,9 +9,11 @@ import '../../index.scss'
 import 'react-notion-x/src/styles.css'
 import ellipseBottom from 'static/images/blogs/ellips-bottom.png'
 
-export const metadata: Metadata = {
-  title: 'Desig: The Blockchain-Agnostic Multisig Solution',
-  description: 'The Blockchain-Agnostic Multisig Solution',
+type Props = {
+  params: {
+    pageId: string
+    title: string
+  }
 }
 
 export default function PageLayout({ children }: { children: ReactNode }) {
@@ -25,9 +27,38 @@ export default function PageLayout({ children }: { children: ReactNode }) {
 
 export async function generateStaticParams() {
   const { pageIds, metadataMap } = await getDatabase()
-  const params = pageIds.map((pageId) => ({
-    pageId,
-    title: normalizePageTitle(metadataMap[pageId].title),
-  }))
+  const params = pageIds.map((pageId) => {
+    return {
+      pageId,
+      title: normalizePageTitle(metadataMap[pageId].title),
+      metadata: metadataMap[pageId],
+    }
+  })
   return params
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata,
+) {
+  const { pageId } = params
+  const { metadataMap } = await getDatabase()
+  const metadata = metadataMap[pageId]
+
+  const prevThumbnails = (await parent).openGraph?.images || []
+
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    openGraph: {
+      images: [metadata.thumbnail, ...prevThumbnails],
+      title: metadata.title,
+      description: metadata.description,
+    },
+    twitter: {
+      images: [metadata.thumbnail, ...prevThumbnails],
+      title: metadata.title,
+      description: metadata.description,
+    },
+  }
 }

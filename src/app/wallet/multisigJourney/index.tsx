@@ -56,9 +56,8 @@ export default function MultisigJourney() {
               <Typography.Title level={2}>
                 Streamline your multisig journey, the{' '}
                 <span style={{ paddingRight: 4 }} className="gradient-text">
-                  Desig{' '}
+                  DesigWay
                 </span>
-                way
               </Typography.Title>
             </Col>
             <Col span={24}>

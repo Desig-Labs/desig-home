@@ -62,7 +62,14 @@ export function BlogCard({
   return (
     <Link href={`/blog/${normalizePageTitle(title)}/${pageId}`}>
       <Card
-        cover={<Image preview={false} alt={title} src={thumbnail} />}
+        cover={
+          <Image
+            preview={false}
+            alt={title}
+            src={thumbnail}
+            style={{ objectFit: 'cover' }}
+          />
+        }
         className="blog-card"
         bodyStyle={{ padding: 0 }}
       >
