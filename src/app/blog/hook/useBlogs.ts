@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import useSWR from 'swr'
 import { ExtendedRecordMap } from 'notion-types'
 import axios from 'axios'
+import { normalizePageTitle } from 'app/api/utils'
 
 export const LIMIT = 3
 export const TAGS = [
@@ -108,4 +109,14 @@ export const useBlogCard = (
     pinnedIds,
     thumbnailIds,
   }
+}
+
+export const getPageIdBySlug = (slug: string, metadataMap?: PageMap) => {
+  if (!metadataMap) return ''
+  return (
+    Object.keys(metadataMap).find((pageId) => {
+      const data = metadataMap[pageId]
+      return normalizePageTitle(data.slug) === slug
+    }) || ''
+  )
 }

@@ -4,15 +4,15 @@ import Image from 'next/image'
 
 import { getDatabase } from 'app/api/service'
 import { normalizePageTitle } from 'app/api/utils'
+import { getPageIdBySlug } from '../hook/useBlogs'
 
-import '../../index.scss'
+import '../index.scss'
 import 'react-notion-x/src/styles.css'
 import ellipseBottom from 'static/images/blogs/ellips-bottom.png'
 
 type Props = {
   params: {
-    pageId: string
-    title: string
+    slug: string
   }
 }
 
@@ -29,9 +29,9 @@ export async function generateStaticParams() {
   const { pageIds, metadataMap } = await getDatabase()
   const params = pageIds.map((pageId) => {
     return {
+      slug: normalizePageTitle(metadataMap[pageId].slug),
       pageId,
       title: normalizePageTitle(metadataMap[pageId].title),
-      metadata: metadataMap[pageId],
     }
   })
   return params
@@ -41,11 +41,14 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata,
 ) {
-  const { pageId } = params
   const { metadataMap } = await getDatabase()
+
+  const { slug } = params
+  const pageId = getPageIdBySlug(slug, metadataMap)
   const metadata = metadataMap[pageId]
 
   const prevThumbnails = (await parent).openGraph?.images || []
+  if (!metadata) return {}
 
   return {
     title: metadata.title,
