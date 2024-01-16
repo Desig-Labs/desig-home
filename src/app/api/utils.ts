@@ -17,6 +17,7 @@ export const extractProperties = (
   const publishedAt = getPageProperty<number>('Date', block, map) || Date.now()
   const tags = getPageProperty<string[]>('Tags', block, map) || []
   const description = getPageProperty<string>('Description', block, map) || ''
+  const slug = getPageProperty<string>('Slug', block, map) || ''
   const [thumbnail] = getPageImageUrls(map, {
     mapImageUrl: (url, { id }) => {
       if (!!pageId && id !== pageId) return null
@@ -32,9 +33,10 @@ export const extractProperties = (
     description,
     thumbnail: thumbnail || 'https://placehold.co/1600x900',
     pinned,
+    slug,
   }
 }
 
 export const normalizePageTitle = (title: string) => {
-  return title.replace(/[^a-zA-Z0-9]/g, '-')
+  return (title.replace(/[^a-zA-Z0-9]/g, '-') || '').toLocaleLowerCase()
 }

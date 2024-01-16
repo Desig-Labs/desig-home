@@ -11,7 +11,7 @@ export type HeroProps = {
 
 export default function Hero({ pageId, metadataMap }: HeroProps) {
   const { back } = useRouter()
-  const { thumbnail } = metadataMap[pageId]
+  const { thumbnail, title } = metadataMap[pageId]
 
   return (
     <Space direction="vertical" className="header-details" size={20}>
@@ -21,7 +21,7 @@ export default function Hero({ pageId, metadataMap }: HeroProps) {
       <Image
         preview={false}
         src={thumbnail}
-        alt="hero"
+        alt={title}
         className="hero-image"
       />
     </Space>

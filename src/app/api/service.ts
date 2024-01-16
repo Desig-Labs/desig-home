@@ -7,6 +7,7 @@ import { extractProperties } from './utils'
 const getNotionAPI = async () => {
   try {
     const api = new NotionAPI()
+
     return api
   } catch (error) {
     console.error('error', error)
@@ -19,6 +20,7 @@ export const getDatabase = async () => {
 
   const map = await api.getPage(configs.notionDatabaseId)
   const block = { ...map.block }
+
   Object.keys(block).forEach((pageId) => {
     const {
       value: { type, parent_table, content },

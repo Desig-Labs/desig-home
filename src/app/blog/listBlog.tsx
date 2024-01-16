@@ -57,12 +57,21 @@ export type BlogCardProps = {
 
 export function BlogCard({
   pageId,
-  metadata: { publishedAt, title, description, thumbnail },
+  metadata: { publishedAt, title, description, thumbnail, slug },
 }: BlogCardProps) {
   return (
-    <Link href={`/blog/${normalizePageTitle(title)}/${pageId}`}>
+    <Link
+      href={`/blog/${(normalizePageTitle(slug) || '').toLocaleLowerCase()}`}
+    >
       <Card
-        cover={<Image preview={false} alt={title} src={thumbnail} />}
+        cover={
+          <Image
+            preview={false}
+            alt={title}
+            src={thumbnail}
+            style={{ objectFit: 'cover' }}
+          />
+        }
         className="blog-card"
         bodyStyle={{ padding: 0 }}
       >

@@ -8,21 +8,23 @@ import PageCollection from './collection'
 import RecommendBlogs from './recommendBlogs'
 import { Skeleton } from 'antd'
 
-import { useBlogPage, useBlogs } from 'app/blog/hook/useBlogs'
+import { useBlogPage, useBlogs, getPageIdBySlug } from 'app/blog/hook/useBlogs'
 
 export default function Page({
-  params: { pageId },
+  params: { slug },
 }: {
-  params: { pageId: string }
+  params: { slug: string }
 }) {
-  const {
-    data: { map, recommends },
-  } = useBlogPage(pageId)
   const {
     data: { metadataMap },
   } = useBlogs()
+  const pageId = getPageIdBySlug(slug, metadataMap)
+  const {
+    data: { map, recommends },
+  } = useBlogPage(pageId)
 
   if (!map || !recommends || !metadataMap) return <Skeleton active />
+
   return (
     <NotionRenderer
       recordMap={map}

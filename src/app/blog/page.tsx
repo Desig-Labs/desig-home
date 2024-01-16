@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 import Banner from './banner'
 import Navigation from './navigation'
-import { Col, Input, Row, Typography, Button } from 'antd'
+import { Col, Row, Typography } from 'antd'
 
 import { useBlogs } from './hook/useBlogs'
 
@@ -36,7 +36,7 @@ export default function BlogPage() {
               updates.
             </Typography.Text>
           </Col>
-          <Col span={24}>
+          {/* <Col span={24}>
             <Row gutter={[12, 12]} justify="center">
               <Col xs={16} md={8}>
                 <Input size="large" placeholder="Input your email address" />
@@ -47,7 +47,7 @@ export default function BlogPage() {
                 </Button>
               </Col>
             </Row>
-          </Col>
+          </Col> */}
         </Row>
       </Col>
       <Col span={24}>
