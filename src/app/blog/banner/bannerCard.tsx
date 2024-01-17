@@ -14,10 +14,10 @@ export type BannerCardProps = {
 
 export default function BannerCard({
   pageId,
-  metadata: { publishedAt, title, description, thumbnail },
+  metadata: { publishedAt, title, description, thumbnail, slug },
 }: BannerCardProps) {
   return (
-    <Link href={`/blog/${normalizePageTitle(title)}/${pageId}`}>
+    <Link href={`/blog/${normalizePageTitle(slug)}`}>
       <Card
         className="banner-card"
         cover={<Image preview={false} alt={title} src={thumbnail} />}
