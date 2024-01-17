@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation'
 
 import { Image, Space, Button } from 'antd'
 import IonIcon from 'components/ionicon'
+import { normalizePageTitle } from 'app/api/utils'
 
 export type HeroProps = {
   pageId: string
@@ -11,7 +12,7 @@ export type HeroProps = {
 
 export default function Hero({ pageId, metadataMap }: HeroProps) {
   const { back } = useRouter()
-  const { thumbnail, title } = metadataMap[pageId]
+  const { thumbnail, slug } = metadataMap[pageId]
 
   return (
     <Space direction="vertical" className="header-details" size={20}>
@@ -21,7 +22,7 @@ export default function Hero({ pageId, metadataMap }: HeroProps) {
       <Image
         preview={false}
         src={thumbnail}
-        alt={title}
+        alt={normalizePageTitle(slug)}
         className="hero-image"
       />
     </Space>
