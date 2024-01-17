@@ -34,21 +34,5 @@ export default function RecommendBlogs({ pageIds }: RecommendBlogsProps) {
         </Col>
       </Row>
     </MaxWidthLayout>
-
-    // <div className="w-full flex flex-row justify-center p-4">
-    //   <div className="w-full max-w-[720px] grid grid-cols-12 gap-4 @container">
-    //     <div className="col-span-full divider">
-    //       <h5 className="opacity-60">Only For You</h5>
-    //     </div>
-    //     {pageIds.map((pageId) => (
-    //       <div
-    //         key={pageId}
-    //         className="col-span-full @xl:col-span-6 @4xl:col-span-4"
-    //       >
-    //         <Recommend pageId={pageId} />
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
   )
 }
