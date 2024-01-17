@@ -43,7 +43,13 @@ export default function Banner() {
         </Col>
         <Col xs={24} md={10}>
           <Image
-            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              position: 'relative',
+              zIndex: 1,
+            }}
             alt="wallet"
             src={BANNER}
           />
