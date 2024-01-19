@@ -1,0 +1,14 @@
+.body-blog-details {
+  * [class^='tweet-header_header'] {
+    flex-wrap: wrap;
+    > [class^='tweet-header_author'] {
+      max-width: calc(100% - 100px);
+    }
+  }
+  * [class^='quoted-tweet-header_author'] {
+    flex-wrap: wrap;
+  }
+  * [class^='tweet-link_root'] {
+    word-break: break-all;
+  }
+}
