@@ -1,6 +1,6 @@
 'use client'
 import { NotionRenderer } from 'react-notion-x'
-import { Tweet } from 'react-tweet'
+import { Tweet, TweetProps } from 'react-tweet'
 
 import Hero from './hero'
 import { Equation } from './equation'
@@ -9,6 +9,8 @@ import RecommendBlogs from './recommendBlogs'
 import { Skeleton } from 'antd'
 
 import { useBlogPage, useBlogs, getPageIdBySlug } from 'app/blog/hook/useBlogs'
+
+import './index.scss'
 
 export default function Page({
   params: { slug },
@@ -35,7 +37,9 @@ export default function Page({
       components={{
         Header: () => <Hero pageId={pageId} metadataMap={metadataMap} />,
         Collection: () => <PageCollection pageId={pageId} />,
-        Tweet,
+        Tweet: (props: JSX.IntrinsicAttributes & TweetProps) => (
+          <Tweet {...props} />
+        ),
         Equation,
       }}
       footer={<RecommendBlogs pageIds={recommends} />}
