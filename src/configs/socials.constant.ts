@@ -21,5 +21,5 @@ export const core = 'https://www.npmjs.com/package/@desig/core'
 export const web3 = 'https://web3.desig.io/'
 export const brandkit =
   'https://drive.google.com/drive/u/0/folders/1_gQzJ6_95B8_oLDUmmi4yKO7cTWBDo6G'
-export const blog = '#'
+export const blog = '/blog'
 export const discord = 'https://discord.com/invite/5fpWqAjxdc'

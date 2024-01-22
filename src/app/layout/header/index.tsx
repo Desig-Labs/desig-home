@@ -8,11 +8,12 @@ import DrawerHeader from './drawerHeader'
 
 import './index.scss'
 import MaxWidthLayout from 'components/maxWidthLayout'
+import { docs } from 'configs/socials.constant'
 
 export const SECTIONS_LIST = [
   { title: 'Wallet', route: '/wallet', disabled: false },
   { title: 'Services', route: '/services', disabled: false },
-  { title: 'Docs', route: '/docs', disabled: true },
+  { title: 'Docs', route: docs, disabled: false },
   { title: 'Blog', route: '/blog', disabled: false },
 ]
 
@@ -39,17 +40,32 @@ export default function Header() {
         </Col>
         <Col className="tabs-section">
           <Space size={40}>
-            {SECTIONS_LIST.map(({ title, route, disabled }) => (
-              <Button
-                key={title}
-                type="text"
-                disabled={disabled}
-                onClick={() => router.push(route)}
-                className={path === route ? 'tab active' : 'tab'}
-              >
-                {title}
-              </Button>
-            ))}
+            {SECTIONS_LIST.map(({ title, route, disabled }) => {
+              if (route === docs)
+                return (
+                  <Button
+                    key={title}
+                    disabled={disabled}
+                    href={route}
+                    type="text"
+                    target="_blank"
+                    style={{ display: 'flex', alignItems: 'center' }}
+                  >
+                    {title}
+                  </Button>
+                )
+              return (
+                <Button
+                  key={title}
+                  type="text"
+                  disabled={disabled}
+                  onClick={() => router.push(route)}
+                  className={path === route ? 'tab active' : 'tab'}
+                >
+                  {title}
+                </Button>
+              )
+            })}
           </Space>
         </Col>
         <Col span={4} style={{ textAlign: 'right' }}>
