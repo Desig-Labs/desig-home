@@ -22,9 +22,11 @@ import {
 } from 'configs/socials.constant'
 import { useRouter } from 'next/navigation'
 
+export const ROUTE_IN_SITE = '/blog'
+
 export const RESOURCES = [
   {
-    name: 'Blog (Coming soon)',
+    name: 'Blog',
     url: blog,
   },
   {
@@ -110,14 +112,31 @@ export default function Footer() {
           <Space direction="vertical" size={24}>
             <Typography.Text strong>Resources</Typography.Text>
             <Space direction="vertical">
-              {RESOURCES.map(({ name, url }, index) => (
-                <Button key={index} href={url} type="text" target="_blank">
-                  <Space>
-                    <Typography.Text type="secondary">{name}</Typography.Text>
-                    <Image src={Arrow} alt="arrow" />
-                  </Space>
-                </Button>
-              ))}
+              {RESOURCES.map(({ name, url }, index) => {
+                if (ROUTE_IN_SITE === url)
+                  return (
+                    <Button
+                      type="text"
+                      key={index}
+                      onClick={() => router.push(url)}
+                    >
+                      <Space>
+                        <Typography.Text type="secondary">
+                          {name}
+                        </Typography.Text>
+                        <Image src={Arrow} alt="arrow" />
+                      </Space>
+                    </Button>
+                  )
+                return (
+                  <Button key={index} href={url} type="text" target="_blank">
+                    <Space>
+                      <Typography.Text type="secondary">{name}</Typography.Text>
+                      <Image src={Arrow} alt="arrow" />
+                    </Space>
+                  </Button>
+                )
+              })}
             </Space>
           </Space>
         </Col>
