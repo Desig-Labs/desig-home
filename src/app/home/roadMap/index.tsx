@@ -20,8 +20,8 @@ export const RoadMap = () => {
 
   return (
     <MaxWidthLayout>
-      <Row gutter={[16, 16]} justify="center">
-        <Col>
+      <Row gutter={[8, 8]} justify="center">
+        <Col span={24} style={{ textAlign: 'center' }}>
           <Typography.Title level={2}>
             <span className="gradient-text gradient-road-map">Our Vision</span>
             {` `}for the Future
@@ -32,7 +32,7 @@ export const RoadMap = () => {
             Follow our journey to conquer the Web3 multisig realm
           </Typography.Text>
         </Col>
-        <Col span={24} style={{ aspectRatio: 3 / 2 }}>
+        <Col span={24} style={{ aspectRatio: 3 / 2, marginTop: 32 }}>
           {!isMobile ? (
             <Image src={RoadMapImg} alt="roadmap" fill />
           ) : (
