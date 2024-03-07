@@ -1,8 +1,10 @@
-import { Button, Col, Row, Space, Typography } from 'antd'
 import { useRouter } from 'next/navigation'
 
+import { Button, Col, Row, Space, Typography } from 'antd'
 import MaxWidthLayout from 'components/maxWidthLayout'
 import IonIcon from 'components/ionicon'
+
+import { twitter } from 'configs/socials.constant'
 
 import './index.scss'
 
@@ -34,7 +36,8 @@ export const FutureOfMultisig = () => {
             </Button>
             <Button
               size="large"
-              href="mailto:hi@desig.io"
+              href={twitter}
+              target="_blank"
               icon={<IonIcon name="chatbubbles-outline" />}
             >
               Talk To Us

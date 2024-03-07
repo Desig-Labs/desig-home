@@ -1,6 +1,8 @@
 import { getBlockTitle, getPageImageUrls, getPageProperty } from 'notion-utils'
 import { Block, ExtendedRecordMap } from 'notion-types'
 
+import DEFAULT_THUMBNAIL from 'static/images/blogs/default-thumbnail.png'
+
 const normalizeImageUrl = (url: string, id: string) => {
   if (!/^https?:\/\//.test(url)) url = `https://www.notion.so${url}`
   return `https://www.notion.so/image/${encodeURIComponent(
@@ -31,7 +33,7 @@ export const extractProperties = (
     tags,
     title,
     description,
-    thumbnail: thumbnail || 'https://placehold.co/1600x900',
+    thumbnail: thumbnail || DEFAULT_THUMBNAIL.src,
     pinned,
     slug,
   }

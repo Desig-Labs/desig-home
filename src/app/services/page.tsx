@@ -14,6 +14,7 @@ import { Infix } from 'providers/ui.provider'
 import lightBg from 'static/images/services/light-service.png'
 import lightLeft from 'static/images/services/light-left.svg'
 import Img from 'static/images/desig-web.png'
+import { twitter } from 'configs/socials.constant'
 
 import './index.scss'
 
@@ -41,7 +42,8 @@ export default function ServicesPage() {
                   block={isMobile}
                   type="primary"
                   size="large"
-                  href="mailto:hi@desig.io"
+                  href={twitter}
+                  target="_blank"
                   icon={<IonIcon name="chatbubbles-outline" />}
                 >
                   Talk to us
