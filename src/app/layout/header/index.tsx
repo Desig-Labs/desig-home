@@ -5,10 +5,11 @@ import { Button, Col, Row, Space } from 'antd'
 import Brand from 'components/brand'
 import IonIcon from 'components/ionicon'
 import DrawerHeader from './drawerHeader'
+import MaxWidthLayout from 'components/maxWidthLayout'
+
+import { docs } from 'configs/socials.constant'
 
 import './index.scss'
-import MaxWidthLayout from 'components/maxWidthLayout'
-import { docs } from 'configs/socials.constant'
 
 export const SECTIONS_LIST = [
   { title: 'Wallet', route: '/wallet', disabled: false },
@@ -49,6 +50,7 @@ export default function Header() {
                     href={route}
                     type="text"
                     target="_blank"
+                    className="tab"
                     style={{ display: 'flex', alignItems: 'center' }}
                   >
                     {title}

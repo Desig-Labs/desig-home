@@ -39,6 +39,7 @@ const DrawerHeader = () => {
         onClose={() => setVisible(false)}
         open={visible}
         className="header-drawer"
+        width={350}
       >
         <List
           dataSource={SECTIONS_LIST}
